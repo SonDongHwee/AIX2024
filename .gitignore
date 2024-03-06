@@ -1,0 +1,5 @@
+*/main.o
+*/additionally.o
+*/box.o
+*/yolov2_forward_network.o
+*/yolov2_forward_nework_quantized.o
