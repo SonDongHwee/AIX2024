@@ -11,7 +11,7 @@
 #define MAX_VAL_32      2147483647  // 31-bit (1-bit sign)
 #define MAX_VAL_UINT_8  255
 
-int const run_single_image_test = 1;
+int const run_single_image_test = 0;
 
 int max_abs(int src, int max_val)
 {
@@ -308,9 +308,9 @@ void do_quantization(network net) {
       128,      //conv 4
       128,      //conv 6
       128,     //conv 8
-      384,     //conv 10
+      256,     //conv 10
       256,     //conv 12
-      384,     //conv 13
+      256,     //conv 13
       128,     //conv 14
       256,      //conv 17
       256};     //conv 20
@@ -341,31 +341,31 @@ void do_quantization(network net) {
       2,        //conv 17
       17};      //conv 20
 	
-    // float input_quant_multiplier[TOTAL_CALIB_LAYER] = {
-    //  128,	  //conv 0
-    //   16,     //conv 2
-    //   16,     //conv 4
-    //   16,     //conv 6
-    //   16,     //conv 8
-    //   16,     //conv 10     
-    //   16,     //conv 12
-    //   16,     //conv 13
-    //   16,     //conv 14
-    //   16,     //conv 17
-    //   16};    //conv 20
-
     float input_quant_multiplier[TOTAL_CALIB_LAYER] = {
      108,	  //conv 0
-      8,     //conv 2
-      8,     //conv 4
-      8,     //conv 6
-      8,     //conv 8
-      8,     //conv 10     
-      8,     //conv 12
-      8,     //conv 13
-      8,     //conv 14
-      8,     //conv 17
-      8};    //conv 20
+       8,     //conv 2
+       8,     //conv 4
+       8,     //conv 6
+       8,     //conv 8
+       8,     //conv 10     
+       8,     //conv 12
+       8,     //conv 13
+       8,     //conv 14
+       8,     //conv 17
+       8};    //conv 20
+
+    // float input_quant_multiplier[TOTAL_CALIB_LAYER] = {
+    //  295,	  //conv 0
+    //   80,     //conv 2
+    //  121,     //conv 4
+    //  125,     //conv 6
+    //  115,     //conv 8
+    //   57,     //conv 10     
+    //   77,     //conv 12
+    //  100,     //conv 13
+    //   72,     //conv 14
+    //  100,     //conv 17
+    //   63};    //conv 20
 
 	printf("Multipler    Input    Weight    Bias\n");
     for (j = 0; j < net.n; ++j) {
@@ -420,6 +420,7 @@ void do_quantization(network net) {
 
 void save_quantized_model(network net) {
     int j;
+    if (!run_single_image_test) return;
     for (j = 0; j < net.n; ++j) {
         layer* l = &net.layers[j];
         if (l->type == CONVOLUTIONAL) {            

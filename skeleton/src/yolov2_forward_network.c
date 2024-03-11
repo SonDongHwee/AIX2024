@@ -35,19 +35,19 @@ void forward_convolutional_layer_cpu(layer l, network_state state)
     float xmin = INT_MAX;
     float xmax = -INT_MAX;
 
-    char inacts [1000];
-    sprintf(inacts  , "../bin/log_inacts/CONV%02d_inputs.txt", conv_layer_num[conv_layer_index]);
-    conv_layer_index++;
-    FILE* fp = fopen(inacts, "w");
+    // char inacts [1000];
+    // sprintf(inacts  , "../bin/log_inacts/CONV%02d_inputs.txt", conv_layer_num[conv_layer_index]);
+    // conv_layer_index++;
+    // FILE* fp = fopen(inacts, "w");
 
     for (int i = 0; i < l.inputs; i++) {
        if (xmin > state.input[i])
            xmin = state.input[i];
        if (xmax < state.input[i])
            xmax = state.input[i];
-       fprintf(fp, "%0.8f\n", state.input[i]); 
+       // fprintf(fp, "%0.8f\n", state.input[i]); 
     }
-    if (fp) fclose(fp);
+    // if (fp) fclose(fp);
 
     fprintf(stderr, "%0.4f - %0.4f \n", xmin, xmax);
     // }}}
