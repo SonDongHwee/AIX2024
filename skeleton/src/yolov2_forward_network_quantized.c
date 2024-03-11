@@ -11,7 +11,7 @@
 #define MAX_VAL_32      2147483647  // 31-bit (1-bit sign)
 #define MAX_VAL_UINT_8  255
 
-int const run_single_image_test = 0;
+int const run_single_image_test = 1;
 
 int max_abs(int src, int max_val)
 {
@@ -148,7 +148,8 @@ void forward_convolutional_layer_q(network net, layer l, network_state state)
     if (run_single_image_test) {
         // Input Feature Map (IFM)
         char file_input_femap[100];
-        snprintf(file_input_femap, sizeof(file_input_femap), "C:/skeleton/bin/log_feamap/CONV%02d_input.hex", state.index);
+        // snprintf(file_input_femap, sizeof(file_input_femap), "C:/skeleton/bin/log_feamap/CONV%02d_input.hex", state.index);
+        snprintf(file_input_femap, sizeof(file_input_femap), "../bin/log_feamap/CONV%02d_input.hex", state.index);
         FILE* fp = fopen(file_input_femap, "w");
     
         // Data Format: [Channel, Width, Height]        
@@ -216,7 +217,8 @@ void forward_convolutional_layer_q(network net, layer l, network_state state)
             }
         }
         char file_output_femap[100];
-        snprintf(file_output_femap, sizeof(file_output_femap), "C:/skeleton/bin/log_feamap/CONV%02d_output.hex", state.index);
+        // snprintf(file_output_femap, sizeof(file_output_femap), "C:/skeleton/bin/log_feamap/CONV%02d_output.hex", state.index);
+        snprintf(file_output_femap, sizeof(file_output_femap), "../bin/log_feamap/CONV%02d_output.hex", state.index);
         FILE* fp = fopen(file_output_femap, "w");
     
         // Data Format: [Channel, Width, Height]
@@ -299,32 +301,71 @@ void do_quantization(network net) {
 	//Dummy weight_quantization 
 	#define TOTAL_CALIB_LAYER 11
 	// TODO
-	//{{{		
-	float weight_quant_multiplier[TOTAL_CALIB_LAYER] = {
-      16,	  //conv 0
-      64,     //conv 2
-      64,     //conv 4
-      64,     //conv 6
-      64,     //conv 8
-      64,     //conv 10
-      64,     //conv 12
-      64,     //conv 13
-      64,     //conv 14
-      64,     //conv 17
-      64};    //conv 20
+	//{{
+    float weight_quant_multiplier[TOTAL_CALIB_LAYER] = {
+      16,      //conv 0
+      128,      //conv 2
+      128,      //conv 4
+      128,      //conv 6
+      128,     //conv 8
+      384,     //conv 10
+      256,     //conv 12
+      384,     //conv 13
+      128,     //conv 14
+      256,      //conv 17
+      256};     //conv 20
+
+	// float weight_quant_multiplier[TOTAL_CALIB_LAYER] = {
+    //   103,      //conv 0
+    //   289,      //conv 2
+    //   499,      //conv 4
+    //   806,      //conv 6
+    //   1268,     //conv 8
+    //   2282,     //conv 10
+    //   1188,     //conv 12
+    //   3120,     //conv 13
+    //   1017,     //conv 14
+    //   980,      //conv 17
+    //   689};     //conv 20
+
+    float weight_quant_z[TOTAL_CALIB_LAYER] = {
+      1,	    //conv 0
+      5,        //conv 2
+      7,        //conv 4
+      7,        //conv 6
+      3,        //conv 8
+      1,        //conv 10
+      2,        //conv 12
+      1,        //conv 13
+      16,       //conv 14
+      2,        //conv 17
+      17};      //conv 20
 	
+    // float input_quant_multiplier[TOTAL_CALIB_LAYER] = {
+    //  128,	  //conv 0
+    //   16,     //conv 2
+    //   16,     //conv 4
+    //   16,     //conv 6
+    //   16,     //conv 8
+    //   16,     //conv 10     
+    //   16,     //conv 12
+    //   16,     //conv 13
+    //   16,     //conv 14
+    //   16,     //conv 17
+    //   16};    //conv 20
+
     float input_quant_multiplier[TOTAL_CALIB_LAYER] = {
-     128,	  //conv 0
-      16,     //conv 2
-      16,     //conv 4
-      16,     //conv 6
-      16,     //conv 8
-      16,     //conv 10     
-      16,     //conv 12
-      16,     //conv 13
-      16,     //conv 14
-      16,     //conv 17
-      16};    //conv 20
+     108,	  //conv 0
+      8,     //conv 2
+      8,     //conv 4
+      8,     //conv 6
+      8,     //conv 8
+      8,     //conv 10     
+      8,     //conv 12
+      8,     //conv 13
+      8,     //conv 14
+      8,     //conv 17
+      8};    //conv 20
 
 	printf("Multipler    Input    Weight    Bias\n");
     for (j = 0; j < net.n; ++j) {
@@ -348,6 +389,7 @@ void do_quantization(network net) {
 				
 				// Weight
 				l->weights_quant_multiplier = (counter < TOTAL_CALIB_LAYER) ? weight_quant_multiplier[counter] : 16;
+                l->weights_quant_z = (counter < TOTAL_CALIB_LAYER) ? weight_quant_z[counter] : 0; // ADDED
 				
 				++counter;
 			//}}}	
@@ -355,6 +397,7 @@ void do_quantization(network net) {
 			for (fil = 0; fil < l->n; ++fil) {          // 
                 for (i = 0; i < filter_size; ++i) {
                     float w = l->weights[fil*filter_size + i] * l->weights_quant_multiplier; // Scale
+                    // float w = l->weights[fil*filter_size + i] * l->weights_quant_multiplier + l->weights_quant_z; // Scale
                     l->weights_int8[fil*filter_size + i] = max_abs(w, MAX_VAL_8); // Clip
                 }
             }
@@ -388,9 +431,12 @@ void save_quantized_model(network net) {
             char biasfile   [100];
             char scalefile  [100];
 
-            sprintf(weightfile  , "C:/skeleton/bin//log_param/CONV%02d_param_weight.hex", j);
-            sprintf(biasfile    , "C:/skeleton/bin//log_param/CONV%02d_param_biases.hex", j);
-            sprintf(scalefile   , "C:/skeleton/bin//log_param/CONV%02d_param_scales.hex", j);
+            // sprintf(weightfile  , "C:/skeleton/bin//log_param/CONV%02d_param_weight.hex", j);
+            // sprintf(biasfile    , "C:/skeleton/bin//log_param/CONV%02d_param_biases.hex", j);
+            // sprintf(scalefile   , "C:/skeleton/bin//log_param/CONV%02d_param_scales.hex", j);
+            sprintf(weightfile  , "../bin/log_param/CONV%02d_param_weight.hex", j);
+            sprintf(biasfile    , "../bin/log_param/CONV%02d_param_biases.hex", j);
+            sprintf(scalefile   , "../bin/log_param/CONV%02d_param_scales.hex", j);
             FILE* fp_w = fopen(weightfile, "w");
             FILE* fp_b = fopen(biasfile, "w");
             FILE* fp_s = fopen(scalefile, "w");

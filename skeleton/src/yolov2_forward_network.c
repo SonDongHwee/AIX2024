@@ -4,6 +4,8 @@
 #define GEMMCONV
 
 // 4 layers in 1: convolution, batch-normalization, BIAS and activation
+int conv_layer_num[11] = {0, 2, 4, 6, 8, 10, 12, 13, 14, 17, 20};
+int conv_layer_index = 0;
 void forward_convolutional_layer_cpu(layer l, network_state state)
 {
 
@@ -29,17 +31,26 @@ void forward_convolutional_layer_cpu(layer l, network_state state)
     float *c = l.output;
 
     //// Profiling range
-    ////{{{{
-    //float xmin = 0;
-    //float xmax = 0;
-    //for (int i = 0; i < l.inputs; i++) {
-    //    if (xmin > state.input[i])
-    //        xmin = state.input[i];
-    //    if (xmax < state.input[i])
-    //        xmax = state.input[i];
-    //}
-    //fprintf(stderr, "%0.4f - %0.4f \n", xmin, xmax);
-    ////}}}
+    // {{{{
+    float xmin = INT_MAX;
+    float xmax = -INT_MAX;
+
+    char inacts [1000];
+    sprintf(inacts  , "../bin/log_inacts/CONV%02d_inputs.txt", conv_layer_num[conv_layer_index]);
+    conv_layer_index++;
+    FILE* fp = fopen(inacts, "w");
+
+    for (int i = 0; i < l.inputs; i++) {
+       if (xmin > state.input[i])
+           xmin = state.input[i];
+       if (xmax < state.input[i])
+           xmax = state.input[i];
+       fprintf(fp, "%0.8f\n", state.input[i]); 
+    }
+    if (fp) fclose(fp);
+
+    fprintf(stderr, "%0.4f - %0.4f \n", xmin, xmax);
+    // }}}
     // convolution as GEMM (as part of BLAS)
     for (i = 0; i < l.batch; ++i) {
         im2col_cpu_custom(state.input, l.c, l.h, l.w, l.size, l.stride, l.pad, b);    // AVX2

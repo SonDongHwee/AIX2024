@@ -480,6 +480,7 @@ extern "C" {
         int8_t *weights_int8;
 
         float weights_quant_multiplier;
+        float weights_quant_z; // ADDED
         float input_quant_multiplier;
 
         float *col_image;

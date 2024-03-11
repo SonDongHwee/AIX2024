@@ -73,8 +73,8 @@ print("0.48~")
 for obj in Object:
 	list = []
 	for f_path in glob.iglob(os.path.join(current_dir, "*.jpg")):
-        	title, ext = os.path.splitext(os.path.basename(f_path))
-        	list.append(title)      	
+			title, ext = os.path.splitext(os.path.basename(f_path))
+			list.append(title)      	
 	total_cnt = 0
 	cnt = np.zeros(12, dtype=float)
 
