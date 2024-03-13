@@ -1,5 +1,0 @@
-classes = 60
-train = ./data/yolohw.train
-valid = ./data/yolohw.test
-names = ./data/yolohw.names
-backup = ./backup/
