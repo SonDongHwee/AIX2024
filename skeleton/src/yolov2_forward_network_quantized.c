@@ -200,7 +200,8 @@ void forward_convolutional_layer_q(network net, layer l, network_state state)
     // De-scaling or De-quantization
     float ALPHA1 = 1 / (l.input_quant_multiplier * l.weights_quant_multiplier);
     for (i = 0; i < l.outputs; ++i) {
-        l.output[i] = output_q[i] * ALPHA1;
+        // l.output[i] = output_q[i] * ALPHA1;
+        l.output[i] = (output_q[i] + l.biases_quant_z) * ALPHA1; // ADDED
     }
 
     
@@ -302,70 +303,83 @@ void do_quantization(network net) {
 	#define TOTAL_CALIB_LAYER 11
 	// TODO
 	//{{
-    float weight_quant_multiplier[TOTAL_CALIB_LAYER] = {
-      16,      //conv 0
+    // float weight_quant_multiplier[TOTAL_CALIB_LAYER] = {
+    //   16,       //conv 0
+    //   128,      //conv 2
+    //   128,      //conv 4
+    //   128,      //conv 6
+    //   128,      //conv 8
+    //   256,      //conv 10
+    //   256,      //conv 12
+    //   256,      //conv 13
+    //   128,      //conv 14
+    //   256,      //conv 17
+    //   256};     //conv 20
+
+	float weight_quant_multiplier[TOTAL_CALIB_LAYER] = {
+      16,       //conv 0
       128,      //conv 2
       128,      //conv 4
-      128,      //conv 6
-      128,     //conv 8
-      256,     //conv 10
-      256,     //conv 12
-      256,     //conv 13
-      128,     //conv 14
-      256,      //conv 17
+      256,      //conv 6
+      256,      //conv 8
+      512,      //conv 10
+      512,      //conv 12
+      1024,     //conv 13
+      256,      //conv 14
+      512,      //conv 17
       256};     //conv 20
-
-	// float weight_quant_multiplier[TOTAL_CALIB_LAYER] = {
-    //   103,      //conv 0
-    //   289,      //conv 2
-    //   499,      //conv 4
-    //   806,      //conv 6
-    //   1268,     //conv 8
-    //   2282,     //conv 10
-    //   1188,     //conv 12
-    //   3120,     //conv 13
-    //   1017,     //conv 14
-    //   980,      //conv 17
-    //   689};     //conv 20
-
-    float weight_quant_z[TOTAL_CALIB_LAYER] = {
-      1,	    //conv 0
-      5,        //conv 2
-      7,        //conv 4
-      7,        //conv 6
-      3,        //conv 8
-      1,        //conv 10
-      2,        //conv 12
-      1,        //conv 13
-      16,       //conv 14
-      2,        //conv 17
-      17};      //conv 20
 	
-    float input_quant_multiplier[TOTAL_CALIB_LAYER] = {
-     108,	  //conv 0
-       8,     //conv 2
-       8,     //conv 4
-       8,     //conv 6
-       8,     //conv 8
-       8,     //conv 10     
-       8,     //conv 12
-       8,     //conv 13
-       8,     //conv 14
-       8,     //conv 17
-       8};    //conv 20
-
     // float input_quant_multiplier[TOTAL_CALIB_LAYER] = {
-    //  295,	  //conv 0
-    //   80,     //conv 2
-    //  121,     //conv 4
-    //  125,     //conv 6
-    //  115,     //conv 8
-    //   57,     //conv 10     
-    //   77,     //conv 12
-    //  100,     //conv 13
-    //   72,     //conv 14
-    //  100,     //conv 17
-    //   63};    //conv 20
+    //   108,	 //conv 0
+    //   8,     //conv 2
+    //   8,     //conv 4
+    //   8,     //conv 6
+    //   8,     //conv 8
+    //   8,     //conv 10     
+    //   8,     //conv 12
+    //   8,     //conv 13
+    //   8,     //conv 14
+    //   8,     //conv 17
+    //   8};    //conv 20
+
+    float input_quant_multiplier[TOTAL_CALIB_LAYER] = {
+      128,	  //conv 0
+      8,      //conv 2
+      16,     //conv 4
+      16,     //conv 6
+      16,     //conv 8
+      8,      //conv 10     
+      16,     //conv 12
+      16,     //conv 13
+      16,     //conv 14
+      16,     //conv 17
+      8};     //conv 20
+
+    float bias_quant_z[TOTAL_CALIB_LAYER] = {
+      0, 	 //conv 0
+      0,     //conv 2
+      0,     //conv 4
+      0,     //conv 6
+      0,     //conv 8
+      0,     //conv 10     
+      0,     //conv 12
+      0,     //conv 13
+      0,     //conv 14
+      0,     //conv 17
+      0};    //conv 20
+
+    // float bias_quant_z[TOTAL_CALIB_LAYER] = {
+    //   11934, 	 //conv 0
+    //   16750,     //conv 2
+    //   24598,     //conv 4
+    //   38165,     //conv 6
+    //   14717,     //conv 8
+    //   22507,     //conv 10     
+    //   19032,     //conv 12
+    //   -1101,     //conv 13
+    //   20279,     //conv 14
+    //   -22023,    //conv 17
+    //   26071};    //conv 20
 
 	printf("Multipler    Input    Weight    Bias\n");
     for (j = 0; j < net.n; ++j) {
@@ -389,7 +403,9 @@ void do_quantization(network net) {
 				
 				// Weight
 				l->weights_quant_multiplier = (counter < TOTAL_CALIB_LAYER) ? weight_quant_multiplier[counter] : 16;
-                l->weights_quant_z = (counter < TOTAL_CALIB_LAYER) ? weight_quant_z[counter] : 0; // ADDED
+
+                // Bias
+                l->biases_quant_z = (counter < TOTAL_CALIB_LAYER) ? bias_quant_z[counter] : 0; // ADDED
 				
 				++counter;
 			//}}}	
@@ -405,7 +421,8 @@ void do_quantization(network net) {
             // Bias Quantization
             float biases_multiplier = (l->weights_quant_multiplier * l->input_quant_multiplier);
             for (fil = 0; fil < l->n; ++fil) {
-                float b = l->biases[fil] * biases_multiplier; // Scale
+                // float b = l->biases[fil] * biases_multiplier; // Scale
+                float b = l->biases[fil] * biases_multiplier - l->biases_quant_z; // Scale, ADDED
                 l->biases_quant[fil] = max_abs(b, MAX_VAL_16); // Clip
             }
 
