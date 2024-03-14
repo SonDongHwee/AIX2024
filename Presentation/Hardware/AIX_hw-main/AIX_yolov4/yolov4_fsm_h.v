@@ -1,0 +1,9 @@
+// fsm parameters
+`define IDLE 0 
+`define RECEIVE_SCALE 1
+`define RECEIVE_WEIGHT 2
+`define RECEIVE_BIAS 3
+`define CONV_STATE 4
+`define MAX_POOL_STATE 5
+`define UPSAMPLE_STATE 6
+`define ROUTE_STATE 7
