@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="cnv_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="cnv_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="163,817.333 ns"></ZoomStartTime>
+      <ZoomEndTime time="163,892.534 ns"></ZoomEndTime>
+      <Cursor1Time time="163,880.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="209"></NameColumnWidth>
+      <ValueColumnWidth column_width="565"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/cnv_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cnv_tb/rstn" type="logic">
+      <obj_property name="ElementShortName">rstn</obj_property>
+      <obj_property name="ObjectShortName">rstn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cnv_tb/vld_i" type="logic">
+      <obj_property name="ElementShortName">vld_i</obj_property>
+      <obj_property name="ObjectShortName">vld_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cnv_tb/win" type="array">
+      <obj_property name="ElementShortName">win[0:3][127:0]</obj_property>
+      <obj_property name="ObjectShortName">win[0:3][127:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/cnv_tb/din" type="array">
+      <obj_property name="ElementShortName">din[127:0]</obj_property>
+      <obj_property name="ObjectShortName">din[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cnv_tb/acc_o" type="array">
+      <obj_property name="ElementShortName">acc_o[0:3][19:0]</obj_property>
+      <obj_property name="ObjectShortName">acc_o[0:3][19:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/cnv_tb/acc_o[0]" type="array">
+         <obj_property name="ElementShortName">[0][19:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][19:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cnv_tb/acc_o[1]" type="array">
+         <obj_property name="ElementShortName">[1][19:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][19:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cnv_tb/acc_o[2]" type="array">
+         <obj_property name="ElementShortName">[2][19:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][19:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cnv_tb/acc_o[3]" type="array">
+         <obj_property name="ElementShortName">[3][19:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][19:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/cnv_tb/vld_o" type="array">
+      <obj_property name="ElementShortName">vld_o[0:3]</obj_property>
+      <obj_property name="ObjectShortName">vld_o[0:3]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cnv_tb/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cnv_tb/INFILE" type="array">
+      <obj_property name="ElementShortName">INFILE[151:0]</obj_property>
+      <obj_property name="ObjectShortName">INFILE[151:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cnv_tb/CLK_PERIOD" type="array">
+      <obj_property name="ElementShortName">CLK_PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cnv_tb/row" type="array">
+      <obj_property name="ElementShortName">row[7:0]</obj_property>
+      <obj_property name="ObjectShortName">row[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cnv_tb/col" type="array">
+      <obj_property name="ElementShortName">col[7:0]</obj_property>
+      <obj_property name="ObjectShortName">col[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cnv_tb/index" type="array">
+      <obj_property name="ElementShortName">index[31:0]</obj_property>
+      <obj_property name="ObjectShortName">index[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cnv_tb/in_img" type="array">
+      <obj_property name="ElementShortName">in_img[0:16383][7:0]</obj_property>
+      <obj_property name="ObjectShortName">in_img[0:16383][7:0]</obj_property>
+   </wvobject>
+</wave_config>

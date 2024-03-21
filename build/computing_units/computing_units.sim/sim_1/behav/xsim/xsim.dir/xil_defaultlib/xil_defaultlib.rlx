@@ -1,0 +1,11 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Users/leewo/Documents/GitHub/AIX2024/build/computing_units/computing_units.gen/sources_1/ip/dsp_macro_0/sim/dsp_macro_0.vhd,1711014453,vhdl,,,,dsp_macro_0,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/build/computing_units/computing_units.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/src/adder_tree.v,1711008669,verilog,,C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/src/mac.v,,adder_tree,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/src/mac.v,1711008669,verilog,,C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/src/mul.v,,mac,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/src/mul.v,1711015589,verilog,,C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/tb/cnv_tb.v,,mul,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/tb/cnv_tb.v,1711027444,verilog,,,,cnv_tb,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/tb/mul_tb.v,1711008669,verilog,,,,mul_tb,,,,,,,,

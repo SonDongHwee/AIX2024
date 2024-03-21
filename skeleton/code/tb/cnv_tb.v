@@ -3,7 +3,7 @@
 module cnv_tb;
 parameter WIDTH 	= 128;
 parameter HEIGHT 	= 128;
-parameter INFILE    = "./hex/butterfly_08bit.hex";
+parameter INFILE    = "butterfly_08bit.hex";
 localparam FRAME_SIZE = WIDTH * HEIGHT;
 localparam FRAME_SIZE_W = $clog2(FRAME_SIZE);
 reg [7:0] in_img [0:FRAME_SIZE-1];	// Input image
@@ -95,7 +95,37 @@ initial begin
 	
 	#(4*CLK_PERIOD) rstn = 1'b1;	 
 	
+	#(128*128*CLK_PERIOD) $finish;
 	// Insert your code
+end
+integer m, n, index;
+reg [7:0] row, col;
+always @ (posedge clk) begin
+	if (!rstn) begin
+		row <= 8'd0;
+		col <= 8'd0;
+		din <= 128'd0;
+	end else begin
+		if (col == WIDTH-1) begin
+			row <= row + 1;
+			col <= 1'b0;
+		end else begin
+			col <= col + 1;
+		end
+		for (m = -1; m <= 1; m = m + 1) begin
+			for (n = -1; n <= 1; n = n + 1) begin
+				if ((row + m < 0) || (row + m > WIDTH-1) || (col + n < 0) || (col + n > HEIGHT-1)) begin
+					din[8*(3*(m+1)+n+1)+:8] = 8'd0;
+				end else begin
+					index = ((row + m) % 128) * 128 + ((col + n) % 128);
+					din[8*(3*(m+1)+n+1)+:8] = in_img[index];
+				end
+			end
+		end
+	end
+end
+always @ (*) begin
+	din[127:72] = 56'd0;
 end
 
 endmodule

@@ -13,5 +13,5 @@ assign dsp_A = w[7]? {10'b11_1111_1111, w} : {10'b00_0000_0000, w};
 assign dsp_B = x[7]? {10'b11_1111_1111, x} : {10'b00_0000_0000, x};
 assign y = dsp_P[15:0];
 
-xbip_dsp48_macro_0 u_dsp(.CLK(clk), .A(dsp_A), .B(dsp_B), .C(48'b0), .P(dsp_P));
+dsp_macro_0 u_dsp(.CLK(clk), .A(dsp_A), .B(dsp_B), .C(48'b0), .P(dsp_P));
 endmodule
