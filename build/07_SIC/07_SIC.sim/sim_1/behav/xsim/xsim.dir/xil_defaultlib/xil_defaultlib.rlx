@@ -1,0 +1,14 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.gen/sources_1/ip/dsp_macro_0/sim/dsp_macro_0.vhd,1711526699,vhdl,,,,dsp_macro_0,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.sim/sim_1/behav/xsim/define.v,1711586473,verilog,,,,,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/sim/bmp_image_writer.v,1711299279,verilog,,C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/src/mac.v,,bmp_image_writer,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/sim/cnn_ctrl_tb.v,1711299279,verilog,,,,cnn_ctrl_tb,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/sim/conv_kern_tb.v,1711526441,verilog,,,C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.sim/sim_1/behav/xsim/define.v,conv_kern_tb,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/src/adder_tree.v,1711299285,verilog,,C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/sim/bmp_image_writer.v,,adder_tree,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/src/cnn_ctrl.v,1711299285,verilog,,C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/sim/cnn_ctrl_tb.v,,cnn_ctrl,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/src/mac.v,1711299285,verilog,,C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/src/mul.v,,mac,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/src/mul.v,1711526707,verilog,,C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/sim/conv_kern_tb.v,C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.sim/sim_1/behav/xsim/define.v,mul,,,,,,,,

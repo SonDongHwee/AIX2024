@@ -10,7 +10,7 @@
 // History: 2021.09.01 by NXT (truongnx@capp.snu.ac.kr)
 //------------------------------------------------------------+
 
-//`define FPGA 1
+`define FPGA 1
 module dpram_wrapper (	
 	clk,		// clock 
 	ena,		// enable for write address

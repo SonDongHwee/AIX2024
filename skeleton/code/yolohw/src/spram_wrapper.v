@@ -10,7 +10,7 @@
 // History: 2021.09.01 by NXT (truongnx@capp.snu.ac.kr)
 //------------------------------------------------------------+
 
-//`define FPGA 1
+`define FPGA 1
 module spram_wrapper (
 	clk,					// clock 
 	addr,					// input address 

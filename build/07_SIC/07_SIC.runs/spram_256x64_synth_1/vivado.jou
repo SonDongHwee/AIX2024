@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Mar 28 09:20:50 2024
+# Process ID: 22532
+# Current directory: C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.runs/spram_256x64_synth_1
+# Command line: vivado.exe -log spram_256x64.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source spram_256x64.tcl
+# Log file: C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.runs/spram_256x64_synth_1/spram_256x64.vds
+# Journal file: C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.runs/spram_256x64_synth_1\vivado.jou
+# Running On: DESKTOP-5IEP7NP, OS: Windows, CPU Frequency: 1800 MHz, CPU Physical cores: 4, Host memory: 8373 MB
+#-----------------------------------------------------------
+source spram_256x64.tcl -notrace

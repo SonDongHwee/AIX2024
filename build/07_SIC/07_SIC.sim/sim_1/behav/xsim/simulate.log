@@ -1,0 +1,125 @@
+Time resolution is 1 ps
+Loading input feature maps from file: inout_data_sw/log_feamap/CONV00_input_32b.hex
+Loading input feature maps from file: inout_data_sw/log_param/CONV00_param_weight.hex
+Filter och=00: 
+
+  19	 -11	  -6
+  61	 -17	 -42
+  23	  -2	 -21
+
+
+Filter och=01: 
+
+  12	 -15	 -17
+   5	   5	 -18
+   6	   2	 -17
+
+
+Filter och=02: 
+
+   3	   6	  14
+  -8	   1	  21
+   5	 -22	   9
+
+
+Filter och=03: 
+
+  24	  17	  12
+  11	  23	  24
+  -4	   9	  -1
+
+
+Filter och=04: 
+
+ -10	  -2	   4
+  -9	  -8	  -9
+   8	   0	  10
+
+
+Filter och=05: 
+
+  25	 -10	  22
+  -7	 -32	   9
+  -6	 -21	  -8
+
+
+Filter och=06: 
+
+ -70	 -35	 -12
+  47	  28	   0
+  48	  16	   4
+
+
+Filter och=07: 
+
+  -8	   2	  15
+ -27	  -5	  32
+ -27	  16	   9
+
+
+Filter och=08: 
+
+ -21	 -26	 -25
+ -60	 -95	 -32
+ -38	 -79	 -28
+
+
+Filter och=09: 
+
+  -8	   4	   8
+  12	   5	   8
+   4	  18	  13
+
+
+Filter och=10: 
+
+ -76	  21	 -45
+ -37	 -18	  33
+  29	  23	  50
+
+
+Filter och=11: 
+
+  53	  29	  30
+  25	  -5	  -1
+ -62	 -56	  -9
+
+
+Filter och=12: 
+
+   6	  53	  26
+  23	  70	  46
+  -9	  31	  11
+
+
+Filter och=13: 
+
+  20	  45	 -11
+  -7	 -32	 -25
+   4	 -28	 -17
+
+
+Filter och=14: 
+
+   7	 -65	  10
+ -10	   5	   3
+   1	 -22	   2
+
+
+Filter och=15: 
+
+  -8	  -9	 -18
+   0	   2	  -2
+   6	  13	   0
+
+
+Saving output images to file: inout_data_hw/CONV00_input_ch03.bmp
+Saving output images to file: inout_data_hw/CONV00_input_ch02.bmp
+Saving output images to file: inout_data_hw/CONV00_input_ch01.bmp
+Saving output images to file: inout_data_hw/CONV00_input_ch00.bmp
+Saving output images to file: inout_data_hw/CONV00_output_ch03.bmp
+Saving output images to file: inout_data_hw/CONV00_output_ch02.bmp
+Saving output images to file: inout_data_hw/CONV00_output_ch01.bmp
+Saving output images to file: inout_data_hw/CONV00_output_ch00.bmp
+$stop called at time : 916400 ns : File "C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/sim/conv_kern_tb.v" Line 102
+INFO: xsimkernel Simulation Memory Usage: 95292 KB (Peak: 95292 KB), Simulation CPU Usage: 70281 ms

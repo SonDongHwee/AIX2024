@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../skeleton/code/yolohw/src/adder_tree.v" \
+"../../../../../../skeleton/code/yolohw/sim/bmp_image_writer.v" \
+"../../../../../../skeleton/code/yolohw/src/mac.v" \
+"../../../../../../skeleton/code/yolohw/src/mul.v" \
+"../../../../../../skeleton/code/yolohw/sim/conv_kern_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
