@@ -408,13 +408,13 @@ void save_quantized_model(network net) {
                 //{{{
                 for (int i = 0; i < filter_size; ++i) {     // Filter size
                     int w_index = f * filter_size + i;
-                    fprintf(fp_w, "%02x\n", l->weights_int8[w_index]);
+                    fprintf(fp_w, "%08x\n", l->weights_int8[w_index]);
                 }                
                 //}}}
                 
                 // Biases
                 //{{{
-                fprintf(fp_b, "%04x\n", l->biases_quant[f]);
+                fprintf(fp_b, "%08x\n", l->biases_quant[f]);
                 //}}}
                 
                 // Dequantization or Scaling                
