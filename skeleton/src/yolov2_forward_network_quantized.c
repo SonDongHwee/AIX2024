@@ -398,9 +398,9 @@ void save_quantized_model(network net) {
             sprintf(weightfile  , "../bin/log_param/CONV%02d_param_weight.hex", j);
             sprintf(biasfile    , "../bin/log_param/CONV%02d_param_biases.hex", j);
             sprintf(scalefile   , "../bin/log_param/CONV%02d_param_scales.hex", j);
-            FILE* fp_w = fopen(weightfile, "w");
-            FILE* fp_b = fopen(biasfile, "w");
-            FILE* fp_s = fopen(scalefile, "w");
+            FILE* fp_w = fopen(weightfile, "%02x\n", "w");
+            FILE* fp_b = fopen(biasfile, "%02x\n", "w");
+            FILE* fp_s = fopen(scalefile, "%02x\n", "w");
             
             int f;            
             for (f = 0; f < l->n; f++) {    // Out_channel
