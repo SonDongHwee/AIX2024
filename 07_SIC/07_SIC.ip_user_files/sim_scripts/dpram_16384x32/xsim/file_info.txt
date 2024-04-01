@@ -1,0 +1,2 @@
+dpram_16384x32.v,verilog,xil_defaultlib,../../../../07_SIC.gen/sources_1/ip/dpram_16384x32/sim/dpram_16384x32.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

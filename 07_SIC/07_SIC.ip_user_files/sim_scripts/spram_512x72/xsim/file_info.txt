@@ -1,0 +1,2 @@
+spram_512x72.v,verilog,xil_defaultlib,../../../../07_SIC.gen/sources_1/ip/spram_512x72/sim/spram_512x72.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v
