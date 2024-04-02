@@ -1,0 +1,50 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Apr  2 01:28:48 2024
+# Process ID: 21996
+# Current directory: C:/Users/hdm09/Desktop/AIX2024/07_SIC
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5136 C:\Users\hdm09\Desktop\AIX2024\07_SIC\07_SIC.xpr
+# Log file: C:/Users/hdm09/Desktop/AIX2024/07_SIC/vivado.log
+# Journal file: C:/Users/hdm09/Desktop/AIX2024/07_SIC\vivado.jou
+# Running On: Dongmin, OS: Windows, CPU Frequency: 1800 MHz, CPU Physical cores: 4, Host memory: 8437 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.xpr
+launch_simulation
+source conv_kern_tb.tcl
+run all
+save_wave_config {C:/Users/hdm09/Desktop/AIX2024/07_SIC/conv_kern_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/hdm09/Desktop/AIX2024/07_SIC/conv_kern_tb_behav.wcfg
+set_property xsim.view C:/Users/hdm09/Desktop/AIX2024/07_SIC/conv_kern_tb_behav.wcfg [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config C:/Users/hdm09/Desktop/AIX2024/07_SIC/conv_kern_tb_behav.wcfg
+source conv_kern_tb.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Users/hdm09/Desktop/AIX2024/07_SIC/conv_kern_tb_behav.wcfg
+source conv_kern_tb.tcl
+run all
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/hdm09/Desktop/AIX2024/07_SIC/conv_kern_tb_behav.wcfg
+source conv_kern_tb.tcl
+run all
+add_files -norecurse C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mac_array.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top conv_kern_array_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+launch_simulation
+save_wave_config {C:/Users/hdm09/Desktop/AIX2024/07_SIC/conv_kern_tb_behav.wcfg}
+close_sim

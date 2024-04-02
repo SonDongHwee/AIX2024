@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Mon Apr  1 23:21:02 2024
+# Process ID: 22392
+# Current directory: C:/Users/hdm09/Desktop/AIX2024/07_SIC
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6016 C:\Users\hdm09\Desktop\AIX2024\07_SIC\07_SIC.xpr
+# Log file: C:/Users/hdm09/Desktop/AIX2024/07_SIC/vivado.log
+# Journal file: C:/Users/hdm09/Desktop/AIX2024/07_SIC\vivado.jou
+# Running On: Dongmin, OS: Windows, CPU Frequency: 1800 MHz, CPU Physical cores: 4, Host memory: 8437 MB
+#-----------------------------------------------------------
+start_gui

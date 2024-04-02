@@ -21,7 +21,8 @@ parameter WGT_WORD_SIZE   = 32;
 
 parameter IFM_FILE_32 		 = "../../inout_data_sw/log_feamap/CONV00_input_32b.hex"; 
 parameter IFM_FILE   		 = "../../inout_data_sw/log_feamap/CONV00_input_16b.hex"; 
-parameter WGT_FILE   		 = "../../inout_data_sw/log_param/CONV00_param_weight.hex"; 
+parameter WGT_FILE   		 = "../../inout_data_sw/log_param/CONV00_param_weight.hex";
+parameter BIAS_FILE			 = "../../inout_data_sw/log_param/CONV00_param_biases.hex";
 
 // Output Files
 parameter CONV_INPUT_IMG00   = "../../inout_data_hw/CONV00_input_ch00.bmp"; 
@@ -198,150 +199,20 @@ end
 //-------------------------------------------
 // DUT: MACs
 //-------------------------------------------
-mac u_mac_00(
-./*input 		 */clk	(clk	 ), 
-./*input 		 */rstn	(rstn	 ), 
-./*input 		 */vld_i(vld_i	 ), 
-./*input [127:0] */win	(win[0]	 ), 
-./*input [127:0] */din	(din	 ),
-./*output[ 19:0] */acc_o(acc_o[0]), 
-./*output        */vld_o(vld_o[0])
-);
-mac u_mac_01(
-./*input 		 */clk	(clk	 ), 
-./*input 		 */rstn	(rstn	 ), 
-./*input 		 */vld_i(vld_i	 ), 
-./*input [127:0] */win	(win[1]	 ), 
-./*input [127:0] */din	(din	 ),
-./*output[ 19:0] */acc_o(acc_o[1]), 
-./*output        */vld_o(vld_o[1])
-);
-mac u_mac_02(
-./*input 		 */clk	(clk     ), 
-./*input 		 */rstn	(rstn    ), 
-./*input 		 */vld_i(vld_i   ), 
-./*input [127:0] */win	(win[2]  ), 
-./*input [127:0] */din	(din     ),
-./*output[ 19:0] */acc_o(acc_o[2]), 
-./*output        */vld_o(vld_o[2])
-);
-mac u_mac_03(
-./*input 		 */clk	(clk     ), 
-./*input 		 */rstn (rstn    ), 
-./*input 		 */vld_i(vld_i   ), 
-./*input [127:0] */win  (win[3]  ), 
-./*input [127:0] */din  (din     ),
-./*output[ 19:0] */acc_o(acc_o[3]), 
-./*output        */vld_o(vld_o[3])
-);
-mac u_mac_04(
-./*input 		 */clk	(clk     ), 
-./*input 		 */rstn (rstn    ), 
-./*input 		 */vld_i(vld_i   ), 
-./*input [127:0] */win  (win[4]  ), 
-./*input [127:0] */din  (din     ),
-./*output[ 19:0] */acc_o(acc_o[4]), 
-./*output        */vld_o(vld_o[4])
-);
-mac u_mac_05(
-./*input 		 */clk	(clk     ), 
-./*input 		 */rstn (rstn    ), 
-./*input 		 */vld_i(vld_i   ), 
-./*input [127:0] */win  (win[5]  ), 
-./*input [127:0] */din  (din     ),
-./*output[ 19:0] */acc_o(acc_o[5]), 
-./*output        */vld_o(vld_o[5])
-);
-mac u_mac_06(
-./*input 		 */clk	(clk     ), 
-./*input 		 */rstn (rstn    ), 
-./*input 		 */vld_i(vld_i   ), 
-./*input [127:0] */win  (win[6]  ), 
-./*input [127:0] */din  (din     ),
-./*output[ 19:0] */acc_o(acc_o[6]), 
-./*output        */vld_o(vld_o[6])
-);
-mac u_mac_07(
-./*input 		 */clk	(clk     ), 
-./*input 		 */rstn (rstn    ), 
-./*input 		 */vld_i(vld_i   ), 
-./*input [127:0] */win  (win[7]  ), 
-./*input [127:0] */din  (din     ),
-./*output[ 19:0] */acc_o(acc_o[7]), 
-./*output        */vld_o(vld_o[7])
-);
-mac u_mac_08(
-./*input 		 */clk	(clk     ), 
-./*input 		 */rstn (rstn    ), 
-./*input 		 */vld_i(vld_i   ), 
-./*input [127:0] */win  (win[8]  ), 
-./*input [127:0] */din  (din     ),
-./*output[ 19:0] */acc_o(acc_o[8]), 
-./*output        */vld_o(vld_o[8])
-);
-mac u_mac_09(
-./*input 		 */clk	(clk     ), 
-./*input 		 */rstn (rstn    ), 
-./*input 		 */vld_i(vld_i   ), 
-./*input [127:0] */win  (win[9]  ), 
-./*input [127:0] */din  (din     ),
-./*output[ 19:0] */acc_o(acc_o[9]), 
-./*output        */vld_o(vld_o[9])
-);
-mac u_mac_10(
-./*input 		 */clk	(clk     ), 
-./*input 		 */rstn (rstn    ), 
-./*input 		 */vld_i(vld_i   ), 
-./*input [127:0] */win  (win[10]  ), 
-./*input [127:0] */din  (din     ),
-./*output[ 19:0] */acc_o(acc_o[10]), 
-./*output        */vld_o(vld_o[10])
-);
-mac u_mac_11(
-./*input 		 */clk	(clk     ), 
-./*input 		 */rstn (rstn    ), 
-./*input 		 */vld_i(vld_i   ), 
-./*input [127:0] */win  (win[11]  ), 
-./*input [127:0] */din  (din     ),
-./*output[ 19:0] */acc_o(acc_o[11]), 
-./*output        */vld_o(vld_o[11])
-);
-mac u_mac_12(
-./*input 		 */clk	(clk     ), 
-./*input 		 */rstn (rstn    ), 
-./*input 		 */vld_i(vld_i   ), 
-./*input [127:0] */win  (win[12]  ), 
-./*input [127:0] */din  (din     ),
-./*output[ 19:0] */acc_o(acc_o[12]), 
-./*output        */vld_o(vld_o[12])
-);
-mac u_mac_13(
-./*input 		 */clk	(clk     ), 
-./*input 		 */rstn (rstn    ), 
-./*input 		 */vld_i(vld_i   ), 
-./*input [127:0] */win  (win[13]  ), 
-./*input [127:0] */din  (din     ),
-./*output[ 19:0] */acc_o(acc_o[13]), 
-./*output        */vld_o(vld_o[13])
-);
-mac u_mac_14(
-./*input 		 */clk	(clk     ), 
-./*input 		 */rstn (rstn    ), 
-./*input 		 */vld_i(vld_i   ), 
-./*input [127:0] */win  (win[14]  ), 
-./*input [127:0] */din  (din     ),
-./*output[ 19:0] */acc_o(acc_o[14]), 
-./*output        */vld_o(vld_o[14])
-);
-mac u_mac_15(
-./*input 		 */clk	(clk     ), 
-./*input 		 */rstn (rstn    ), 
-./*input 		 */vld_i(vld_i   ), 
-./*input [127:0] */win  (win[15]  ), 
-./*input [127:0] */din  (din     ),
-./*output[ 19:0] */acc_o(acc_o[15]), 
-./*output        */vld_o(vld_o[15])
-);
+genvar k;
+generate
+    for (k = 0; k < 16; k = k + 1) begin : mac_module
+    	mac u_mac (
+    	    ./*input 		 */clk	(clk	 ), 
+			./*input 		 */rstn	(rstn	 ), 
+			./*input 		 */vld_i(vld_i	 ), 
+			./*input [127:0] */win	(win[k]	 ), 
+			./*input [127:0] */din	(din	 ),
+			./*output[ 19:0] */acc_o(acc_o[k]), 
+			./*output        */vld_o(vld_o[k])
+    	);
+	end 
+endgenerate
 
 
 //--------------------------------------------------------------------
@@ -349,151 +220,143 @@ mac u_mac_15(
 //--------------------------------------------------------------------
 // Output feature maps
 //{{{
-wire [7:0] conv_out_ch00 = acc_o[0][19:12];	// Descaling: * 1/2^12	
-wire [7:0] conv_out_ch01 = acc_o[1][19:12]; // Descaling: * 1/2^12	
-wire [7:0] conv_out_ch02 = acc_o[2][19:12]; // Descaling: * 1/2^12	
-wire [7:0] conv_out_ch03 = acc_o[3][19:12]; // Descaling: * 1/2^12
-wire [7:0] conv_out_ch04 = acc_o[4][19:12];	// Descaling: * 1/2^12	
-wire [7:0] conv_out_ch05 = acc_o[5][19:12]; // Descaling: * 1/2^12	
-wire [7:0] conv_out_ch06 = acc_o[6][19:12]; // Descaling: * 1/2^12	
-wire [7:0] conv_out_ch07 = acc_o[7][19:12]; // Descaling: * 1/2^12
-wire [7:0] conv_out_ch08 = acc_o[8][19:12];	// Descaling: * 1/2^12	
-wire [7:0] conv_out_ch09 = acc_o[9][19:12]; // Descaling: * 1/2^12	
-wire [7:0] conv_out_ch10 = acc_o[10][19:12]; // Descaling: * 1/2^12	
-wire [7:0] conv_out_ch11 = acc_o[11][19:12]; // Descaling: * 1/2^12
-wire [7:0] conv_out_ch12 = acc_o[12][19:12]; // Descaling: * 1/2^12	
-wire [7:0] conv_out_ch13 = acc_o[13][19:12]; // Descaling: * 1/2^12	
-wire [7:0] conv_out_ch14 = acc_o[14][19:12]; // Descaling: * 1/2^12	
-wire [7:0] conv_out_ch15 = acc_o[15][19:12]; // Descaling: * 1/2^12
+wire [7:0] conv_out [0:15];
+genvar l;
+generate
+	for (l = 0; l < 16; l = l + 1) begin : conv_out_wire
+		assign conv_out[l] = acc_o[l][19:12];
+	end
+endgenerate
 
 bmp_image_writer #(.OUTFILE(CONV_OUTPUT_IMG00),.WIDTH(IFM_WIDTH),.HEIGHT(IFM_HEIGHT))
 u_acc_img_ch0(
-	./*input 			*/clk		(clk		  ),
-	./*input 			*/rstn		(rstn		  ),
-	./*input [WI-1:0] 	*/din		(conv_out_ch00),
-	./*input 			*/vld		(vld_o[0]	  ),
-	./*output reg 		*/frame_done(		      )
+   ./*input          */clk      (clk        ),
+   ./*input          */rstn      (rstn        ),
+   ./*input [WI-1:0]    */din      (conv_out[0]),
+   ./*input          */vld      (vld_o[0]     ),
+   ./*output reg       */frame_done(            )
 );
 bmp_image_writer #(.OUTFILE(CONV_OUTPUT_IMG01),.WIDTH(IFM_WIDTH),.HEIGHT(IFM_HEIGHT))
 u_acc_img_ch1(
-	./*input 			*/clk		(clk		  ),
-	./*input 			*/rstn		(rstn		  ),
-	./*input [WI-1:0] 	*/din		(conv_out_ch01),
-	./*input 			*/vld		(vld_o[1]	  ),
-	./*output reg 		*/frame_done(		      )
+   ./*input          */clk      (clk        ),
+   ./*input          */rstn      (rstn        ),
+   ./*input [WI-1:0]    */din      (conv_out[1]),
+   ./*input          */vld      (vld_o[1]     ),
+   ./*output reg       */frame_done(            )
 );
 bmp_image_writer #(.OUTFILE(CONV_OUTPUT_IMG02),.WIDTH(IFM_WIDTH),.HEIGHT(IFM_HEIGHT))
 u_acc_img_ch2(
-	./*input 			*/clk		(clk		  ),
-	./*input 			*/rstn		(rstn		  ),
-	./*input [WI-1:0] 	*/din		(conv_out_ch02),
-	./*input 			*/vld		(vld_o[2]	  ),
-	./*output reg 		*/frame_done(		      )
+   ./*input          */clk      (clk        ),
+   ./*input          */rstn      (rstn        ),
+   ./*input [WI-1:0]    */din      (conv_out[2]),
+   ./*input          */vld      (vld_o[2]     ),
+   ./*output reg       */frame_done(            )
 );
 bmp_image_writer #(.OUTFILE(CONV_OUTPUT_IMG03),.WIDTH(IFM_WIDTH),.HEIGHT(IFM_HEIGHT))
 u_acc_img_ch3(
-	./*input 			*/clk		(clk		  ),
-	./*input 			*/rstn		(rstn		  ),
-	./*input [WI-1:0] 	*/din		(conv_out_ch03),
-	./*input 			*/vld		(vld_o[3]	  ),
-	./*output reg 		*/frame_done(		      )
-);	
+   ./*input          */clk      (clk        ),
+   ./*input          */rstn      (rstn        ),
+   ./*input [WI-1:0]    */din      (conv_out[3]),
+   ./*input          */vld      (vld_o[3]     ),
+   ./*output reg       */frame_done(            )
+);   
 bmp_image_writer #(.OUTFILE(CONV_OUTPUT_IMG04),.WIDTH(IFM_WIDTH),.HEIGHT(IFM_HEIGHT))
 u_acc_img_ch4(
-	./*input 			*/clk		(clk		  ),
-	./*input 			*/rstn		(rstn		  ),
-	./*input [WI-1:0] 	*/din		(conv_out_ch04),
-	./*input 			*/vld		(vld_o[4]	  ),
-	./*output reg 		*/frame_done(		      )
-);	
+   ./*input          */clk      (clk        ),
+   ./*input          */rstn      (rstn        ),
+   ./*input [WI-1:0]    */din      (conv_out[4]),
+   ./*input          */vld      (vld_o[4]     ),
+   ./*output reg       */frame_done(            )
+);   
 bmp_image_writer #(.OUTFILE(CONV_OUTPUT_IMG05),.WIDTH(IFM_WIDTH),.HEIGHT(IFM_HEIGHT))
 u_acc_img_ch5(
-	./*input 			*/clk		(clk		  ),
-	./*input 			*/rstn		(rstn		  ),
-	./*input [WI-1:0] 	*/din		(conv_out_ch05),
-	./*input 			*/vld		(vld_o[5]	  ),
-	./*output reg 		*/frame_done(		      )
-);	
+   ./*input          */clk      (clk        ),
+   ./*input          */rstn      (rstn        ),
+   ./*input [WI-1:0]    */din      (conv_out[5]),
+   ./*input          */vld      (vld_o[5]     ),
+   ./*output reg       */frame_done(            )
+);   
 bmp_image_writer #(.OUTFILE(CONV_OUTPUT_IMG06),.WIDTH(IFM_WIDTH),.HEIGHT(IFM_HEIGHT))
 u_acc_img_ch6(
-	./*input 			*/clk		(clk		  ),
-	./*input 			*/rstn		(rstn		  ),
-	./*input [WI-1:0] 	*/din		(conv_out_ch06),
-	./*input 			*/vld		(vld_o[6]	  ),
-	./*output reg 		*/frame_done(		      )
-);	
+   ./*input          */clk      (clk        ),
+   ./*input          */rstn      (rstn        ),
+   ./*input [WI-1:0]    */din      (conv_out[6]),
+   ./*input          */vld      (vld_o[6]     ),
+   ./*output reg       */frame_done(            )
+);   
 bmp_image_writer #(.OUTFILE(CONV_OUTPUT_IMG07),.WIDTH(IFM_WIDTH),.HEIGHT(IFM_HEIGHT))
 u_acc_img_ch7(
-	./*input 			*/clk		(clk		  ),
-	./*input 			*/rstn		(rstn		  ),
-	./*input [WI-1:0] 	*/din		(conv_out_ch07),
-	./*input 			*/vld		(vld_o[7]	  ),
-	./*output reg 		*/frame_done(		      )
-);	
+   ./*input          */clk      (clk        ),
+   ./*input          */rstn      (rstn        ),
+   ./*input [WI-1:0]    */din      (conv_out[7]),
+   ./*input          */vld      (vld_o[7]     ),
+   ./*output reg       */frame_done(            )
+);   
 bmp_image_writer #(.OUTFILE(CONV_OUTPUT_IMG08),.WIDTH(IFM_WIDTH),.HEIGHT(IFM_HEIGHT))
 u_acc_img_ch8(
-	./*input 			*/clk		(clk		  ),
-	./*input 			*/rstn		(rstn		  ),
-	./*input [WI-1:0] 	*/din		(conv_out_ch08),
-	./*input 			*/vld		(vld_o[8]	  ),
-	./*output reg 		*/frame_done(		      )
-);	
+   ./*input          */clk      (clk        ),
+   ./*input          */rstn      (rstn        ),
+   ./*input [WI-1:0]    */din      (conv_out[8]),
+   ./*input          */vld      (vld_o[8]     ),
+   ./*output reg       */frame_done(            )
+);   
 bmp_image_writer #(.OUTFILE(CONV_OUTPUT_IMG09),.WIDTH(IFM_WIDTH),.HEIGHT(IFM_HEIGHT))
 u_acc_img_ch9(
-	./*input 			*/clk		(clk		  ),
-	./*input 			*/rstn		(rstn		  ),
-	./*input [WI-1:0] 	*/din		(conv_out_ch09),
-	./*input 			*/vld		(vld_o[9]	  ),
-	./*output reg 		*/frame_done(		      )
-);	
+   ./*input          */clk      (clk        ),
+   ./*input          */rstn      (rstn        ),
+   ./*input [WI-1:0]    */din      (conv_out[9]),
+   ./*input          */vld      (vld_o[9]     ),
+   ./*output reg       */frame_done(            )
+);   
 bmp_image_writer #(.OUTFILE(CONV_OUTPUT_IMG10),.WIDTH(IFM_WIDTH),.HEIGHT(IFM_HEIGHT))
 u_acc_img_ch10(
-	./*input 			*/clk		(clk		  ),
-	./*input 			*/rstn		(rstn		  ),
-	./*input [WI-1:0] 	*/din		(conv_out_ch10),
-	./*input 			*/vld		(vld_o[10]	  ),
-	./*output reg 		*/frame_done(		      )
-);	
+   ./*input          */clk      (clk        ),
+   ./*input          */rstn      (rstn        ),
+   ./*input [WI-1:0]    */din      (conv_out[10]),
+   ./*input          */vld      (vld_o[10]     ),
+   ./*output reg       */frame_done(            )
+);   
 bmp_image_writer #(.OUTFILE(CONV_OUTPUT_IMG11),.WIDTH(IFM_WIDTH),.HEIGHT(IFM_HEIGHT))
 u_acc_img_ch11(
-	./*input 			*/clk		(clk		  ),
-	./*input 			*/rstn		(rstn		  ),
-	./*input [WI-1:0] 	*/din		(conv_out_ch11),
-	./*input 			*/vld		(vld_o[11]	  ),
-	./*output reg 		*/frame_done(		      )
-);	
+   ./*input          */clk      (clk        ),
+   ./*input          */rstn      (rstn        ),
+   ./*input [WI-1:0]    */din      (conv_out[11]),
+   ./*input          */vld      (vld_o[11]     ),
+   ./*output reg       */frame_done(            )
+);   
 bmp_image_writer #(.OUTFILE(CONV_OUTPUT_IMG12),.WIDTH(IFM_WIDTH),.HEIGHT(IFM_HEIGHT))
 u_acc_img_ch12(
-	./*input 			*/clk		(clk		  ),
-	./*input 			*/rstn		(rstn		  ),
-	./*input [WI-1:0] 	*/din		(conv_out_ch12),
-	./*input 			*/vld		(vld_o[12]	  ),
-	./*output reg 		*/frame_done(		      )
-);	
+   ./*input          */clk      (clk        ),
+   ./*input          */rstn      (rstn        ),
+   ./*input [WI-1:0]    */din      (conv_out[12]),
+   ./*input          */vld      (vld_o[12]     ),
+   ./*output reg       */frame_done(            )
+);   
 bmp_image_writer #(.OUTFILE(CONV_OUTPUT_IMG13),.WIDTH(IFM_WIDTH),.HEIGHT(IFM_HEIGHT))
 u_acc_img_ch13(
-	./*input 			*/clk		(clk		  ),
-	./*input 			*/rstn		(rstn		  ),
-	./*input [WI-1:0] 	*/din		(conv_out_ch13),
-	./*input 			*/vld		(vld_o[13]	  ),
-	./*output reg 		*/frame_done(		      )
-);	
+   ./*input          */clk      (clk        ),
+   ./*input          */rstn      (rstn        ),
+   ./*input [WI-1:0]    */din      (conv_out[13]),
+   ./*input          */vld      (vld_o[13]     ),
+   ./*output reg       */frame_done(            )
+);   
 bmp_image_writer #(.OUTFILE(CONV_OUTPUT_IMG14),.WIDTH(IFM_WIDTH),.HEIGHT(IFM_HEIGHT))
 u_acc_img_ch14(
-	./*input 			*/clk		(clk		  ),
-	./*input 			*/rstn		(rstn		  ),
-	./*input [WI-1:0] 	*/din		(conv_out_ch14),
-	./*input 			*/vld		(vld_o[14]	  ),
-	./*output reg 		*/frame_done(		      )
-);	
+   ./*input          */clk      (clk        ),
+   ./*input          */rstn      (rstn        ),
+   ./*input [WI-1:0]    */din      (conv_out[14]),
+   ./*input          */vld      (vld_o[14]     ),
+   ./*output reg       */frame_done(            )
+);   
 bmp_image_writer #(.OUTFILE(CONV_OUTPUT_IMG15),.WIDTH(IFM_WIDTH),.HEIGHT(IFM_HEIGHT))
 u_acc_img_ch15(
-	./*input 			*/clk		(clk		  ),
-	./*input 			*/rstn		(rstn		  ),
-	./*input [WI-1:0] 	*/din		(conv_out_ch15),
-	./*input 			*/vld		(vld_o[15]	  ),
-	./*output reg 		*/frame_done(		      )
-);	
+   ./*input          */clk      (clk        ),
+   ./*input          */rstn      (rstn        ),
+   ./*input [WI-1:0]    */din      (conv_out[15]),
+   ./*input          */vld      (vld_o[15]     ),
+   ./*output reg       */frame_done(            )
+);   
+
 //}}}	
 //**********************************************************************
 //{{{

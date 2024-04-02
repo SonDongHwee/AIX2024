@@ -3,79 +3,32 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Mon Apr  1 15:46:27 2024
-# Process ID: 15008
-# Current directory: C:/Users/ece/Documents/GitHub/AIX2024/07_SIC
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10832 C:\Users\ece\Documents\GitHub\AIX2024\07_SIC\07_SIC.xpr
-# Log file: C:/Users/ece/Documents/GitHub/AIX2024/07_SIC/vivado.log
-# Journal file: C:/Users/ece/Documents/GitHub/AIX2024/07_SIC\vivado.jou
-# Running On: DESKTOP-KCLED0O, OS: Windows, CPU Frequency: 3000 MHz, CPU Physical cores: 6, Host memory: 8465 MB
+# Start of session at: Tue Apr  2 15:03:26 2024
+# Process ID: 29784
+# Current directory: C:/Users/hdm09/Desktop/AIX2024/07_SIC
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent31132 C:\Users\hdm09\Desktop\AIX2024\07_SIC\07_SIC.xpr
+# Log file: C:/Users/hdm09/Desktop/AIX2024/07_SIC/vivado.log
+# Journal file: C:/Users/hdm09/Desktop/AIX2024/07_SIC\vivado.jou
+# Running On: Dongmin, OS: Windows, CPU Frequency: 1800 MHz, CPU Physical cores: 4, Host memory: 8437 MB
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/ece/Documents/GitHub/AIX2024/07_SIC/07_SIC.xpr
-update_compile_order -fileset sources_1
-update_compile_order -fileset sim_1
-set_property source_mgmt_mode DisplayOnly [current_project]
-export_ip_user_files -of_objects  [get_files C:/Users/ece/Documents/GitHub/skeleton/code/yolohw/src/adder_tree.v] -no_script -reset -force -quiet
-export_ip_user_files -of_objects  [get_files C:/Users/ece/Documents/GitHub/skeleton/code/yolohw/src/cnn_ctrl.v] -no_script -reset -force -quiet
-export_ip_user_files -of_objects  [get_files C:/Users/ece/Documents/GitHub/skeleton/code/yolohw/src/dpram_wrapper.v] -no_script -reset -force -quiet
-export_ip_user_files -of_objects  [get_files C:/Users/ece/Documents/GitHub/skeleton/code/yolohw/src/mac.v] -no_script -reset -force -quiet
-export_ip_user_files -of_objects  [get_files C:/Users/ece/Documents/GitHub/skeleton/code/yolohw/src/mul.v] -no_script -reset -force -quiet
-export_ip_user_files -of_objects  [get_files C:/Users/ece/Documents/GitHub/skeleton/code/yolohw/src/spram_wrapper.v] -no_script -reset -force -quiet
-remove_files  {C:/Users/ece/Documents/GitHub/skeleton/code/yolohw/src/adder_tree.v C:/Users/ece/Documents/GitHub/skeleton/code/yolohw/src/cnn_ctrl.v C:/Users/ece/Documents/GitHub/skeleton/code/yolohw/src/dpram_wrapper.v C:/Users/ece/Documents/GitHub/skeleton/code/yolohw/src/mac.v C:/Users/ece/Documents/GitHub/skeleton/code/yolohw/src/mul.v C:/Users/ece/Documents/GitHub/skeleton/code/yolohw/src/spram_wrapper.v}
-add_files -norecurse {C:/Users/ece/Documents/GitHub/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/define.v C:/Users/ece/Documents/GitHub/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/adder_tree.v C:/Users/ece/Documents/GitHub/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/cnn_ctrl.v C:/Users/ece/Documents/GitHub/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/spram_wrapper.v C:/Users/ece/Documents/GitHub/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mac.v C:/Users/ece/Documents/GitHub/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mul.v C:/Users/ece/Documents/GitHub/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/dpram_wrapper.v}
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse {C:/Users/ece/Documents/GitHub/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/cnn_ctrl_tb.v C:/Users/ece/Documents/GitHub/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_tb.v C:/Users/ece/Documents/GitHub/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/bmp_image_writer.v}
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top conv_kern_tb [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode DisplayOnly [current_project]
-launch_simulation
-export_ip_user_files -of_objects  [get_files C:/Users/ece/Documents/GitHub/skeleton/code/yolohw/sim/bmp_image_writer.v] -no_script -reset -force -quiet
-export_ip_user_files -of_objects  [get_files C:/Users/ece/Documents/GitHub/skeleton/code/yolohw/sim/cnn_ctrl_tb.v] -no_script -reset -force -quiet
-export_ip_user_files -of_objects  [get_files C:/Users/ece/Documents/GitHub/skeleton/code/yolohw/sim/conv_kern_tb.v] -no_script -reset -force -quiet
-export_ip_user_files -of_objects  [get_files C:/Users/ece/Documents/GitHub/skeleton/code/yolohw/src/define.v] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 {C:/Users/ece/Documents/GitHub/skeleton/code/yolohw/sim/bmp_image_writer.v C:/Users/ece/Documents/GitHub/skeleton/code/yolohw/sim/cnn_ctrl_tb.v C:/Users/ece/Documents/GitHub/skeleton/code/yolohw/sim/conv_kern_tb.v C:/Users/ece/Documents/GitHub/skeleton/code/yolohw/src/define.v}
-launch_simulation
-export_ip_user_files -of_objects  [get_files C:/Users/ece/Documents/GitHub/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/define.v] -no_script -reset -force -quiet
-remove_files  C:/Users/ece/Documents/GitHub/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/define.v
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse C:/Users/ece/Documents/GitHub/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/define.v
+open_project C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.xpr
 launch_simulation
 launch_simulation
-export_ip_user_files -of_objects  [get_files C:/Users/ece/Documents/GitHub/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/define.v] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 C:/Users/ece/Documents/GitHub/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/define.v
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse C:/Users/ece/Documents/GitHub/AIX2024/07_SIC/07_SIC.sim/sim_1/define.v
+open_wave_config C:/Users/hdm09/Desktop/AIX2024/07_SIC/conv_kern_tb_behav.wcfg
+source conv_kern_array_tb.tcl
+create_wave_config
+export_ip_user_files -of_objects  [get_files C:/Users/hdm09/Desktop/AIX2024/07_SIC/conv_kern_tb_behav.wcfg] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/hdm09/Desktop/AIX2024/07_SIC/conv_kern_tb_behav.wcfg
+close_sim
 launch_simulation
-launch_simulation
-launch_simulation
-export_ip_user_files -of_objects  [get_files C:/Users/ece/Documents/GitHub/AIX2024/07_SIC/07_SIC.sim/sim_1/define.v] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 C:/Users/ece/Documents/GitHub/AIX2024/07_SIC/07_SIC.sim/sim_1/define.v
-launch_simulation
-launch_simulation
-launch_simulation
-source conv_kern_tb.tcl
+source conv_kern_array_tb.tcl
 run all
 close_sim
 launch_simulation
-source conv_kern_tb.tcl
+source conv_kern_array_tb.tcl
 run all
 close_sim
 launch_simulation
-source conv_kern_tb.tcl
+source conv_kern_array_tb.tcl
 run all
-close_sim
-launch_simulation
-source conv_kern_tb.tcl
-close_sim
-launch_simulation
-source conv_kern_tb.tcl
-run all
-close_sim
-launch_simulation
-source conv_kern_tb.tcl
-run all
-close_sim

@@ -1,0 +1,4 @@
+Running: xsim.dir/conv_kern_array_tb_behav/xsimk.exe -simmode gui -wdb conv_kern_array_tb_behav.wdb -simrunnum 0 -socket 5254
+Design successfully loaded
+Design Loading Memory Usage: 132168 KB (Peak: 132168 KB)
+Design Loading CPU Usage: 171 ms

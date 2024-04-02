@@ -1,7 +1,7 @@
 Vivado Simulator v2023.2
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_7 -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_7 -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_array_tb_behav xil_defaultlib.conv_kern_array_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -38,6 +38,7 @@ Compiling architecture dsp_macro_0_arch of entity xil_defaultlib.dsp_macro_0 [ds
 Compiling module xil_defaultlib.mul_default
 Compiling module xil_defaultlib.adder_tree
 Compiling module xil_defaultlib.mac
+Compiling module xil_defaultlib.mac_array
 Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
 Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
 Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
@@ -58,6 +59,6 @@ Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
 Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
 Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
 Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
-Compiling module xil_defaultlib.conv_kern_tb
+Compiling module xil_defaultlib.conv_kern_array_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot conv_kern_tb_behav
+Built simulation snapshot conv_kern_array_tb_behav
