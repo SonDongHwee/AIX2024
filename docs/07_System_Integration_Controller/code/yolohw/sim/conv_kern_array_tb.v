@@ -69,6 +69,7 @@ end
 //--------------------------------------------------------------------
 reg  [IFM_WORD_SIZE_32-1:0] in_img[0:IFM_DATA_SIZE_32-1];  // Infmap
 reg  [IFM_WORD_SIZE_32-1:0] filter[0:WGT_DATA_SIZE   -1];	// Filter
+reg  [IFM_WORD_SIZE_32-1:0] bias[0:No -1]; // bias
 reg  preload;
 
 
@@ -87,8 +88,15 @@ initial begin: PROC_SimmemLoad
 	for (i = 0; i< WGT_DATA_SIZE; i=i+1) begin
 		filter[i] = 0;
 	end
-	$display ("Loading input feature maps from file: %s", WGT_FILE);
-	$readmemh(WGT_FILE, filter);	
+	$display ("Loading weight from file: %s", WGT_FILE);
+	$readmemh(WGT_FILE, filter);
+
+    // Bias
+    for (i = 0; i < No; i=i+1) begin
+        bias[i] = 0;
+    end
+    $display ("Loading bias from file: %s", BIAS_FILE);
+	$readmemh(BIAS_FILE, bias);
 end
 
 //--------------------------------------------------------------------
@@ -283,13 +291,13 @@ mac_array u_mac_array_1(
     .vld_i(vld_i), 
 
     .win_0(win[4][127:0]), 
-    .win_1({40'b0, win[0][215:128]}),
+    .win_1({40'b0, win[4][215:128]}),
     .win_2(win[5][127:0]), 
-    .win_3({40'b0, win[1][215:128]}),
+    .win_3({40'b0, win[5][215:128]}),
     .win_4(win[6][127:0]), 
-    .win_5({40'b0, win[2][215:128]}),
+    .win_5({40'b0, win[6][215:128]}),
     .win_6(win[7][127:0]), 
-    .win_7({40'b0, win[3][215:128]}),
+    .win_7({40'b0, win[7][215:128]}),
 
     .din_0(din[127:0]), 
     .din_1({40'b0, din[215:128]}),
@@ -314,13 +322,13 @@ mac_array u_mac_array_2(
     .vld_i(vld_i), 
 
     .win_0(win[8][127:0]), 
-    .win_1({40'b0, win[0][215:128]}),
+    .win_1({40'b0, win[8][215:128]}),
     .win_2(win[9][127:0]), 
-    .win_3({40'b0, win[1][215:128]}),
+    .win_3({40'b0, win[9][215:128]}),
     .win_4(win[10][127:0]), 
-    .win_5({40'b0, win[2][215:128]}),
+    .win_5({40'b0, win[10][215:128]}),
     .win_6(win[11][127:0]), 
-    .win_7({40'b0, win[3][215:128]}),
+    .win_7({40'b0, win[11][215:128]}),
 
     .din_0(din[127:0]), 
     .din_1({40'b0, din[215:128]}),
@@ -345,13 +353,13 @@ mac_array u_mac_array_3(
     .vld_i(vld_i), 
 
     .win_0(win[12][127:0]), 
-    .win_1({40'b0, win[0][215:128]}),
+    .win_1({40'b0, win[12][215:128]}),
     .win_2(win[13][127:0]), 
-    .win_3({40'b0, win[1][215:128]}),
+    .win_3({40'b0, win[13][215:128]}),
     .win_4(win[14][127:0]), 
-    .win_5({40'b0, win[2][215:128]}),
+    .win_5({40'b0, win[14][215:128]}),
     .win_6(win[15][127:0]), 
-    .win_7({40'b0, win[3][215:128]}),
+    .win_7({40'b0, win[15][215:128]}),
 
     .din_0(din[127:0]), 
     .din_1({40'b0, din[215:128]}),
@@ -375,11 +383,14 @@ mac_array u_mac_array_3(
 //--------------------------------------------------------------------
 // Output feature maps
 //{{{
+wire [20:0] temp_acc_bias [0:15];
 wire [7:0] conv_out [0:15];
 genvar l;
 generate
 	for (l = 0; l < 16; l = l + 1) begin : conv_out_wire
-		assign conv_out[l] = acc_o[l][19:12];
+		//assign conv_out[l] = acc_o[l][19:12];
+        assign temp_acc_bias[l] = $signed(acc_o[l]) + $signed(bias[l]); // bias adding
+        assign conv_out[l] = temp_acc_bias[l][20] ? 8'b0 : temp_acc_bias[l][14:7]; // relu
 	end
 endgenerate
 
