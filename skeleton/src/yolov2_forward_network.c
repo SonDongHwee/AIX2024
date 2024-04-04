@@ -49,7 +49,7 @@ void forward_convolutional_layer_cpu(layer l, network_state state)
     }
     // if (fp) fclose(fp);
 
-    fprintf(stderr, "%0.4f - %0.4f \n", xmin, xmax);
+    // fprintf(stderr, "%0.4f - %0.4f \n", xmin, xmax);
     // }}}
     // convolution as GEMM (as part of BLAS)
     for (i = 0; i < l.batch; ++i) {

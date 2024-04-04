@@ -11,7 +11,7 @@
 #define MAX_VAL_32      2147483647  // 31-bit (1-bit sign)
 #define MAX_VAL_UINT_8  255
 
-int const run_single_image_test = 1;
+int const run_single_image_test = 0;
 
 int max_abs(int src, int max_val)
 {
@@ -302,6 +302,27 @@ void do_quantization(network net) {
 	#define TOTAL_CALIB_LAYER 11
 	// TODO
 	//{{
+    // ------------------------------
+    // Baseline: multipliers with minimum MSE
+    // ------------------------------
+    /*
+    float weight_quant_multiplier[TOTAL_CALIB_LAYER] = {
+      16,       //conv 0
+      128,      //conv 2
+      128,      //conv 4
+      256,      //conv 6
+      256,      //conv 8
+      1024,     //conv 10
+      256,      //conv 12
+      512,      //conv 13
+      256,      //conv 14
+      128,      //conv 17
+      256};     //conv 20
+    */
+
+    // ------------------------------
+    // Optimized multipliers
+    // ------------------------------
 	float weight_quant_multiplier[TOTAL_CALIB_LAYER] = {
       16,       //conv 0
       128,      //conv 2
@@ -318,14 +339,14 @@ void do_quantization(network net) {
     float input_quant_multiplier[TOTAL_CALIB_LAYER] = {
       64,	  //conv 0
       8,      //conv 2
-      8,     //conv 4
-      8,     //conv 6
-      8,     //conv 8
+      8,      //conv 4
+      8,      //conv 6
+      8,      //conv 8
       8,      //conv 10     
-      8,     //conv 12
-      8,     //conv 13
-      8,     //conv 14
-      8,     //conv 17
+      8,      //conv 12
+      8,      //conv 13
+      8,      //conv 14
+      8,      //conv 17
       8};     //conv 20
 
 	printf("Multipler    Input    Weight    Bias\n");
@@ -354,13 +375,28 @@ void do_quantization(network net) {
 				++counter;
 			//}}}	
             // Weight Quantization
-			for (fil = 0; fil < l->n; ++fil) {          // 
+
+            // ------------------------------
+            // Saving the weights before quantization
+            // for selecting the best quant_multipliers
+            // ------------------------------
+            FILE *fp;
+            char filename[50];
+            sprintf(filename, "../bin/weights/weights_of_layer_%02d.txt", j);
+            
+            fp = fopen(filename, "w");
+            if (fp == NULL) {
+                printf("Error opening file %s.\n", filename);
+            }
+
+			for (fil = 0; fil < l->n; ++fil) { 
                 for (i = 0; i < filter_size; ++i) {
+                    fprintf(fp, "%f\n", l->weights[fil*filter_size + i]); // Write w to the file, one element per line
                     float w = l->weights[fil*filter_size + i] * l->weights_quant_multiplier; // Scale
-                    // float w = l->weights[fil*filter_size + i] * l->weights_quant_multiplier + l->weights_quant_z; // Scale
                     l->weights_int8[fil*filter_size + i] = max_abs(w, MAX_VAL_8); // Clip
                 }
             }
+            fclose(fp);
 
             // Bias Quantization
             float biases_multiplier = (l->weights_quant_multiplier * l->input_quant_multiplier);

@@ -1,8 +1,7 @@
 `timescale 1ns / 1ns
 
 module conv_kern_tb;
-// `include "../src/define.v"
-`include "define.v"
+`include "../src/define.v"
 
 // Clock
 parameter CLK_PERIOD = 10;   //100MHz

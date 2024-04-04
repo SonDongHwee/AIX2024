@@ -1,6 +1,6 @@
 Time resolution is 1 ps
-Loading input feature maps from file: inout_data_sw/log_feamap/CONV00_input_32b.hex
-Loading input feature maps from file: inout_data_sw/log_param/CONV00_param_weight.hex
+Loading input feature maps from file: ../../inout_data_sw/log_feamap_32bit/CONV00_input.hex
+Loading input feature maps from file: ../../inout_data_sw/log_param/CONV00_param_weight.hex
 Filter och=00: 
 
   19	 -11	  -6
@@ -113,13 +113,5 @@ Filter och=15:
    6	  13	   0
 
 
-Saving output images to file: inout_data_hw/CONV00_input_ch03.bmp
-Saving output images to file: inout_data_hw/CONV00_input_ch02.bmp
-Saving output images to file: inout_data_hw/CONV00_input_ch01.bmp
-Saving output images to file: inout_data_hw/CONV00_input_ch00.bmp
-Saving output images to file: inout_data_hw/CONV00_output_ch03.bmp
-Saving output images to file: inout_data_hw/CONV00_output_ch02.bmp
-Saving output images to file: inout_data_hw/CONV00_output_ch01.bmp
-Saving output images to file: inout_data_hw/CONV00_output_ch00.bmp
-$stop called at time : 916400 ns : File "C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/sim/conv_kern_tb.v" Line 102
-INFO: xsimkernel Simulation Memory Usage: 95292 KB (Peak: 95292 KB), Simulation CPU Usage: 70281 ms
+$stop called at time : 660410 ns : File "C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sim_1/imports/sim/conv_kern_tb.v" Line 123
+INFO: xsimkernel Simulation Memory Usage: 31740 KB (Peak: 31740 KB), Simulation CPU Usage: 38484 ms

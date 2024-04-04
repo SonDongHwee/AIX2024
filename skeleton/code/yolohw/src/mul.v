@@ -14,7 +14,7 @@ output[15:0] y
 	assign dsp_B = x[7]? {10'b11_1111_1111, x} : {10'b00_0000_0000, x};
 	assign y = dsp_P[15:0];
 
-	dsp_macro_0 u_dsp(.CLK(clk), .A(dsp_A), .B(dsp_B), .C(48'b0), .P(dsp_P));
+	xbip_dsp48_macro_0 u_dsp(.CLK(clk), .A(dsp_A), .B(dsp_B), .C(48'b0), .P(dsp_P));
 `else 
 	// Assume that i
 	reg [15:0] dsp_P[0:3];
