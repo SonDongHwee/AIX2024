@@ -70,7 +70,7 @@ reg         vld_i;
 reg [127:0] win		[0:NUM_MAC_MODULES-1];
 reg [127:0] din		[0:NUM_MAC_MODULES-1];
 wire[ 19:0] acc_o	[0:NUM_MAC_MODULES-1];
-wire 		vld_o;  [0:NUM_MAC_MODULES-1];
+wire 		vld_o   [0:NUM_MAC_MODULES-1];
 
 //------------------------------------------------------------------------------------------------------
 // Test cases

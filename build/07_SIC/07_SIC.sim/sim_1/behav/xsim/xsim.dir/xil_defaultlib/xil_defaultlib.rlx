@@ -2,13 +2,15 @@
 2020.2
 Oct 13 2023
 20:47:58
-C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.gen/sources_1/ip/dsp_macro_0/sim/dsp_macro_0.vhd,1711526699,vhdl,,,,dsp_macro_0,,,,,,,,
-C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.gen/sources_1/ip/dsp_macro_0/sim/dsp_macro_0.vhd,1712104297,vhdl,,,,dsp_macro_0,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.sim/sim_1/behav/xsim/glbl.v,1712104300,verilog,,,,glbl,,,,,,,,
 C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sim_1/imports/sim/bmp_image_writer.v,1711612230,verilog,,C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sources_1/imports/src/mac.v,,bmp_image_writer,,,,,,,,
-C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sim_1/imports/sim/conv_kern_tb.v,1712037985,verilog,,,C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sources_1/imports/src/define.v,conv_kern_tb,,,,,,,,
-C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sources_1/imports/src/adder_tree.v,1711870634,verilog,,C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sim_1/imports/sim/bmp_image_writer.v,,adder_tree,,,,,,,,
-C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sources_1/imports/src/define.v,1711956507,verilog,,,,,,,,,,,,
-C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sources_1/imports/src/mac.v,1711299285,verilog,,C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sources_1/imports/src/mul.v,,mac,,,,,,,,
-C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sources_1/imports/src/mul.v,1711526707,verilog,,C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sim_1/imports/sim/conv_kern_tb.v,C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sources_1/imports/src/define.v,mul,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sim_1/imports/sim/conv_kern_tb.v,1712504145,verilog,,,C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sources_1/imports/src/define.v,conv_kern_tb,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sources_1/imports/src/adder_tree.v,1712104321,verilog,,C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sources_1/imports/src/conv3x3_maxpool_module.v,,adder_tree,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sources_1/imports/src/conv3x3_maxpool_module.v,1712550360,verilog,,C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sources_1/imports/src/mac.v,,conv3x3_maxpool_module,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sources_1/imports/src/define.v,1712549841,verilog,,,,,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sources_1/imports/src/mac.v,1712104321,verilog,,C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sources_1/imports/src/mac_array.v,,mac,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sources_1/imports/src/mac_array.v,1712556345,verilog,,C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sources_1/imports/src/mul.v,,mac_array,,,,,,,,
+C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sources_1/imports/src/mul.v,1712104321,verilog,,C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sim_1/imports/sim/conv_kern_tb.v,C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sources_1/imports/src/define.v,mul,,,,,,,,
 C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/sim/cnn_ctrl_tb.v,1711299279,verilog,,,,cnn_ctrl_tb,,,,,,,,
 C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/src/cnn_ctrl.v,1711299285,verilog,,C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/sim/cnn_ctrl_tb.v,,cnn_ctrl,,,,,,,,
