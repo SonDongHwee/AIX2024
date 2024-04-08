@@ -75,7 +75,7 @@ end
 adder_tree u_adder_tree(
 ./*input 		*/clk(clk), 
 ./*input 		*/rstn(rstn),
-./*input 		*/vld_i(vld_i_d4),
+./*input 		*/vld_i(vld_i_d3),
 ./*input [15:0] */mul_00(y00), 
 ./*input [15:0] */mul_01(y01), 
 ./*input [15:0] */mul_02(y02), 

@@ -34,7 +34,7 @@ parameter NEXT_LAYER_INPUT_M = 3;
 
 // IFM
 parameter IFM_WIDTH         = 256;
-parameter IFM_HEIGHT        = 8;
+parameter IFM_HEIGHT        = 256;
 parameter IFM_DATA_SIZE     = IFM_HEIGHT*IFM_WIDTH;	
 parameter IFM_WORD_SIZE     = 32;
 
@@ -56,8 +56,11 @@ parameter BIAS_FILE          = "../../inout_data_sw/log_param/CONV00_param_biase
 
 /* ################################# CONV 02 ################################# */
 // // CONV module consumes Tr x Tc x Ti IFM pixels and produces Tr x Tc x To pixels every cycle
+// parameter is_CONV00 = 0;
 // parameter Tr = 2,  Tc = 2; // row-wise and col-wise factor
 // parameter Ti = 16, To = 1; // input-channel-wise and output-channel-wise factor
+// parameter SCALE_FACTOR = ;
+// parameter NEXT_LAYER_INPUT_M = 3;
 
 // // IFM
 // parameter IFM_WIDTH         = 128;
@@ -77,14 +80,17 @@ parameter BIAS_FILE          = "../../inout_data_sw/log_param/CONV00_param_biase
 
 // // File directory
 // parameter IFM_FILE   		 = "../../inout_data_sw/log_feamap/CONV02_input_32b.hex"; 
-// parameter WGT_FILE   		 = "../../inout_data_sw/log_param/CONV02_param_weight.hex";
-// parameter BIAS_FILE          = "../../inout_data_sw/log_param/CONV02_param_biases.hex";
+// parameter WGT_FILE   		 = "../../inout_data_sw/log_param/CONV02_param_weight_32b.hex";
+// parameter BIAS_FILE          = "../../inout_data_sw/log_param/CONV02_param_biases_32b.hex";
 /* ########################################################################### */
 
 /* ################################# CONV 04 ################################# */
 // // CONV module consumes Tr x Tc x Ti IFM pixels and produces Tr x Tc x To pixels every cycle
+// parameter is_CONV00 = 0;
 // parameter Tr = 2,  Tc = 2; // row-wise and col-wise factor
 // parameter Ti = 16, To = 1; // input-channel-wise and output-channel-wise factor
+// parameter SCALE_FACTOR = ;
+// parameter NEXT_LAYER_INPUT_M = 3;
 
 // // IFM
 // parameter IFM_WIDTH         = 64;
@@ -104,8 +110,8 @@ parameter BIAS_FILE          = "../../inout_data_sw/log_param/CONV00_param_biase
 
 // // File directory
 // parameter IFM_FILE   		 = "../../inout_data_sw/log_feamap/CONV04_input_32b.hex"; 
-// parameter WGT_FILE   		 = "../../inout_data_sw/log_param/CONV04_param_weight.hex";
-// parameter BIAS_FILE          = "../../inout_data_sw/log_param/CONV04_param_biases.hex";
+// parameter WGT_FILE   		 = "../../inout_data_sw/log_param/CONV04_param_weight_32b.hex";
+// parameter BIAS_FILE          = "../../inout_data_sw/log_param/CONV04_param_biases_32b.hex";
 /* ########################################################################### */
 
 

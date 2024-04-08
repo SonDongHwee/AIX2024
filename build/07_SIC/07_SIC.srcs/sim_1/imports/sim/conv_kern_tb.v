@@ -234,6 +234,9 @@ end
 //-------------------------------------------
 // CONV result
 //-------------------------------------------
+// Note @ `24.04.08 17:43
+// This part does not work...:<
+// Need to be modified...
 reg [7:0] OFM [0:IFM_HEIGHT/2*IFM_WIDTH/2*No-1]; // Output Feature Map (row x col x chan)
 reg [31:0] out_counter;
 reg [31:0] pixel_counter;

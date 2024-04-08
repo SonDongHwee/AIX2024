@@ -17,4 +17,14 @@ WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 f
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'NEXT_LAYER_INPUT_M' [C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sim_1/imports/sim/conv_kern_tb.v:175]
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_CONV00' [C:/Users/leewo/Documents/GitHub/AIX2024/build/07_SIC/07_SIC.srcs/sim_1/imports/sim/conv_kern_tb.v:179]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mul_default
+Compiling module xil_defaultlib.adder_tree
+Compiling module xil_defaultlib.mac
+Compiling module xil_defaultlib.mac_array
+Compiling module xil_defaultlib.conv3x3_maxpool_module
+Compiling module xil_defaultlib.conv_kern_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot conv_kern_tb_behav
