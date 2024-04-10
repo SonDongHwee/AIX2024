@@ -1,0 +1,18 @@
+Time resolution is 1 ps
+Loading input feature maps from file: ../../inout_data_sw/log_feamap/CONV04_input_32b.hex
+WARNING: Too many words specified in data file ../../inout_data_sw/log_feamap/CONV04_input_32b.hex
+Loading weights from file: ../../inout_data_sw/log_param/CONV04_param_weight_32b.hex
+Loading biases from file: ../../inout_data_sw/log_param/CONV04_param_biases_32b.hex
+Preload data done.
+
+Conv module starts to read feature
+Conv module finishes reading feature
+
+Conv module starts to read weight
+Conv module finishes reading weight
+
+Conv module starts to read bias
+Conv module finishes reading bias
+
+Conv module starts to compute
+INFO: xsimkernel Simulation Memory Usage: 20716 KB (Peak: 20716 KB), Simulation CPU Usage: 97359 ms
