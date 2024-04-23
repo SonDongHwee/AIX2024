@@ -1,44 +1,4 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_512x72/sim/dpram_512x72.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dpram_512x72
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_26x32/sim/dpram_26x32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dpram_26x32
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_13x256/sim/dpram_13x256.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dpram_13x256
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_208x256/sim/dpram_208x256.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dpram_208x256
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_208x32/sim/dpram_208x32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dpram_208x32
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_16384x32/sim/dpram_16384x32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dpram_16384x32
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_256x64/sim/spram_256x64.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module spram_256x64
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_832x32/sim/spram_832x32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module spram_832x32
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_6240x32/sim/spram_6240x32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module spram_6240x32
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_512x72/sim/spram_512x72.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module spram_512x72
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_208x256/sim/spram_208x256.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module spram_208x256
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/adder_tree.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module adder_tree
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/cnn_ctrl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cnn_ctrl
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/spram_wrapper.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module spram_wrapper
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mac.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mac
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mul.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mul
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/dpram_wrapper.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dpram_wrapper
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mac_array.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mac_array
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/cnn_ctrl_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cnn_ctrl_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module conv_kern_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/bmp_image_writer.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module bmp_image_writer
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module conv_kern_array_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_layer_02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_layer_02
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_layer_00.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_layer_00

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="conv_layer_00_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="conv_layer_00" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="660,409,991 ps"></ZoomStartTime>
+      <ZoomEndTime time="660,410,002 ps"></ZoomEndTime>
+      <Cursor1Time time="660,410,000 ps"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="275"></NameColumnWidth>
+      <ValueColumnWidth column_width="222"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="62" />
+   <wvobject fp_name="/conv_layer_00/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/rstn" type="logic">
+      <obj_property name="ElementShortName">rstn</obj_property>
+      <obj_property name="ObjectShortName">rstn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/ctrl_data_run" type="logic">
+      <obj_property name="ElementShortName">ctrl_data_run</obj_property>
+      <obj_property name="ObjectShortName">ctrl_data_run</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/vld_i" type="logic">
+      <obj_property name="ElementShortName">vld_i</obj_property>
+      <obj_property name="ObjectShortName">vld_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/win" type="array">
+      <obj_property name="ElementShortName">win[0:15][215:0]</obj_property>
+      <obj_property name="ObjectShortName">win[0:15][215:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/din" type="array">
+      <obj_property name="ElementShortName">din[215:0]</obj_property>
+      <obj_property name="ObjectShortName">din[215:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/acc_o" type="array">
+      <obj_property name="ElementShortName">acc_o[0:15][19:0]</obj_property>
+      <obj_property name="ObjectShortName">acc_o[0:15][19:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/vld_o" type="array">
+      <obj_property name="ElementShortName">vld_o[3:0]</obj_property>
+      <obj_property name="ObjectShortName">vld_o[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/filter" type="array">
+      <obj_property name="ElementShortName">filter[0:431][31:0]</obj_property>
+      <obj_property name="ObjectShortName">filter[0:431][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/bias" type="array">
+      <obj_property name="ElementShortName">bias[0:15][31:0]</obj_property>
+      <obj_property name="ObjectShortName">bias[0:15][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/preload" type="logic">
+      <obj_property name="ElementShortName">preload</obj_property>
+      <obj_property name="ObjectShortName">preload</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/iter" type="array">
+      <obj_property name="ElementShortName">iter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">iter[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/j" type="array">
+      <obj_property name="ElementShortName">j[31:0]</obj_property>
+      <obj_property name="ObjectShortName">j[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/row" type="array">
+      <obj_property name="ElementShortName">row[31:0]</obj_property>
+      <obj_property name="ObjectShortName">row[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/col" type="array">
+      <obj_property name="ElementShortName">col[31:0]</obj_property>
+      <obj_property name="ObjectShortName">col[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/is_first_row" type="logic">
+      <obj_property name="ElementShortName">is_first_row</obj_property>
+      <obj_property name="ObjectShortName">is_first_row</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/is_last_row" type="logic">
+      <obj_property name="ElementShortName">is_last_row</obj_property>
+      <obj_property name="ObjectShortName">is_last_row</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/is_first_col" type="logic">
+      <obj_property name="ElementShortName">is_first_col</obj_property>
+      <obj_property name="ObjectShortName">is_first_col</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/is_last_col" type="logic">
+      <obj_property name="ElementShortName">is_last_col</obj_property>
+      <obj_property name="ObjectShortName">is_last_col</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/temp_acc_bias" type="array">
+      <obj_property name="ElementShortName">temp_acc_bias[0:15][20:0]</obj_property>
+      <obj_property name="ObjectShortName">temp_acc_bias[0:15][20:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/conv_out" type="array">
+      <obj_property name="ElementShortName">conv_out[0:15][7:0]</obj_property>
+      <obj_property name="ObjectShortName">conv_out[0:15][7:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/dbg_write_image" type="logic">
+      <obj_property name="ElementShortName">dbg_write_image</obj_property>
+      <obj_property name="ObjectShortName">dbg_write_image</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/dbg_write_image_done" type="logic">
+      <obj_property name="ElementShortName">dbg_write_image_done</obj_property>
+      <obj_property name="ObjectShortName">dbg_write_image_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/dbg_pix_idx" type="array">
+      <obj_property name="ElementShortName">dbg_pix_idx[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_pix_idx[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/IFM_WIDTH" type="array">
+      <obj_property name="ElementShortName">IFM_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IFM_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/IFM_HEIGHT" type="array">
+      <obj_property name="ElementShortName">IFM_HEIGHT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IFM_HEIGHT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/IFM_DATA_SIZE" type="array">
+      <obj_property name="ElementShortName">IFM_DATA_SIZE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IFM_DATA_SIZE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/IFM_WORD_SIZE" type="array">
+      <obj_property name="ElementShortName">IFM_WORD_SIZE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IFM_WORD_SIZE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/IFM_DATA_SIZE_32" type="array">
+      <obj_property name="ElementShortName">IFM_DATA_SIZE_32[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IFM_DATA_SIZE_32[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/IFM_WORD_SIZE_32" type="array">
+      <obj_property name="ElementShortName">IFM_WORD_SIZE_32[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IFM_WORD_SIZE_32[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/Fx" type="array">
+      <obj_property name="ElementShortName">Fx[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Fx[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/Fy" type="array">
+      <obj_property name="ElementShortName">Fy[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Fy[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/Ni" type="array">
+      <obj_property name="ElementShortName">Ni[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Ni[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/No" type="array">
+      <obj_property name="ElementShortName">No[31:0]</obj_property>
+      <obj_property name="ObjectShortName">No[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/WGT_DATA_SIZE" type="array">
+      <obj_property name="ElementShortName">WGT_DATA_SIZE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WGT_DATA_SIZE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/WGT_WORD_SIZE" type="array">
+      <obj_property name="ElementShortName">WGT_WORD_SIZE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WGT_WORD_SIZE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/IFM_FILE_32" type="array">
+      <obj_property name="ElementShortName">IFM_FILE_32[407:0]</obj_property>
+      <obj_property name="ObjectShortName">IFM_FILE_32[407:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/IFM_FILE" type="array">
+      <obj_property name="ElementShortName">IFM_FILE[407:0]</obj_property>
+      <obj_property name="ObjectShortName">IFM_FILE[407:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/WGT_FILE" type="array">
+      <obj_property name="ElementShortName">WGT_FILE[423:0]</obj_property>
+      <obj_property name="ObjectShortName">WGT_FILE[423:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/BIAS_FILE" type="array">
+      <obj_property name="ElementShortName">BIAS_FILE[423:0]</obj_property>
+      <obj_property name="ObjectShortName">BIAS_FILE[423:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/CONV_INPUT_IMG00" type="array">
+      <obj_property name="ElementShortName">CONV_INPUT_IMG00[327:0]</obj_property>
+      <obj_property name="ObjectShortName">CONV_INPUT_IMG00[327:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/CONV_INPUT_IMG01" type="array">
+      <obj_property name="ElementShortName">CONV_INPUT_IMG01[327:0]</obj_property>
+      <obj_property name="ObjectShortName">CONV_INPUT_IMG01[327:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/CONV_INPUT_IMG02" type="array">
+      <obj_property name="ElementShortName">CONV_INPUT_IMG02[327:0]</obj_property>
+      <obj_property name="ObjectShortName">CONV_INPUT_IMG02[327:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/CONV_INPUT_IMG03" type="array">
+      <obj_property name="ElementShortName">CONV_INPUT_IMG03[327:0]</obj_property>
+      <obj_property name="ObjectShortName">CONV_INPUT_IMG03[327:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/CONV_OUTPUT_IMG00" type="array">
+      <obj_property name="ElementShortName">CONV_OUTPUT_IMG00[335:0]</obj_property>
+      <obj_property name="ObjectShortName">CONV_OUTPUT_IMG00[335:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/CONV_OUTPUT_IMG01" type="array">
+      <obj_property name="ElementShortName">CONV_OUTPUT_IMG01[335:0]</obj_property>
+      <obj_property name="ObjectShortName">CONV_OUTPUT_IMG01[335:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/CONV_OUTPUT_IMG02" type="array">
+      <obj_property name="ElementShortName">CONV_OUTPUT_IMG02[335:0]</obj_property>
+      <obj_property name="ObjectShortName">CONV_OUTPUT_IMG02[335:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/CONV_OUTPUT_IMG03" type="array">
+      <obj_property name="ElementShortName">CONV_OUTPUT_IMG03[335:0]</obj_property>
+      <obj_property name="ObjectShortName">CONV_OUTPUT_IMG03[335:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/CONV_OUTPUT_IMG04" type="array">
+      <obj_property name="ElementShortName">CONV_OUTPUT_IMG04[335:0]</obj_property>
+      <obj_property name="ObjectShortName">CONV_OUTPUT_IMG04[335:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/CONV_OUTPUT_IMG05" type="array">
+      <obj_property name="ElementShortName">CONV_OUTPUT_IMG05[335:0]</obj_property>
+      <obj_property name="ObjectShortName">CONV_OUTPUT_IMG05[335:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/CONV_OUTPUT_IMG06" type="array">
+      <obj_property name="ElementShortName">CONV_OUTPUT_IMG06[335:0]</obj_property>
+      <obj_property name="ObjectShortName">CONV_OUTPUT_IMG06[335:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/CONV_OUTPUT_IMG07" type="array">
+      <obj_property name="ElementShortName">CONV_OUTPUT_IMG07[335:0]</obj_property>
+      <obj_property name="ObjectShortName">CONV_OUTPUT_IMG07[335:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/CONV_OUTPUT_IMG08" type="array">
+      <obj_property name="ElementShortName">CONV_OUTPUT_IMG08[335:0]</obj_property>
+      <obj_property name="ObjectShortName">CONV_OUTPUT_IMG08[335:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/CONV_OUTPUT_IMG09" type="array">
+      <obj_property name="ElementShortName">CONV_OUTPUT_IMG09[335:0]</obj_property>
+      <obj_property name="ObjectShortName">CONV_OUTPUT_IMG09[335:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/CONV_OUTPUT_IMG10" type="array">
+      <obj_property name="ElementShortName">CONV_OUTPUT_IMG10[335:0]</obj_property>
+      <obj_property name="ObjectShortName">CONV_OUTPUT_IMG10[335:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/CONV_OUTPUT_IMG11" type="array">
+      <obj_property name="ElementShortName">CONV_OUTPUT_IMG11[335:0]</obj_property>
+      <obj_property name="ObjectShortName">CONV_OUTPUT_IMG11[335:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/CONV_OUTPUT_IMG12" type="array">
+      <obj_property name="ElementShortName">CONV_OUTPUT_IMG12[335:0]</obj_property>
+      <obj_property name="ObjectShortName">CONV_OUTPUT_IMG12[335:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/CONV_OUTPUT_IMG13" type="array">
+      <obj_property name="ElementShortName">CONV_OUTPUT_IMG13[335:0]</obj_property>
+      <obj_property name="ObjectShortName">CONV_OUTPUT_IMG13[335:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/CONV_OUTPUT_IMG14" type="array">
+      <obj_property name="ElementShortName">CONV_OUTPUT_IMG14[335:0]</obj_property>
+      <obj_property name="ObjectShortName">CONV_OUTPUT_IMG14[335:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/CONV_OUTPUT_IMG15" type="array">
+      <obj_property name="ElementShortName">CONV_OUTPUT_IMG15[335:0]</obj_property>
+      <obj_property name="ObjectShortName">CONV_OUTPUT_IMG15[335:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_layer_00/CLK_PERIOD" type="array">
+      <obj_property name="ElementShortName">CLK_PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD[31:0]</obj_property>
+   </wvobject>
+</wave_config>

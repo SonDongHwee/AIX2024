@@ -1282,3 +1282,1467 @@ Saving output images to file: ../../inout_data_hw/CONV00_output_ch01.bmp
 Saving output images to file: ../../inout_data_hw/CONV00_output_ch00.bmp
 $stop called at time : 660410 ns : File "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v" Line 151
 run: Time (s): cpu = 00:03:13 ; elapsed = 00:21:52 . Memory (MB): peak = 2149.031 ; gain = 0.000
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024\docs\07_System_Integration_Controller\code\yolohw\src\adder_tree.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024\docs\07_System_Integration_Controller\code\yolohw\sim\conv_kern_array_tb.v:]
+close_sim
+INFO: xsimkernel Simulation Memory Usage: 306672 KB (Peak: 306672 KB), Simulation CPU Usage: 922217 ms
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_array_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'conv_kern_array_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj conv_kern_array_tb_vlog.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_512x72/sim/dpram_512x72.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_512x72
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_26x32/sim/dpram_26x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_26x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_13x256/sim/dpram_13x256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_13x256
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_208x256/sim/dpram_208x256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_208x256
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_208x32/sim/dpram_208x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_208x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_16384x32/sim/dpram_16384x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_16384x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_256x64/sim/spram_256x64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_256x64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_832x32/sim/spram_832x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_832x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_6240x32/sim/spram_6240x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_6240x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_512x72/sim/spram_512x72.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_512x72
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_208x256/sim/spram_208x256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_208x256
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/adder_tree.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/cnn_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/spram_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mac.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/dpram_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mac_array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_array
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/cnn_ctrl_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_ctrl_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/bmp_image_writer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bmp_image_writer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_array_tb
+"xvhdl --incr --relax -prj conv_kern_array_tb_vhdl.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 2149.031 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '8' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_7 -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_array_tb_behav xil_defaultlib.conv_kern_array_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_7 -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_array_tb_behav xil_defaultlib.conv_kern_array_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_11.xbip_utils_v3_0_11_pkg
+Compiling package dsp_macro_v1_0_4.dsp_macro_v1_0_4_viv_comp
+Compiling package dsp_macro_v1_0_4.dsp_macro_v1_0_4_pkg
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_width=18...]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_width=48...]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_latency=...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=2,adreg=0,areg...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_5.xbip_dsp48e1_wrapper_v3_0 [\xbip_dsp48e1_wrapper_v3_0(areg=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_width=24...]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(1,1)(1,1)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_latency=...]
+Compiling architecture synth of entity dsp_macro_v1_0_4.dsp_macro_synth [\dsp_macro_synth(c_xdevicefamily...]
+Compiling architecture synth of entity dsp_macro_v1_0_4.dsp_macro_v1_0_4_viv [\dsp_macro_v1_0_4_viv(c_xdevicef...]
+Compiling architecture xilinx of entity dsp_macro_v1_0_4.dsp_macro_v1_0_4 [\dsp_macro_v1_0_4(c_xdevicefamil...]
+Compiling architecture dsp_macro_0_arch of entity xil_defaultlib.dsp_macro_0 [dsp_macro_0_default]
+Compiling module xil_defaultlib.mul_default
+Compiling module xil_defaultlib.adder_tree
+Compiling module xil_defaultlib.mac
+Compiling module xil_defaultlib.mac_array
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.conv_kern_array_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot conv_kern_array_tb_behav
+run_program: Time (s): cpu = 00:00:02 ; elapsed = 00:00:57 . Memory (MB): peak = 2149.031 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '58' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "conv_kern_array_tb_behav -key {Behavioral:sim_1:Functional:conv_kern_array_tb} -tclbatch {conv_kern_array_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source conv_kern_array_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Wavedata 42-489] Can't add object "/conv_kern_array_tb/in_img" to the wave window because it has 2097152 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+# run 1000ns
+Loading input feature maps from file: ../../inout_data_sw/log_feamap/CONV00_input_32b.hex
+Loading weight from file: ../../inout_data_sw/log_param/CONV00_param_weight.hex
+Loading bias from file: ../../inout_data_sw/log_param/CONV00_param_biases.hex
+xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 2149.031 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'conv_kern_array_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:01:17 . Memory (MB): peak = 2149.031 ; gain = 0.000
+run all
+Filter och=00: 
+
+  19	 -11	  -6
+  61	 -17	 -42
+  23	  -2	 -21
+
+
+Filter och=01: 
+
+  12	 -15	 -17
+   5	   5	 -18
+   6	   2	 -17
+
+
+Filter och=02: 
+
+   3	   6	  14
+  -8	   1	  21
+   5	 -22	   9
+
+
+Filter och=03: 
+
+  24	  17	  12
+  11	  23	  24
+  -4	   9	  -1
+
+
+Filter och=04: 
+
+ -10	  -2	   4
+  -9	  -8	  -9
+   8	   0	  10
+
+
+Filter och=05: 
+
+  25	 -10	  22
+  -7	 -32	   9
+  -6	 -21	  -8
+
+
+Filter och=06: 
+
+ -70	 -35	 -12
+  47	  28	   0
+  48	  16	   4
+
+
+Filter och=07: 
+
+  -8	   2	  15
+ -27	  -5	  32
+ -27	  16	   9
+
+
+Filter och=08: 
+
+ -21	 -26	 -25
+ -60	 -95	 -32
+ -38	 -79	 -28
+
+
+Filter och=09: 
+
+  -8	   4	   8
+  12	   5	   8
+   4	  18	  13
+
+
+Filter och=10: 
+
+ -76	  21	 -45
+ -37	 -18	  33
+  29	  23	  50
+
+
+Filter och=11: 
+
+  53	  29	  30
+  25	  -5	  -1
+ -62	 -56	  -9
+
+
+Filter och=12: 
+
+   6	  53	  26
+  23	  70	  46
+  -9	  31	  11
+
+
+Filter och=13: 
+
+  20	  45	 -11
+  -7	 -32	 -25
+   4	 -28	 -17
+
+
+Filter och=14: 
+
+   7	 -65	  10
+ -10	   5	   3
+   1	 -22	   2
+
+
+Filter och=15: 
+
+  -8	  -9	 -18
+   0	   2	  -2
+   6	  13	   0
+
+
+run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:43 . Memory (MB): peak = 2698.770 ; gain = 549.738
+run all
+run: Time (s): cpu = 00:00:50 ; elapsed = 00:15:50 . Memory (MB): peak = 2698.957 ; gain = 0.000
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024\docs\07_System_Integration_Controller\code\yolohw\src\adder_tree.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024\docs\07_System_Integration_Controller\code\yolohw\sim\conv_kern_array_tb.v:]
+close_sim
+ERROR: [Common 17-180] Spawn failed: No error
+INFO: xsimkernel Simulation Memory Usage: 282596 KB (Peak: 282596 KB), Simulation CPU Usage: 652921 ms
+INFO: [Simtcl 6-16] Simulation closed
+ERROR: [Common 17-39] 'close_sim' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_array_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'conv_kern_array_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj conv_kern_array_tb_vlog.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_512x72/sim/dpram_512x72.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_512x72
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_26x32/sim/dpram_26x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_26x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_13x256/sim/dpram_13x256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_13x256
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_208x256/sim/dpram_208x256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_208x256
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_208x32/sim/dpram_208x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_208x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_16384x32/sim/dpram_16384x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_16384x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_256x64/sim/spram_256x64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_256x64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_832x32/sim/spram_832x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_832x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_6240x32/sim/spram_6240x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_6240x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_512x72/sim/spram_512x72.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_512x72
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_208x256/sim/spram_208x256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_208x256
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/adder_tree.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/cnn_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/spram_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mac.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/dpram_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mac_array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_array
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/cnn_ctrl_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_ctrl_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/bmp_image_writer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bmp_image_writer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_array_tb
+ERROR: [VRFC 10-4982] syntax error near 'wire' [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:387]
+ERROR: [VRFC 10-8549] Verilog 2000 keyword 'wire' used in incorrect context [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:387]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'temp_acc_bias' is not permitted [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:392]
+ERROR: [VRFC 10-2989] 'conv_out' is not declared [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:393]
+ERROR: [VRFC 10-3627] part-select of memory 'temp_acc_bias' is not allowed [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:393]
+ERROR: [VRFC 10-2989] 'conv_out' is not declared [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:401]
+ERROR: [VRFC 10-2989] 'conv_out' is not declared [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:409]
+ERROR: [VRFC 10-2989] 'conv_out' is not declared [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:417]
+ERROR: [VRFC 10-2989] 'conv_out' is not declared [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:425]
+ERROR: [VRFC 10-2989] 'conv_out' is not declared [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:433]
+ERROR: [VRFC 10-2989] 'conv_out' is not declared [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:441]
+ERROR: [VRFC 10-2989] 'conv_out' is not declared [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:449]
+ERROR: [VRFC 10-2989] 'conv_out' is not declared [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:457]
+ERROR: [VRFC 10-2989] 'conv_out' is not declared [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:465]
+ERROR: [VRFC 10-2989] 'conv_out' is not declared [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:473]
+ERROR: [VRFC 10-2989] 'conv_out' is not declared [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:481]
+ERROR: [VRFC 10-2989] 'conv_out' is not declared [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:489]
+ERROR: [VRFC 10-2989] 'conv_out' is not declared [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:497]
+ERROR: [VRFC 10-2989] 'conv_out' is not declared [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:505]
+INFO: [#UNDEF] Sorry, too many errors..
+"xvhdl --incr --relax -prj conv_kern_array_tb_vhdl.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 2698.957 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '8' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 2698.957 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024\docs\07_System_Integration_Controller\code\yolohw\src\adder_tree.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024\docs\07_System_Integration_Controller\code\yolohw\sim\conv_kern_array_tb.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_array_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'conv_kern_array_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj conv_kern_array_tb_vlog.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_512x72/sim/dpram_512x72.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_512x72
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_26x32/sim/dpram_26x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_26x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_13x256/sim/dpram_13x256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_13x256
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_208x256/sim/dpram_208x256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_208x256
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_208x32/sim/dpram_208x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_208x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_16384x32/sim/dpram_16384x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_16384x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_256x64/sim/spram_256x64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_256x64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_832x32/sim/spram_832x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_832x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_6240x32/sim/spram_6240x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_6240x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_512x72/sim/spram_512x72.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_512x72
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_208x256/sim/spram_208x256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_208x256
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/adder_tree.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/cnn_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/spram_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mac.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/dpram_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mac_array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_array
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/cnn_ctrl_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_ctrl_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/bmp_image_writer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bmp_image_writer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_array_tb
+ERROR: [VRFC 10-3627] part-select of memory 'temp_acc_bias' is not allowed [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:393]
+ERROR: [VRFC 10-845] illegal operand for operator ?: [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:393]
+ERROR: [VRFC 10-395] cannot assign an unpacked type to a packed type [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:393]
+ERROR: [VRFC 10-8530] module 'conv_kern_array_tb' is ignored due to previous errors [C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v:3]
+"xvhdl --incr --relax -prj conv_kern_array_tb_vhdl.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2698.957 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2698.957 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024\docs\07_System_Integration_Controller\code\yolohw\src\adder_tree.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024\docs\07_System_Integration_Controller\code\yolohw\sim\conv_kern_array_tb.v:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_array_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'conv_kern_array_tb' in fileset 'sim_1'...
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-39] 'ipx::open_core' failed due to earlier errors.
+
+    while executing
+"ipx::open_core -set_current false $ip_xml"
+    ("foreach" body line 2)
+    invoked from within
+"foreach ip_xml $ip_comps {
+    set ip_comp [ipx::open_core -set_current false $ip_xml]
+    set vlnv    [get_property vlnv $ip_comp]
+    foreach file_g..."
+    (procedure "xcs_find_sv_pkg_libs" line 75)
+    invoked from within
+"xcs_find_sv_pkg_libs $a_sim_vars(s_launch_dir) $a_sim_vars(b_int_sm_lib_ref_debug)"
+    (procedure "usf_xsim_setup_simulation" line 108)
+    invoked from within
+"usf_xsim_setup_simulation"
+    (procedure "tclapp::xilinx::xsim::setup" line 24)
+    invoked from within
+"tclapp::xilinx::xsim::setup { -simset sim_1 -mode behavioral -run_dir C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim -int_os_type 6..."
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+close_project
+open_project C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_array_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'conv_kern_array_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj conv_kern_array_tb_vlog.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_512x72/sim/dpram_512x72.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_512x72
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_26x32/sim/dpram_26x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_26x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_13x256/sim/dpram_13x256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_13x256
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_208x256/sim/dpram_208x256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_208x256
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_208x32/sim/dpram_208x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_208x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_16384x32/sim/dpram_16384x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_16384x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_256x64/sim/spram_256x64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_256x64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_832x32/sim/spram_832x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_832x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_6240x32/sim/spram_6240x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_6240x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_512x72/sim/spram_512x72.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_512x72
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_208x256/sim/spram_208x256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_208x256
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/adder_tree.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/cnn_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/spram_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mac.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/dpram_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mac_array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_array
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/cnn_ctrl_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_ctrl_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/bmp_image_writer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bmp_image_writer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_array_tb
+"xvhdl --incr --relax -prj conv_kern_array_tb_vhdl.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 2698.957 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '8' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_7 -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_array_tb_behav xil_defaultlib.conv_kern_array_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_7 -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_array_tb_behav xil_defaultlib.conv_kern_array_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_11.xbip_utils_v3_0_11_pkg
+Compiling package dsp_macro_v1_0_4.dsp_macro_v1_0_4_viv_comp
+Compiling package dsp_macro_v1_0_4.dsp_macro_v1_0_4_pkg
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_width=18...]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_width=48...]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_latency=...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=2,adreg=0,areg...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_5.xbip_dsp48e1_wrapper_v3_0 [\xbip_dsp48e1_wrapper_v3_0(areg=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_width=24...]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(1,1)(1,1)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_latency=...]
+Compiling architecture synth of entity dsp_macro_v1_0_4.dsp_macro_synth [\dsp_macro_synth(c_xdevicefamily...]
+Compiling architecture synth of entity dsp_macro_v1_0_4.dsp_macro_v1_0_4_viv [\dsp_macro_v1_0_4_viv(c_xdevicef...]
+Compiling architecture xilinx of entity dsp_macro_v1_0_4.dsp_macro_v1_0_4 [\dsp_macro_v1_0_4(c_xdevicefamil...]
+Compiling architecture dsp_macro_0_arch of entity xil_defaultlib.dsp_macro_0 [dsp_macro_0_default]
+Compiling module xil_defaultlib.mul_default
+Compiling module xil_defaultlib.adder_tree
+Compiling module xil_defaultlib.mac
+Compiling module xil_defaultlib.mac_array
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.conv_kern_array_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot conv_kern_array_tb_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:51 . Memory (MB): peak = 2698.957 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '51' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "conv_kern_array_tb_behav -key {Behavioral:sim_1:Functional:conv_kern_array_tb} -tclbatch {conv_kern_array_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source conv_kern_array_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Wavedata 42-489] Can't add object "/conv_kern_array_tb/in_img" to the wave window because it has 2097152 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+# run 1000ns
+Loading input feature maps from file: ../../inout_data_sw/log_feamap/CONV00_input_32b.hex
+Loading weight from file: ../../inout_data_sw/log_param/CONV00_param_weight.hex
+Loading bias from file: ../../inout_data_sw/log_param/CONV00_param_biases.hex
+xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2698.957 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'conv_kern_array_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:01:08 . Memory (MB): peak = 2698.957 ; gain = 0.000
+current_wave_config {Untitled 6}
+Untitled 6
+add_wave {{/conv_kern_array_tb/clk}} {{/conv_kern_array_tb/rstn}} {{/conv_kern_array_tb/ctrl_data_run}} {{/conv_kern_array_tb/vld_i}} {{/conv_kern_array_tb/win}} {{/conv_kern_array_tb/din}} {{/conv_kern_array_tb/acc_o}} {{/conv_kern_array_tb/vld_o}} {{/conv_kern_array_tb/in_img}} {{/conv_kern_array_tb/filter}} {{/conv_kern_array_tb/bias}} {{/conv_kern_array_tb/preload}} {{/conv_kern_array_tb/i}} {{/conv_kern_array_tb/iter}} {{/conv_kern_array_tb/j}} {{/conv_kern_array_tb/row}} {{/conv_kern_array_tb/col}} {{/conv_kern_array_tb/is_first_row}} {{/conv_kern_array_tb/is_last_row}} {{/conv_kern_array_tb/is_first_col}} {{/conv_kern_array_tb/is_last_col}} {{/conv_kern_array_tb/temp_acc_bias}} {{/conv_kern_array_tb/conv_out}} {{/conv_kern_array_tb/dbg_write_image}} {{/conv_kern_array_tb/dbg_write_image_done}} {{/conv_kern_array_tb/dbg_pix_idx}} 
+WARNING: [Wavedata 42-489] Can't add object "/conv_kern_array_tb/in_img" to the wave window because it has 2097152 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+current_wave_config {Untitled 6}
+Untitled 6
+add_wave {{/conv_kern_array_tb/clk}} {{/conv_kern_array_tb/rstn}} {{/conv_kern_array_tb/ctrl_data_run}} {{/conv_kern_array_tb/vld_i}} {{/conv_kern_array_tb/win}} {{/conv_kern_array_tb/din}} {{/conv_kern_array_tb/acc_o}} {{/conv_kern_array_tb/vld_o}} {{/conv_kern_array_tb/filter}} {{/conv_kern_array_tb/bias}} {{/conv_kern_array_tb/preload}} {{/conv_kern_array_tb/i}} {{/conv_kern_array_tb/iter}} {{/conv_kern_array_tb/j}} {{/conv_kern_array_tb/row}} {{/conv_kern_array_tb/col}} {{/conv_kern_array_tb/is_first_row}} {{/conv_kern_array_tb/is_last_row}} {{/conv_kern_array_tb/is_first_col}} {{/conv_kern_array_tb/is_last_col}} {{/conv_kern_array_tb/temp_acc_bias}} {{/conv_kern_array_tb/conv_out}} {{/conv_kern_array_tb/dbg_write_image}} {{/conv_kern_array_tb/dbg_write_image_done}} {{/conv_kern_array_tb/dbg_pix_idx}} 
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_array_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'conv_kern_array_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj conv_kern_array_tb_vlog.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+"xvhdl --incr --relax -prj conv_kern_array_tb_vhdl.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2698.957 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_7 -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_array_tb_behav xil_defaultlib.conv_kern_array_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_7 -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_array_tb_behav xil_defaultlib.conv_kern_array_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2698.957 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "conv_kern_array_tb_behav -key {Behavioral:sim_1:Functional:conv_kern_array_tb} -tclbatch {conv_kern_array_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source conv_kern_array_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Wavedata 42-489] Can't add object "/conv_kern_array_tb/in_img" to the wave window because it has 2097152 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+# run 1000ns
+Loading input feature maps from file: ../../inout_data_sw/log_feamap/CONV00_input_32b.hex
+Loading weight from file: ../../inout_data_sw/log_param/CONV00_param_weight.hex
+Loading bias from file: ../../inout_data_sw/log_param/CONV00_param_biases.hex
+xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2698.957 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'conv_kern_array_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:20 . Memory (MB): peak = 2698.957 ; gain = 0.000
+run all
+Filter och=00: 
+
+  19	 -11	  -6
+  61	 -17	 -42
+  23	  -2	 -21
+
+
+Filter och=01: 
+
+  12	 -15	 -17
+   5	   5	 -18
+   6	   2	 -17
+
+
+Filter och=02: 
+
+   3	   6	  14
+  -8	   1	  21
+   5	 -22	   9
+
+
+Filter och=03: 
+
+  24	  17	  12
+  11	  23	  24
+  -4	   9	  -1
+
+
+Filter och=04: 
+
+ -10	  -2	   4
+  -9	  -8	  -9
+   8	   0	  10
+
+
+Filter och=05: 
+
+  25	 -10	  22
+  -7	 -32	   9
+  -6	 -21	  -8
+
+
+Filter och=06: 
+
+ -70	 -35	 -12
+  47	  28	   0
+  48	  16	   4
+
+
+Filter och=07: 
+
+  -8	   2	  15
+ -27	  -5	  32
+ -27	  16	   9
+
+
+Filter och=08: 
+
+ -21	 -26	 -25
+ -60	 -95	 -32
+ -38	 -79	 -28
+
+
+Filter och=09: 
+
+  -8	   4	   8
+  12	   5	   8
+   4	  18	  13
+
+
+Filter och=10: 
+
+ -76	  21	 -45
+ -37	 -18	  33
+  29	  23	  50
+
+
+Filter och=11: 
+
+  53	  29	  30
+  25	  -5	  -1
+ -62	 -56	  -9
+
+
+Filter och=12: 
+
+   6	  53	  26
+  23	  70	  46
+  -9	  31	  11
+
+
+Filter och=13: 
+
+  20	  45	 -11
+  -7	 -32	 -25
+   4	 -28	 -17
+
+
+Filter och=14: 
+
+   7	 -65	  10
+ -10	   5	   3
+   1	 -22	   2
+
+
+Filter och=15: 
+
+  -8	  -9	 -18
+   0	   2	  -2
+   6	  13	   0
+
+
+run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 2698.957 ; gain = 0.000
+close_sim
+INFO: xsimkernel Simulation Memory Usage: 283096 KB (Peak: 283096 KB), Simulation CPU Usage: 10593 ms
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_array_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'conv_kern_array_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj conv_kern_array_tb_vlog.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_512x72/sim/dpram_512x72.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_512x72
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_26x32/sim/dpram_26x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_26x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_13x256/sim/dpram_13x256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_13x256
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_208x256/sim/dpram_208x256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_208x256
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_208x32/sim/dpram_208x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_208x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_16384x32/sim/dpram_16384x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_16384x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_256x64/sim/spram_256x64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_256x64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_832x32/sim/spram_832x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_832x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_6240x32/sim/spram_6240x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_6240x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_512x72/sim/spram_512x72.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_512x72
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_208x256/sim/spram_208x256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_208x256
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/adder_tree.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/cnn_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/spram_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mac.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/dpram_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mac_array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_array
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/cnn_ctrl_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_ctrl_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/bmp_image_writer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bmp_image_writer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_array_tb
+"xvhdl --incr --relax -prj conv_kern_array_tb_vhdl.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 2698.957 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '8' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_7 -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_array_tb_behav xil_defaultlib.conv_kern_array_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_7 -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_array_tb_behav xil_defaultlib.conv_kern_array_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_11.xbip_utils_v3_0_11_pkg
+Compiling package dsp_macro_v1_0_4.dsp_macro_v1_0_4_viv_comp
+Compiling package dsp_macro_v1_0_4.dsp_macro_v1_0_4_pkg
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_width=18...]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_width=48...]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_latency=...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=2,adreg=0,areg...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_5.xbip_dsp48e1_wrapper_v3_0 [\xbip_dsp48e1_wrapper_v3_0(areg=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_width=24...]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(1,1)(1,1)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_latency=...]
+Compiling architecture synth of entity dsp_macro_v1_0_4.dsp_macro_synth [\dsp_macro_synth(c_xdevicefamily...]
+Compiling architecture synth of entity dsp_macro_v1_0_4.dsp_macro_v1_0_4_viv [\dsp_macro_v1_0_4_viv(c_xdevicef...]
+Compiling architecture xilinx of entity dsp_macro_v1_0_4.dsp_macro_v1_0_4 [\dsp_macro_v1_0_4(c_xdevicefamil...]
+Compiling architecture dsp_macro_0_arch of entity xil_defaultlib.dsp_macro_0 [dsp_macro_0_default]
+Compiling module xil_defaultlib.mul_default
+Compiling module xil_defaultlib.adder_tree
+Compiling module xil_defaultlib.mac
+Compiling module xil_defaultlib.mac_array
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.conv_kern_array_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot conv_kern_array_tb_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:49 . Memory (MB): peak = 2698.957 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '49' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "conv_kern_array_tb_behav -key {Behavioral:sim_1:Functional:conv_kern_array_tb} -tclbatch {conv_kern_array_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source conv_kern_array_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Wavedata 42-489] Can't add object "/conv_kern_array_tb/in_img" to the wave window because it has 2097152 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+# run 1000ns
+Loading input feature maps from file: ../../inout_data_sw/log_feamap/CONV00_input_32b.hex
+Loading weight from file: ../../inout_data_sw/log_param/CONV00_param_weight.hex
+Loading bias from file: ../../inout_data_sw/log_param/CONV00_param_biases.hex
+xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2698.957 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'conv_kern_array_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:01:06 . Memory (MB): peak = 2698.957 ; gain = 0.000
+run all
+Filter och=00: 
+
+  19	 -11	  -6
+  61	 -17	 -42
+  23	  -2	 -21
+
+
+Filter och=01: 
+
+  12	 -15	 -17
+   5	   5	 -18
+   6	   2	 -17
+
+
+Filter och=02: 
+
+   3	   6	  14
+  -8	   1	  21
+   5	 -22	   9
+
+
+Filter och=03: 
+
+  24	  17	  12
+  11	  23	  24
+  -4	   9	  -1
+
+
+Filter och=04: 
+
+ -10	  -2	   4
+  -9	  -8	  -9
+   8	   0	  10
+
+
+Filter och=05: 
+
+  25	 -10	  22
+  -7	 -32	   9
+  -6	 -21	  -8
+
+
+Filter och=06: 
+
+ -70	 -35	 -12
+  47	  28	   0
+  48	  16	   4
+
+
+Filter och=07: 
+
+  -8	   2	  15
+ -27	  -5	  32
+ -27	  16	   9
+
+
+Filter och=08: 
+
+ -21	 -26	 -25
+ -60	 -95	 -32
+ -38	 -79	 -28
+
+
+Filter och=09: 
+
+  -8	   4	   8
+  12	   5	   8
+   4	  18	  13
+
+
+Filter och=10: 
+
+ -76	  21	 -45
+ -37	 -18	  33
+  29	  23	  50
+
+
+Filter och=11: 
+
+  53	  29	  30
+  25	  -5	  -1
+ -62	 -56	  -9
+
+
+Filter och=12: 
+
+   6	  53	  26
+  23	  70	  46
+  -9	  31	  11
+
+
+Filter och=13: 
+
+  20	  45	 -11
+  -7	 -32	 -25
+   4	 -28	 -17
+
+
+Filter och=14: 
+
+   7	 -65	  10
+ -10	   5	   3
+   1	 -22	   2
+
+
+Filter och=15: 
+
+  -8	  -9	 -18
+   0	   2	  -2
+   6	  13	   0
+
+
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 2698.957 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_array_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'conv_kern_array_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj conv_kern_array_tb_vlog.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_512x72/sim/dpram_512x72.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_512x72
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_26x32/sim/dpram_26x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_26x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_13x256/sim/dpram_13x256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_13x256
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_208x256/sim/dpram_208x256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_208x256
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_208x32/sim/dpram_208x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_208x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/dpram_16384x32/sim/dpram_16384x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_16384x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_256x64/sim/spram_256x64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_256x64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_832x32/sim/spram_832x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_832x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_6240x32/sim/spram_6240x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_6240x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_512x72/sim/spram_512x72.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_512x72
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.gen/sources_1/ip/spram_208x256/sim/spram_208x256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_208x256
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/adder_tree.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/cnn_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/spram_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spram_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mac.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/dpram_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/src/mac_array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_array
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/cnn_ctrl_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cnn_ctrl_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/bmp_image_writer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bmp_image_writer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_array_tb
+"xvhdl --incr --relax -prj conv_kern_array_tb_vhdl.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 2698.957 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '8' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_7 -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_array_tb_behav xil_defaultlib.conv_kern_array_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_7 -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_array_tb_behav xil_defaultlib.conv_kern_array_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_11.xbip_utils_v3_0_11_pkg
+Compiling package dsp_macro_v1_0_4.dsp_macro_v1_0_4_viv_comp
+Compiling package dsp_macro_v1_0_4.dsp_macro_v1_0_4_pkg
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_width=18...]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_width=48...]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_latency=...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=2,adreg=0,areg...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_5.xbip_dsp48e1_wrapper_v3_0 [\xbip_dsp48e1_wrapper_v3_0(areg=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_width=24...]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(1,1)(1,1)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_7.xbip_pipe_v3_0_7_viv [\xbip_pipe_v3_0_7_viv(c_latency=...]
+Compiling architecture synth of entity dsp_macro_v1_0_4.dsp_macro_synth [\dsp_macro_synth(c_xdevicefamily...]
+Compiling architecture synth of entity dsp_macro_v1_0_4.dsp_macro_v1_0_4_viv [\dsp_macro_v1_0_4_viv(c_xdevicef...]
+Compiling architecture xilinx of entity dsp_macro_v1_0_4.dsp_macro_v1_0_4 [\dsp_macro_v1_0_4(c_xdevicefamil...]
+Compiling architecture dsp_macro_0_arch of entity xil_defaultlib.dsp_macro_0 [dsp_macro_0_default]
+Compiling module xil_defaultlib.mul_default
+Compiling module xil_defaultlib.adder_tree
+Compiling module xil_defaultlib.mac
+Compiling module xil_defaultlib.mac_array
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.bmp_image_writer(WIDTH=256,HEIGH...
+Compiling module xil_defaultlib.conv_kern_array_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot conv_kern_array_tb_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:48 . Memory (MB): peak = 2698.957 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '48' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "conv_kern_array_tb_behav -key {Behavioral:sim_1:Functional:conv_kern_array_tb} -tclbatch {conv_kern_array_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source conv_kern_array_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Wavedata 42-489] Can't add object "/conv_kern_array_tb/in_img" to the wave window because it has 2097152 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+# run 1000ns
+Loading input feature maps from file: ../../inout_data_sw/log_feamap/CONV00_input_32b.hex
+Loading weight from file: ../../inout_data_sw/log_param/CONV00_param_weight.hex
+Loading bias from file: ../../inout_data_sw/log_param/CONV00_param_biases.hex
+xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2698.957 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'conv_kern_array_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:01:05 . Memory (MB): peak = 2698.957 ; gain = 0.000
+run all
+Filter och=00: 
+
+  19	 -11	  -6
+  61	 -17	 -42
+  23	  -2	 -21
+
+
+Filter och=01: 
+
+  12	 -15	 -17
+   5	   5	 -18
+   6	   2	 -17
+
+
+Filter och=02: 
+
+   3	   6	  14
+  -8	   1	  21
+   5	 -22	   9
+
+
+Filter och=03: 
+
+  24	  17	  12
+  11	  23	  24
+  -4	   9	  -1
+
+
+Filter och=04: 
+
+ -10	  -2	   4
+  -9	  -8	  -9
+   8	   0	  10
+
+
+Filter och=05: 
+
+  25	 -10	  22
+  -7	 -32	   9
+  -6	 -21	  -8
+
+
+Filter och=06: 
+
+ -70	 -35	 -12
+  47	  28	   0
+  48	  16	   4
+
+
+Filter och=07: 
+
+  -8	   2	  15
+ -27	  -5	  32
+ -27	  16	   9
+
+
+Filter och=08: 
+
+ -21	 -26	 -25
+ -60	 -95	 -32
+ -38	 -79	 -28
+
+
+Filter och=09: 
+
+  -8	   4	   8
+  12	   5	   8
+   4	  18	  13
+
+
+Filter och=10: 
+
+ -76	  21	 -45
+ -37	 -18	  33
+  29	  23	  50
+
+
+Filter och=11: 
+
+  53	  29	  30
+  25	  -5	  -1
+ -62	 -56	  -9
+
+
+Filter och=12: 
+
+   6	  53	  26
+  23	  70	  46
+  -9	  31	  11
+
+
+Filter och=13: 
+
+  20	  45	 -11
+  -7	 -32	 -25
+   4	 -28	 -17
+
+
+Filter och=14: 
+
+   7	 -65	  10
+ -10	   5	   3
+   1	 -22	   2
+
+
+Filter och=15: 
+
+  -8	  -9	 -18
+   0	   2	  -2
+   6	  13	   0
+
+
+run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 2698.957 ; gain = 0.000
+run all
+Saving output images to file: ../../inout_data_hw/CONV00_input_ch03.bmp
+Saving output images to file: ../../inout_data_hw/CONV00_input_ch02.bmp
+Saving output images to file: ../../inout_data_hw/CONV00_input_ch01.bmp
+Saving output images to file: ../../inout_data_hw/CONV00_input_ch00.bmp
+Saving output images to file: ../../inout_data_hw/CONV00_output_ch15.bmp
+Saving output images to file: ../../inout_data_hw/CONV00_output_ch14.bmp
+Saving output images to file: ../../inout_data_hw/CONV00_output_ch13.bmp
+Saving output images to file: ../../inout_data_hw/CONV00_output_ch12.bmp
+Saving output images to file: ../../inout_data_hw/CONV00_output_ch11.bmp
+Saving output images to file: ../../inout_data_hw/CONV00_output_ch10.bmp
+Saving output images to file: ../../inout_data_hw/CONV00_output_ch09.bmp
+Saving output images to file: ../../inout_data_hw/CONV00_output_ch08.bmp
+Saving output images to file: ../../inout_data_hw/CONV00_output_ch07.bmp
+Saving output images to file: ../../inout_data_hw/CONV00_output_ch06.bmp
+Saving output images to file: ../../inout_data_hw/CONV00_output_ch05.bmp
+Saving output images to file: ../../inout_data_hw/CONV00_output_ch04.bmp
+Saving output images to file: ../../inout_data_hw/CONV00_output_ch03.bmp
+Saving output images to file: ../../inout_data_hw/CONV00_output_ch02.bmp
+Saving output images to file: ../../inout_data_hw/CONV00_output_ch01.bmp
+Saving output images to file: ../../inout_data_hw/CONV00_output_ch00.bmp
+$stop called at time : 660410 ns : File "C:/Users/hdm09/Desktop/AIX2024/docs/07_System_Integration_Controller/code/yolohw/sim/conv_kern_array_tb.v" Line 159
+run: Time (s): cpu = 00:03:19 ; elapsed = 00:22:19 . Memory (MB): peak = 2698.957 ; gain = 0.000
+close_sim
+INFO: xsimkernel Simulation Memory Usage: 283992 KB (Peak: 283992 KB), Simulation CPU Usage: 881890 ms
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Apr  2 23:19:52 2024...

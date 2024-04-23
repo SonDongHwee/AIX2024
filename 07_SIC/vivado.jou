@@ -32,3 +32,34 @@ close_sim
 launch_simulation
 source conv_kern_array_tb.tcl
 run all
+close_sim
+launch_simulation
+source conv_kern_array_tb.tcl
+run all
+run all
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+close_project
+open_project C:/Users/hdm09/Desktop/AIX2024/07_SIC/07_SIC.xpr
+launch_simulation
+source conv_kern_array_tb.tcl
+current_wave_config {Untitled 6}
+add_wave {{/conv_kern_array_tb/clk}} {{/conv_kern_array_tb/rstn}} {{/conv_kern_array_tb/ctrl_data_run}} {{/conv_kern_array_tb/vld_i}} {{/conv_kern_array_tb/win}} {{/conv_kern_array_tb/din}} {{/conv_kern_array_tb/acc_o}} {{/conv_kern_array_tb/vld_o}} {{/conv_kern_array_tb/in_img}} {{/conv_kern_array_tb/filter}} {{/conv_kern_array_tb/bias}} {{/conv_kern_array_tb/preload}} {{/conv_kern_array_tb/i}} {{/conv_kern_array_tb/iter}} {{/conv_kern_array_tb/j}} {{/conv_kern_array_tb/row}} {{/conv_kern_array_tb/col}} {{/conv_kern_array_tb/is_first_row}} {{/conv_kern_array_tb/is_last_row}} {{/conv_kern_array_tb/is_first_col}} {{/conv_kern_array_tb/is_last_col}} {{/conv_kern_array_tb/temp_acc_bias}} {{/conv_kern_array_tb/conv_out}} {{/conv_kern_array_tb/dbg_write_image}} {{/conv_kern_array_tb/dbg_write_image_done}} {{/conv_kern_array_tb/dbg_pix_idx}} 
+current_wave_config {Untitled 6}
+add_wave {{/conv_kern_array_tb/clk}} {{/conv_kern_array_tb/rstn}} {{/conv_kern_array_tb/ctrl_data_run}} {{/conv_kern_array_tb/vld_i}} {{/conv_kern_array_tb/win}} {{/conv_kern_array_tb/din}} {{/conv_kern_array_tb/acc_o}} {{/conv_kern_array_tb/vld_o}} {{/conv_kern_array_tb/filter}} {{/conv_kern_array_tb/bias}} {{/conv_kern_array_tb/preload}} {{/conv_kern_array_tb/i}} {{/conv_kern_array_tb/iter}} {{/conv_kern_array_tb/j}} {{/conv_kern_array_tb/row}} {{/conv_kern_array_tb/col}} {{/conv_kern_array_tb/is_first_row}} {{/conv_kern_array_tb/is_last_row}} {{/conv_kern_array_tb/is_first_col}} {{/conv_kern_array_tb/is_last_col}} {{/conv_kern_array_tb/temp_acc_bias}} {{/conv_kern_array_tb/conv_out}} {{/conv_kern_array_tb/dbg_write_image}} {{/conv_kern_array_tb/dbg_write_image_done}} {{/conv_kern_array_tb/dbg_pix_idx}} 
+close_sim
+launch_simulation
+source conv_kern_array_tb.tcl
+run all
+close_sim
+launch_simulation
+source conv_kern_array_tb.tcl
+run all
+close_sim
+launch_simulation
+source conv_kern_array_tb.tcl
+run all
+run all
+close_sim
