@@ -5,17 +5,18 @@ Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_WIDTH' [C:/Users/hdm09/Desktop/AIX2024_CW_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:165]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_HEIGHT' [C:/Users/hdm09/Desktop/AIX2024_CW_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:166]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tr' [C:/Users/hdm09/Desktop/AIX2024_CW_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:167]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tc' [C:/Users/hdm09/Desktop/AIX2024_CW_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:168]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'Ti' [C:/Users/hdm09/Desktop/AIX2024_CW_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:169]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'To' [C:/Users/hdm09/Desktop/AIX2024_CW_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:170]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'Ni' [C:/Users/hdm09/Desktop/AIX2024_CW_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:171]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'No' [C:/Users/hdm09/Desktop/AIX2024_CW_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:172]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'SCALE_FACTOR' [C:/Users/hdm09/Desktop/AIX2024_CW_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:173]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'NEXT_LAYER_INPUT_M' [C:/Users/hdm09/Desktop/AIX2024_CW_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:174]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_CONV00' [C:/Users/hdm09/Desktop/AIX2024_CW_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:178]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_WIDTH' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:166]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_HEIGHT' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:167]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tr' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:168]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tc' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:169]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'Ti' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:170]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'To' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:171]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'Ni' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:172]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'No' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:173]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'SCALE_FACTOR' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:174]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'NEXT_LAYER_INPUT_M' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:175]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_CONV00' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:179]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_1x1' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:180]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis

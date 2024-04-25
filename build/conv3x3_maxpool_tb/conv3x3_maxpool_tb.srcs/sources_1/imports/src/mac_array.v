@@ -5,6 +5,7 @@ module mac_array(
   input rstn, 
   input vld_i,
   input is_CONV00,
+  input is_1x1,
 
   input [127:0] win_0, 
   input [127:0] win_1,
@@ -29,7 +30,11 @@ module mac_array(
   output reg [ 28:0] acc_o_0, 
   output reg [ 28:0] acc_o_1, 
   output reg [ 28:0] acc_o_2, 
-  output reg [ 28:0] acc_o_3, 
+  output reg [ 28:0] acc_o_3,
+  output reg [ 28:0] acc_o_4, 
+  output reg [ 28:0] acc_o_5, 
+  output reg [ 28:0] acc_o_6, 
+  output reg [ 28:0] acc_o_7, 
   output reg         vld_o
 );
 
@@ -131,6 +136,22 @@ always @ (*) begin
     acc_o_1 = $signed(mac_out[2]) + $signed(mac_out[3]);
     acc_o_2 = $signed(mac_out[4]) + $signed(mac_out[5]);
     acc_o_3 = $signed(mac_out[6]) + $signed(mac_out[7]);
+    acc_o_4 = 1'b0;
+    acc_o_5 = 1'b0;
+    acc_o_6 = 1'b0;
+    acc_o_7 = 1'b0;
+
+    vld_o = &mvld_o;
+    
+  end else if (is_1x1) begin
+    acc_o_0 = $signed(mac_out[0]);
+    acc_o_1 = $signed(mac_out[1]);
+    acc_o_2 = $signed(mac_out[2]);
+    acc_o_3 = $signed(mac_out[3]);
+    acc_o_4 = $signed(mac_out[4]);
+    acc_o_5 = $signed(mac_out[5]);
+    acc_o_6 = $signed(mac_out[6]);
+    acc_o_7 = $signed(mac_out[7]);
 
     vld_o = &mvld_o;
 
@@ -141,21 +162,13 @@ always @ (*) begin
     acc_o_1 = 1'b0;
     acc_o_2 = 1'b0;
     acc_o_3 = 1'b0;
+    acc_o_4 = 1'b0;
+    acc_o_5 = 1'b0;
+    acc_o_6 = 1'b0;
+    acc_o_7 = 1'b0;
 
     vld_o = &mvld_o;
   end
 end
-// assign acc_o_0 = (is_CONV00) ? ($signed(mac_out[0]) + $signed(mac_out[1]))
-//                              : ($signed(mac_out[0]) + $signed(mac_out[1]) + $signed(mac_out[2]) + 
-//                                 $signed(mac_out[3]) + $signed(mac_out[4]) + $signed(mac_out[5]) + 
-//                                 $signed(mac_out[6]) + $signed(mac_out[7]) + $signed(mac_out[8]));
-// assign acc_o_1 = (is_CONV00) ? ($signed(mac_out[2]) + $signed(mac_out[3]))
-//                              : 1'b0;
-// assign acc_o_2 = (is_CONV00) ? ($signed(mac_out[4]) + $signed(mac_out[5]))
-//                              : 1'b0;
-// assign acc_o_3 = (is_CONV00) ? ($signed(mac_out[6]) + $signed(mac_out[7]))
-//                              : 1'b0;
-
-// assign vld_o = &mvld_o;
 
 endmodule

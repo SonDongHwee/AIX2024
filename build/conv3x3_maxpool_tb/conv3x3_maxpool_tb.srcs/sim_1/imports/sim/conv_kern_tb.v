@@ -159,6 +159,7 @@ end
 wire F_writedone, W_writedone, B_writedone;
 wire conv3x3_ready, conv3x3_valid;
 wire [127:0] conv3x3_dout;
+wire [127:0] conv3x3_dout_2;
 wire conv3x3_done;
 conv3x3_maxpool_module m_conv3x3_maxpool_module (
 	// inputs
@@ -176,6 +177,7 @@ conv3x3_maxpool_module m_conv3x3_maxpool_module (
 	.clk				(clk),
 	.rstn				(rstn),
 	.is_CONV00			(is_CONV00),
+	.is_1x1				(is_1x1),
 	.COMMAND			(COMMAND),
 	.RECEIVE_SIZE		(RECEIVE_SIZE),
 	.conv_start			(conv3x3_start),
@@ -189,6 +191,7 @@ conv3x3_maxpool_module m_conv3x3_maxpool_module (
 	.ready_o			(conv3x3_ready),
 	.valid_o			(conv3x3_valid),
 	.data_out			(conv3x3_dout),
+	.data_out_2			(conv3x3_dout_2),
 	.conv_done			(conv3x3_done)
 );
 
