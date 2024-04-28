@@ -16,6 +16,7 @@ module conv3x3_maxpool_module(
   input              rstn,
   input              is_CONV00,
   input              is_1x1,
+  input              is_relu,
   input       [ 3:0] COMMAND,
   input       [31:0] RECEIVE_SIZE,
   input              conv_start,
@@ -47,9 +48,9 @@ localparam    STATE_DONE = 4'b0010;
 // --------------------------------------------
 // Registers or BRAMs
 // --------------------------------------------
-reg [31:0] in_img [0:16383];        // maximum value is 256*256=65536 at CONV00, /4 is needed
+reg [31:0] in_img [0:65536];        // maximum value is 256*256*4=262144 at CONV00, /4 is needed
 reg [31:0] weight [0:3*3*256*512/4-1];  // maximum value is 3*3*512*256, but it's too large..., /4 is needed
-reg [31:0]   bias [0:127];          // maximum value is 512 at CONV10, /4 is needed
+reg [31:0]   bias [0:255];          // maximum value is 512 at CONV10, /2 is needed
 
 // --------------------------------------------
 // Local variables
@@ -307,14 +308,14 @@ endgenerate
 genvar d;
 generate
   for (d = 0; d < 8; d = d + 1) begin : quant_ReLU_1x1
-    assign mac_1x1_quant[0][d] = mac_1x1_add_bias[0][d][28] ? 1'b0
-                                    : mac_1x1_add_bias[0][d][(SCALE_FACTOR - NEXT_LAYER_INPUT_M)+:8];
-    assign mac_1x1_quant[1][d] = mac_1x1_add_bias[1][d][28] ? 1'b0
-                                    : mac_1x1_add_bias[1][d][(SCALE_FACTOR - NEXT_LAYER_INPUT_M)+:8];                                
-    assign mac_1x1_quant[2][d] = mac_1x1_add_bias[2][d][28] ? 1'b0
-                                    : mac_1x1_add_bias[2][d][(SCALE_FACTOR - NEXT_LAYER_INPUT_M)+:8];
-    assign mac_1x1_quant[3][d] = mac_1x1_add_bias[3][d][28] ? 1'b0
-                                    : mac_1x1_add_bias[3][d][(SCALE_FACTOR - NEXT_LAYER_INPUT_M)+:8];                                
+    assign mac_1x1_quant[0][d] = mac_1x1_add_bias[0][d][28] ? (is_relu ? 1'b0 : mac_1x1_add_bias[0][d][(SCALE_FACTOR - NEXT_LAYER_INPUT_M)+:8] + 1)
+                                                            : mac_1x1_add_bias[0][d][(SCALE_FACTOR - NEXT_LAYER_INPUT_M)+:8];
+    assign mac_1x1_quant[1][d] = mac_1x1_add_bias[1][d][28] ? (is_relu ? 1'b0 : mac_1x1_add_bias[1][d][(SCALE_FACTOR - NEXT_LAYER_INPUT_M)+:8] + 1)
+                                                            : mac_1x1_add_bias[1][d][(SCALE_FACTOR - NEXT_LAYER_INPUT_M)+:8];                                                        
+    assign mac_1x1_quant[2][d] = mac_1x1_add_bias[2][d][28] ? (is_relu ? 1'b0 : mac_1x1_add_bias[2][d][(SCALE_FACTOR - NEXT_LAYER_INPUT_M)+:8] + 1)
+                                                            : mac_1x1_add_bias[2][d][(SCALE_FACTOR - NEXT_LAYER_INPUT_M)+:8];
+    assign mac_1x1_quant[3][d] = mac_1x1_add_bias[3][d][28] ? (is_relu ? 1'b0 : mac_1x1_add_bias[3][d][(SCALE_FACTOR - NEXT_LAYER_INPUT_M)+:8] + 1)
+                                                            : mac_1x1_add_bias[3][d][(SCALE_FACTOR - NEXT_LAYER_INPUT_M)+:8];                                                        
   end
 endgenerate
 
@@ -1384,7 +1385,6 @@ always @ (posedge clk) begin
                     valid_o <= 1'b0;
                     data_out <= 1'b0;
                     data_out_2 <= 1'b0;
-                    // data_out needs to be considered!!!
                   end else begin // this is already valid_pool == 1
                     send_done <= 1'b0;
                     valid_o <= 1'b1;

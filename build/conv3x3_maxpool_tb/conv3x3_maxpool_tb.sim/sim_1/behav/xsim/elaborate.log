@@ -17,6 +17,7 @@ WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 f
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'NEXT_LAYER_INPUT_M' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:175]
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_CONV00' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:179]
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_1x1' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:180]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_relu' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:181]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis

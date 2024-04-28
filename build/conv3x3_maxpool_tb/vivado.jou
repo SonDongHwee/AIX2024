@@ -3,10 +3,10 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Wed Apr 24 22:36:56 2024
-# Process ID: 18972
+# Start of session at: Sun Apr 28 11:46:18 2024
+# Process ID: 20592
 # Current directory: C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14940 C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19316 C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.xpr
 # Log file: C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/vivado.log
 # Journal file: C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb\vivado.jou
 # Running On: Dongmin, OS: Windows, CPU Frequency: 1800 MHz, CPU Physical cores: 4, Host memory: 8437 MB
@@ -23,20 +23,55 @@ launch_simulation
 open_wave_config C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg
 source conv_kern_tb.tcl
 run all
+relaunch_sim
+run all
+relaunch_sim
+run all
+relaunch_sim
+run all
+relaunch_sim
+run all
 close_sim
 launch_simulation
 open_wave_config C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg
 source conv_kern_tb.tcl
+run all
+relaunch_sim
+relaunch_sim
+run all
+relaunch_sim
+run all
+relaunch_sim
+run all
+save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}
+save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}
+save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}
+relaunch_sim
+save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg
+source conv_kern_tb.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg
+source conv_kern_tb.tcl
+run all
+relaunch_sim
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg
+source conv_kern_tb.tcl
+run all
+relaunch_sim
+run all
+save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}
 current_wave_config {conv_kern_tb_behav.wcfg}
-add_wave {{/conv_kern_tb/m_conv3x3_maxpool_module/final_sum}} {{/conv_kern_tb/m_conv3x3_maxpool_module/bias_1x1}} {{/conv_kern_tb/m_conv3x3_maxpool_module/mac_1x1_add_bias}} {{/conv_kern_tb/m_conv3x3_maxpool_module/mac_1x1_quant}} {{/conv_kern_tb/m_conv3x3_maxpool_module/result_1x1_0}} {{/conv_kern_tb/m_conv3x3_maxpool_module/result_1x1_1}} {{/conv_kern_tb/m_conv3x3_maxpool_module/result_1x1_2}} {{/conv_kern_tb/m_conv3x3_maxpool_module/result_1x1_3}} 
-save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}
-relaunch_sim
-run all
-save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}
-save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}
-save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}
-relaunch_sim
-run all
+add_wave {{/conv_kern_tb/m_conv3x3_maxpool_module/valid_pool}} 
 save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}
 close_sim
 launch_simulation
@@ -49,19 +84,4 @@ relaunch_sim
 run all
 relaunch_sim
 run all
-relaunch_sim
 close_sim
-launch_simulation
-open_wave_config C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg
-source conv_kern_tb.tcl
-restart
-run all
-save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}
-relaunch_sim
-current_wave_config {conv_kern_tb_behav.wcfg}
-add_wave {{/conv_kern_tb/m_conv3x3_maxpool_module/data_out_2}} 
-save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}
-relaunch_sim
-run all
-save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}
-save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}

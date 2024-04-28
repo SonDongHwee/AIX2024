@@ -1,0 +1,1529 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Apr 24 22:36:56 2024
+# Process ID: 18972
+# Current directory: C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14940 C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.xpr
+# Log file: C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/vivado.log
+# Journal file: C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb\vivado.jou
+# Running On: Dongmin, OS: Windows, CPU Frequency: 1800 MHz, CPU Physical cores: 4, Host memory: 8437 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24c/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24i:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24i/1.0/board.xml as part xck24-ubva530-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.2/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.3/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.4/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kd240_som/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.0/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.1/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.0/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.1/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc702:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc702/1.4/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu104/1.1/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.4/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.5/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.6/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [Project 1-313] Project file moved from 'C:/Users/hdm09/Desktop/AIX2024_CW_local/build/conv3x3_maxpool_tb' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
+open_project: Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 1463.469 ; gain = 325.676
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'conv_kern_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj conv_kern_tb_vlog.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/adder_tree.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/conv3x3_maxpool_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv3x3_maxpool_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac_array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_array
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+WARNING: [VRFC 10-3380] identifier 'Ni' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/define.v:188]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_tb
+WARNING: [VRFC 10-2938] 'data' is already implicitly declared on line 183 [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:199]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:94]
+WARNING: [VRFC 10-3380] identifier 'F_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:103]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:109]
+WARNING: [VRFC 10-3380] identifier 'W_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:117]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:123]
+WARNING: [VRFC 10-3380] identifier 'B_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:131]
+WARNING: [VRFC 10-3380] identifier 'conv3x3_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:140]
+WARNING: [VRFC 10-3380] identifier 'pixel_out_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:147]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl --incr --relax -prj conv_kern_tb_vhdl.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.gen/sources_1/ip/dsp_macro_0/sim/dsp_macro_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'dsp_macro_0'
+run_program: Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 1484.195 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '13' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_WIDTH' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:165]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_HEIGHT' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:166]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tr' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:167]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tc' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:168]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'Ti' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:169]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'To' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:170]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'Ni' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:171]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'No' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:172]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'SCALE_FACTOR' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:173]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'NEXT_LAYER_INPUT_M' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:174]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_CONV00' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:178]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mul_default
+Compiling module xil_defaultlib.adder_tree
+Compiling module xil_defaultlib.mac
+Compiling module xil_defaultlib.mac_array
+Compiling module xil_defaultlib.conv3x3_maxpool_module
+Compiling module xil_defaultlib.conv_kern_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot conv_kern_tb_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 1488.281 ; gain = 4.086
+INFO: [USF-XSim-69] 'elaborate' step finished in '16' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "conv_kern_tb_behav -key {Behavioral:sim_1:Functional:conv_kern_tb} -tclbatch {conv_kern_tb.tcl} -view {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg
+source conv_kern_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Loading input feature maps from file: ../../inout_data_sw/log_feamap/CONV10_input_32b.hex
+run: Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1941.766 ; gain = 396.691
+xsim: Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1941.766 ; gain = 453.484
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'conv_kern_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:34 ; elapsed = 00:01:04 . Memory (MB): peak = 1941.766 ; gain = 457.570
+run all
+Loading weights from file: ../../inout_data_sw/log_param/CONV10_param_weight_32b.hex
+Loading biases from file: ../../inout_data_sw/log_param/CONV10_param_biases_32b.hex
+Preload data done.
+
+Conv module starts to read feature
+Conv module finishes reading feature
+
+Conv module starts to read weight
+Conv module finishes reading weight
+
+Conv module starts to read bias
+Conv module finishes reading bias
+
+Conv module starts to compute
+run: Time (s): cpu = 00:01:26 ; elapsed = 00:01:33 . Memory (MB): peak = 1941.766 ; gain = 0.000
+close_sim
+INFO: xsimkernel Simulation Memory Usage: 69848 KB (Peak: 69848 KB), Simulation CPU Usage: 34515 ms
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'conv_kern_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj conv_kern_tb_vlog.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/adder_tree.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/conv3x3_maxpool_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv3x3_maxpool_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac_array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_array
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+WARNING: [VRFC 10-3380] identifier 'Ni' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/define.v:219]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_tb
+WARNING: [VRFC 10-2938] 'data' is already implicitly declared on line 184 [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:200]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:94]
+WARNING: [VRFC 10-3380] identifier 'F_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:103]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:109]
+WARNING: [VRFC 10-3380] identifier 'W_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:117]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:123]
+WARNING: [VRFC 10-3380] identifier 'B_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:131]
+WARNING: [VRFC 10-3380] identifier 'conv3x3_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:140]
+WARNING: [VRFC 10-3380] identifier 'pixel_out_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:147]
+"xvhdl --incr --relax -prj conv_kern_tb_vhdl.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 1941.766 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '10' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_WIDTH' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:165]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_HEIGHT' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:166]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tr' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:167]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tc' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:168]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'Ti' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:169]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'To' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:170]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'Ni' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:171]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'No' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:172]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'SCALE_FACTOR' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:173]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'NEXT_LAYER_INPUT_M' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:174]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_CONV00' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:178]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_1x1' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:179]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mul_default
+Compiling module xil_defaultlib.adder_tree
+Compiling module xil_defaultlib.mac
+Compiling module xil_defaultlib.mac_array
+Compiling module xil_defaultlib.conv3x3_maxpool_module
+Compiling module xil_defaultlib.conv_kern_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot conv_kern_tb_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 1941.766 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '14' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "conv_kern_tb_behav -key {Behavioral:sim_1:Functional:conv_kern_tb} -tclbatch {conv_kern_tb.tcl} -view {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg
+source conv_kern_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Loading input feature maps from file: ../../inout_data_sw/log_feamap/CONV12_input_32b.hex
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1941.766 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'conv_kern_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:36 . Memory (MB): peak = 1941.766 ; gain = 0.000
+run all
+Loading weights from file: ../../inout_data_sw/log_param/CONV12_param_weight_32b.hex
+Loading biases from file: ../../inout_data_sw/log_param/CONV12_param_biases_32b.hex
+Preload data done.
+
+Conv module starts to read feature
+Conv module finishes reading feature
+
+Conv module starts to read weight
+Conv module finishes reading weight
+
+Conv module starts to read bias
+Conv module finishes reading bias
+
+Conv module starts to compute
+run: Time (s): cpu = 00:01:44 ; elapsed = 00:02:23 . Memory (MB): peak = 1941.766 ; gain = 0.000
+close_sim
+INFO: xsimkernel Simulation Memory Usage: 34040 KB (Peak: 34040 KB), Simulation CPU Usage: 68421 ms
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'conv_kern_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj conv_kern_tb_vlog.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/adder_tree.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/conv3x3_maxpool_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv3x3_maxpool_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac_array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_array
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+WARNING: [VRFC 10-3380] identifier 'Ni' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/define.v:219]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_tb
+WARNING: [VRFC 10-2938] 'data' is already implicitly declared on line 184 [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:200]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:94]
+WARNING: [VRFC 10-3380] identifier 'F_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:103]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:109]
+WARNING: [VRFC 10-3380] identifier 'W_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:117]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:123]
+WARNING: [VRFC 10-3380] identifier 'B_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:131]
+WARNING: [VRFC 10-3380] identifier 'conv3x3_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:140]
+WARNING: [VRFC 10-3380] identifier 'pixel_out_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:147]
+"xvhdl --incr --relax -prj conv_kern_tb_vhdl.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '10' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_WIDTH' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:165]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_HEIGHT' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:166]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tr' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:167]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tc' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:168]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'Ti' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:169]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'To' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:170]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'Ni' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:171]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'No' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:172]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'SCALE_FACTOR' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:173]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'NEXT_LAYER_INPUT_M' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:174]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_CONV00' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:178]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_1x1' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:179]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mul_default
+Compiling module xil_defaultlib.adder_tree
+Compiling module xil_defaultlib.mac
+Compiling module xil_defaultlib.mac_array
+Compiling module xil_defaultlib.conv3x3_maxpool_module
+Compiling module xil_defaultlib.conv_kern_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot conv_kern_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "conv_kern_tb_behav -key {Behavioral:sim_1:Functional:conv_kern_tb} -tclbatch {conv_kern_tb.tcl} -view {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg
+source conv_kern_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Loading input feature maps from file: ../../inout_data_sw/log_feamap/CONV12_input_32b.hex
+xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'conv_kern_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:31 . Memory (MB): peak = 3019.699 ; gain = 0.000
+current_wave_config {conv_kern_tb_behav.wcfg}
+conv_kern_tb_behav.wcfg
+add_wave {{/conv_kern_tb/m_conv3x3_maxpool_module/final_sum}} {{/conv_kern_tb/m_conv3x3_maxpool_module/bias_1x1}} {{/conv_kern_tb/m_conv3x3_maxpool_module/mac_1x1_add_bias}} {{/conv_kern_tb/m_conv3x3_maxpool_module/mac_1x1_quant}} {{/conv_kern_tb/m_conv3x3_maxpool_module/result_1x1_0}} {{/conv_kern_tb/m_conv3x3_maxpool_module/result_1x1_1}} {{/conv_kern_tb/m_conv3x3_maxpool_module/result_1x1_2}} {{/conv_kern_tb/m_conv3x3_maxpool_module/result_1x1_3}} 
+save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'conv_kern_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj conv_kern_tb_vlog.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/adder_tree.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/conv3x3_maxpool_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv3x3_maxpool_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac_array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_array
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+WARNING: [VRFC 10-3380] identifier 'Ni' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/define.v:219]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_tb
+WARNING: [VRFC 10-2938] 'data' is already implicitly declared on line 184 [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:200]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:94]
+WARNING: [VRFC 10-3380] identifier 'F_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:103]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:109]
+WARNING: [VRFC 10-3380] identifier 'W_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:117]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:123]
+WARNING: [VRFC 10-3380] identifier 'B_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:131]
+WARNING: [VRFC 10-3380] identifier 'conv3x3_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:140]
+WARNING: [VRFC 10-3380] identifier 'pixel_out_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:147]
+"xvhdl --incr --relax -prj conv_kern_tb_vhdl.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '9' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 3019.699 ; gain = 0.000
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_WIDTH' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:165]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_HEIGHT' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:166]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tr' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:167]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tc' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:168]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'Ti' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:169]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'To' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:170]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'Ni' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:171]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'No' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:172]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'SCALE_FACTOR' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:173]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'NEXT_LAYER_INPUT_M' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:174]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_CONV00' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:178]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_1x1' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:179]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mul_default
+Compiling module xil_defaultlib.adder_tree
+Compiling module xil_defaultlib.mac
+Compiling module xil_defaultlib.mac_array
+Compiling module xil_defaultlib.conv3x3_maxpool_module
+Compiling module xil_defaultlib.conv_kern_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot conv_kern_tb_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '12' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 3019.699 ; gain = 0.000
+Time resolution is 1 ps
+Loading input feature maps from file: ../../inout_data_sw/log_feamap/CONV12_input_32b.hex
+relaunch_xsim_kernel: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 3019.699 ; gain = 0.000
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:31 . Memory (MB): peak = 3019.699 ; gain = 0.000
+run all
+Loading weights from file: ../../inout_data_sw/log_param/CONV12_param_weight_32b.hex
+Loading biases from file: ../../inout_data_sw/log_param/CONV12_param_biases_32b.hex
+Preload data done.
+
+Conv module starts to read feature
+Conv module finishes reading feature
+
+Conv module starts to read weight
+Conv module finishes reading weight
+
+Conv module starts to read bias
+Conv module finishes reading bias
+
+Conv module starts to compute
+run: Time (s): cpu = 00:03:12 ; elapsed = 00:04:35 . Memory (MB): peak = 3019.699 ; gain = 0.000
+save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}
+save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}
+save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}
+relaunch_sim
+INFO: xsimkernel Simulation Memory Usage: 32192 KB (Peak: 32192 KB), Simulation CPU Usage: 98858 ms
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj conv_kern_tb_vlog.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/adder_tree.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/conv3x3_maxpool_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv3x3_maxpool_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac_array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_array
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+WARNING: [VRFC 10-3380] identifier 'Ni' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/define.v:219]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_tb
+WARNING: [VRFC 10-2938] 'data' is already implicitly declared on line 184 [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:200]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:94]
+WARNING: [VRFC 10-3380] identifier 'F_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:103]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:109]
+WARNING: [VRFC 10-3380] identifier 'W_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:117]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:123]
+WARNING: [VRFC 10-3380] identifier 'B_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:131]
+WARNING: [VRFC 10-3380] identifier 'conv3x3_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:140]
+WARNING: [VRFC 10-3380] identifier 'pixel_out_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:147]
+"xvhdl --incr --relax -prj conv_kern_tb_vhdl.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '10' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 3019.699 ; gain = 0.000
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_WIDTH' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:165]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_HEIGHT' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:166]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tr' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:167]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tc' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:168]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'Ti' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:169]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'To' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:170]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'Ni' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:171]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'No' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:172]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'SCALE_FACTOR' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:173]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'NEXT_LAYER_INPUT_M' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:174]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_CONV00' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:178]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_1x1' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:179]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mul_default
+Compiling module xil_defaultlib.adder_tree
+Compiling module xil_defaultlib.mac
+Compiling module xil_defaultlib.mac_array
+Compiling module xil_defaultlib.conv3x3_maxpool_module
+Compiling module xil_defaultlib.conv_kern_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot conv_kern_tb_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '12' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 3019.699 ; gain = 0.000
+Time resolution is 1 ps
+Loading input feature maps from file: ../../inout_data_sw/log_feamap/CONV12_input_32b.hex
+relaunch_xsim_kernel: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 3019.699 ; gain = 0.000
+relaunch_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:32 . Memory (MB): peak = 3019.699 ; gain = 0.000
+run all
+Loading weights from file: ../../inout_data_sw/log_param/CONV12_param_weight_32b.hex
+Loading biases from file: ../../inout_data_sw/log_param/CONV12_param_biases_32b.hex
+Preload data done.
+
+Conv module starts to read feature
+Conv module finishes reading feature
+
+Conv module starts to read weight
+Conv module finishes reading weight
+
+Conv module starts to read bias
+Conv module finishes reading bias
+
+Conv module starts to compute
+run: Time (s): cpu = 00:02:28 ; elapsed = 00:03:00 . Memory (MB): peak = 3019.699 ; gain = 0.000
+save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}
+close_sim
+INFO: xsimkernel Simulation Memory Usage: 32180 KB (Peak: 32180 KB), Simulation CPU Usage: 61828 ms
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 3019.699 ; gain = 0.000
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'conv_kern_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj conv_kern_tb_vlog.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/adder_tree.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/conv3x3_maxpool_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv3x3_maxpool_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac_array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_array
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+WARNING: [VRFC 10-3380] identifier 'Ni' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/define.v:98]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_tb
+WARNING: [VRFC 10-2938] 'data' is already implicitly declared on line 184 [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:200]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:94]
+WARNING: [VRFC 10-3380] identifier 'F_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:103]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:109]
+WARNING: [VRFC 10-3380] identifier 'W_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:117]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:123]
+WARNING: [VRFC 10-3380] identifier 'B_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:131]
+WARNING: [VRFC 10-3380] identifier 'conv3x3_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:140]
+WARNING: [VRFC 10-3380] identifier 'pixel_out_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:147]
+"xvhdl --incr --relax -prj conv_kern_tb_vhdl.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '10' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_WIDTH' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:165]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_HEIGHT' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:166]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tr' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:167]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tc' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:168]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'Ti' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:169]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'To' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:170]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'Ni' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:171]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'No' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:172]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'SCALE_FACTOR' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:173]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'NEXT_LAYER_INPUT_M' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:174]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_CONV00' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:178]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mul_default
+Compiling module xil_defaultlib.adder_tree
+Compiling module xil_defaultlib.mac
+Compiling module xil_defaultlib.mac_array
+Compiling module xil_defaultlib.conv3x3_maxpool_module
+Compiling module xil_defaultlib.conv_kern_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot conv_kern_tb_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:17 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '17' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "conv_kern_tb_behav -key {Behavioral:sim_1:Functional:conv_kern_tb} -tclbatch {conv_kern_tb.tcl} -view {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg
+source conv_kern_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Loading input feature maps from file: ../../inout_data_sw/log_feamap/CONV04_input_32b.hex
+run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 3019.699 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'conv_kern_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:43 . Memory (MB): peak = 3019.699 ; gain = 0.000
+run all
+Loading weights from file: ../../inout_data_sw/log_param/CONV04_param_weight_32b.hex
+Loading biases from file: ../../inout_data_sw/log_param/CONV04_param_biases_32b.hex
+Preload data done.
+
+Conv module starts to read feature
+Conv module finishes reading feature
+
+Conv module starts to read weight
+Conv module finishes reading weight
+
+Conv module starts to read bias
+Conv module finishes reading bias
+
+Conv module starts to compute
+run: Time (s): cpu = 00:02:46 ; elapsed = 00:03:40 . Memory (MB): peak = 3019.699 ; gain = 0.000
+relaunch_sim
+INFO: xsimkernel Simulation Memory Usage: 32164 KB (Peak: 32164 KB), Simulation CPU Usage: 76733 ms
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj conv_kern_tb_vlog.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/adder_tree.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/conv3x3_maxpool_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv3x3_maxpool_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac_array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_array
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+WARNING: [VRFC 10-3380] identifier 'Ni' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/define.v:98]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_tb
+WARNING: [VRFC 10-2938] 'data' is already implicitly declared on line 184 [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:200]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:94]
+WARNING: [VRFC 10-3380] identifier 'F_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:103]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:109]
+WARNING: [VRFC 10-3380] identifier 'W_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:117]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:123]
+WARNING: [VRFC 10-3380] identifier 'B_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:131]
+WARNING: [VRFC 10-3380] identifier 'conv3x3_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:140]
+WARNING: [VRFC 10-3380] identifier 'pixel_out_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:147]
+"xvhdl --incr --relax -prj conv_kern_tb_vhdl.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '10' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 3019.699 ; gain = 0.000
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_WIDTH' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:165]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_HEIGHT' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:166]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tr' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:167]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tc' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:168]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'Ti' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:169]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'To' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:170]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'Ni' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:171]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'No' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:172]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'SCALE_FACTOR' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:173]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'NEXT_LAYER_INPUT_M' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:174]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_CONV00' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:178]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mul_default
+Compiling module xil_defaultlib.adder_tree
+Compiling module xil_defaultlib.mac
+Compiling module xil_defaultlib.mac_array
+Compiling module xil_defaultlib.conv3x3_maxpool_module
+Compiling module xil_defaultlib.conv_kern_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot conv_kern_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '10' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 3019.699 ; gain = 0.000
+Time resolution is 1 ps
+Loading input feature maps from file: ../../inout_data_sw/log_feamap/CONV04_input_32b.hex
+relaunch_xsim_kernel: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 3019.699 ; gain = 0.000
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:27 . Memory (MB): peak = 3019.699 ; gain = 0.000
+run all
+Loading weights from file: ../../inout_data_sw/log_param/CONV04_param_weight_32b.hex
+Loading biases from file: ../../inout_data_sw/log_param/CONV04_param_biases_32b.hex
+Preload data done.
+
+Conv module starts to read feature
+run: Time (s): cpu = 00:00:58 ; elapsed = 00:01:53 . Memory (MB): peak = 3019.699 ; gain = 0.000
+relaunch_sim
+INFO: xsimkernel Simulation Memory Usage: 28992 KB (Peak: 28992 KB), Simulation CPU Usage: 69296 ms
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj conv_kern_tb_vlog.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/adder_tree.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/conv3x3_maxpool_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv3x3_maxpool_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac_array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_array
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+WARNING: [VRFC 10-3380] identifier 'Ni' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/define.v:98]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_tb
+WARNING: [VRFC 10-2938] 'data' is already implicitly declared on line 184 [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:200]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:94]
+WARNING: [VRFC 10-3380] identifier 'F_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:103]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:109]
+WARNING: [VRFC 10-3380] identifier 'W_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:117]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:123]
+WARNING: [VRFC 10-3380] identifier 'B_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:131]
+WARNING: [VRFC 10-3380] identifier 'conv3x3_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:140]
+WARNING: [VRFC 10-3380] identifier 'pixel_out_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:147]
+"xvhdl --incr --relax -prj conv_kern_tb_vhdl.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '9' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 3019.699 ; gain = 0.000
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_WIDTH' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:165]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_HEIGHT' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:166]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tr' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:167]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tc' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:168]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'Ti' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:169]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'To' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:170]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'Ni' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:171]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'No' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:172]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'SCALE_FACTOR' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:173]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'NEXT_LAYER_INPUT_M' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:174]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_CONV00' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:178]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mul_default
+Compiling module xil_defaultlib.adder_tree
+Compiling module xil_defaultlib.mac
+Compiling module xil_defaultlib.mac_array
+Compiling module xil_defaultlib.conv3x3_maxpool_module
+Compiling module xil_defaultlib.conv_kern_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot conv_kern_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 3019.699 ; gain = 0.000
+Time resolution is 1 ps
+Loading input feature maps from file: ../../inout_data_sw/log_feamap/CONV04_input_32b.hex
+relaunch_xsim_kernel: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 3019.699 ; gain = 0.000
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:27 . Memory (MB): peak = 3019.699 ; gain = 0.000
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sources_1\imports\src\conv3x3_maxpool_module.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sim_1\imports\sim\conv_kern_tb.v:]
+run all
+Loading weights from file: ../../inout_data_sw/log_param/CONV04_param_weight_32b.hex
+Loading biases from file: ../../inout_data_sw/log_param/CONV04_param_biases_32b.hex
+Preload data done.
+
+Conv module starts to read feature
+Conv module finishes reading feature
+
+Conv module starts to read weight
+Conv module finishes reading weight
+
+Conv module starts to read bias
+Conv module finishes reading bias
+
+Conv module starts to compute
+run: Time (s): cpu = 00:01:18 ; elapsed = 00:01:45 . Memory (MB): peak = 3019.699 ; gain = 0.000
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sources_1\imports\src\conv3x3_maxpool_module.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sim_1\imports\sim\conv_kern_tb.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sources_1\imports\src\conv3x3_maxpool_module.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sim_1\imports\sim\conv_kern_tb.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sources_1\imports\src\conv3x3_maxpool_module.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sim_1\imports\sim\conv_kern_tb.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+relaunch_sim
+INFO: xsimkernel Simulation Memory Usage: 24176 KB (Peak: 24176 KB), Simulation CPU Usage: 41374 ms
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj conv_kern_tb_vlog.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/adder_tree.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/conv3x3_maxpool_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv3x3_maxpool_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac_array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_array
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+WARNING: [VRFC 10-3380] identifier 'Ni' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/define.v:219]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_tb
+WARNING: [VRFC 10-2938] 'data' is already implicitly declared on line 184 [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:200]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:94]
+WARNING: [VRFC 10-3380] identifier 'F_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:103]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:109]
+WARNING: [VRFC 10-3380] identifier 'W_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:117]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:123]
+WARNING: [VRFC 10-3380] identifier 'B_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:131]
+WARNING: [VRFC 10-3380] identifier 'conv3x3_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:140]
+WARNING: [VRFC 10-3380] identifier 'pixel_out_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:147]
+"xvhdl --incr --relax -prj conv_kern_tb_vhdl.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '11' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 3019.699 ; gain = 0.000
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_WIDTH' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:165]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_HEIGHT' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:166]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tr' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:167]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tc' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:168]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'Ti' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:169]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'To' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:170]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'Ni' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:171]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'No' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:172]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'SCALE_FACTOR' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:173]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'NEXT_LAYER_INPUT_M' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:174]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_CONV00' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:178]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_1x1' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:179]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mul_default
+Compiling module xil_defaultlib.adder_tree
+Compiling module xil_defaultlib.mac
+Compiling module xil_defaultlib.mac_array
+Compiling module xil_defaultlib.conv3x3_maxpool_module
+Compiling module xil_defaultlib.conv_kern_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot conv_kern_tb_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '13' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 3019.699 ; gain = 0.000
+Time resolution is 1 ps
+Loading input feature maps from file: ../../inout_data_sw/log_feamap/CONV12_input_32b.hex
+relaunch_xsim_kernel: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 3019.699 ; gain = 0.000
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:33 . Memory (MB): peak = 3019.699 ; gain = 0.000
+run all
+Loading weights from file: ../../inout_data_sw/log_param/CONV12_param_weight_32b.hex
+Loading biases from file: ../../inout_data_sw/log_param/CONV12_param_biases_32b.hex
+Preload data done.
+
+Conv module starts to read feature
+Conv module finishes reading feature
+
+Conv module starts to read weight
+Conv module finishes reading weight
+
+Conv module starts to read bias
+Conv module finishes reading bias
+
+Conv module starts to compute
+run: Time (s): cpu = 00:01:43 ; elapsed = 00:02:07 . Memory (MB): peak = 3019.699 ; gain = 0.000
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sources_1\imports\src\conv3x3_maxpool_module.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sim_1\imports\sim\conv_kern_tb.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sources_1\imports\src\conv3x3_maxpool_module.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sim_1\imports\sim\conv_kern_tb.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sources_1\imports\src\conv3x3_maxpool_module.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sim_1\imports\sim\conv_kern_tb.v:]
+relaunch_sim
+INFO: xsimkernel Simulation Memory Usage: 24180 KB (Peak: 24180 KB), Simulation CPU Usage: 47109 ms
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-39] 'suspend_sim' failed due to earlier errors.
+INFO: [Common 17-17] undo 'relaunch_sim'
+INFO: [Common 17-17] undo 'relaunch_sim'
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'suspend_sim' failed due to earlier errors.
+
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'conv_kern_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj conv_kern_tb_vlog.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/adder_tree.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/conv3x3_maxpool_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv3x3_maxpool_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac_array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_array
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+WARNING: [VRFC 10-3380] identifier 'Ni' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/define.v:219]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_tb
+WARNING: [VRFC 10-2938] 'data' is already implicitly declared on line 184 [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:200]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:94]
+WARNING: [VRFC 10-3380] identifier 'F_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:103]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:109]
+WARNING: [VRFC 10-3380] identifier 'W_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:117]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:123]
+WARNING: [VRFC 10-3380] identifier 'B_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:131]
+WARNING: [VRFC 10-3380] identifier 'conv3x3_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:140]
+WARNING: [VRFC 10-3380] identifier 'pixel_out_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:147]
+"xvhdl --incr --relax -prj conv_kern_tb_vhdl.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '10' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_WIDTH' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:165]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_HEIGHT' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:166]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tr' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:167]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tc' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:168]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'Ti' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:169]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'To' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:170]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'Ni' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:171]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'No' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:172]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'SCALE_FACTOR' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:173]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'NEXT_LAYER_INPUT_M' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:174]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_CONV00' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:178]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_1x1' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:179]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mul_default
+Compiling module xil_defaultlib.adder_tree
+Compiling module xil_defaultlib.mac
+Compiling module xil_defaultlib.mac_array
+Compiling module xil_defaultlib.conv3x3_maxpool_module
+Compiling module xil_defaultlib.conv_kern_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot conv_kern_tb_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '10' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "conv_kern_tb_behav -key {Behavioral:sim_1:Functional:conv_kern_tb} -tclbatch {conv_kern_tb.tcl} -view {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg
+source conv_kern_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Loading input feature maps from file: ../../inout_data_sw/log_feamap/CONV12_input_32b.hex
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'conv_kern_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:32 . Memory (MB): peak = 3019.699 ; gain = 0.000
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run all
+Loading input feature maps from file: ../../inout_data_sw/log_feamap/CONV12_input_32b.hex
+Loading weights from file: ../../inout_data_sw/log_param/CONV12_param_weight_32b.hex
+Loading biases from file: ../../inout_data_sw/log_param/CONV12_param_biases_32b.hex
+Preload data done.
+
+Conv module starts to read feature
+Conv module finishes reading feature
+
+Conv module starts to read weight
+Conv module finishes reading weight
+
+Conv module starts to read bias
+Conv module finishes reading bias
+
+Conv module starts to compute
+run: Time (s): cpu = 00:02:24 ; elapsed = 00:03:03 . Memory (MB): peak = 3019.699 ; gain = 0.000
+save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sources_1\imports\src\conv3x3_maxpool_module.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sim_1\imports\sim\conv_kern_tb.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sources_1\imports\src\conv3x3_maxpool_module.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sim_1\imports\sim\conv_kern_tb.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sources_1\imports\src\conv3x3_maxpool_module.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sim_1\imports\sim\conv_kern_tb.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sources_1\imports\src\conv3x3_maxpool_module.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sim_1\imports\sim\conv_kern_tb.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sources_1\imports\src\conv3x3_maxpool_module.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sim_1\imports\sim\conv_kern_tb.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sources_1\imports\src\conv3x3_maxpool_module.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sim_1\imports\sim\conv_kern_tb.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+relaunch_sim
+INFO: xsimkernel Simulation Memory Usage: 24304 KB (Peak: 24304 KB), Simulation CPU Usage: 52155 ms
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj conv_kern_tb_vlog.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/adder_tree.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/conv3x3_maxpool_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv3x3_maxpool_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac_array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_array
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+WARNING: [VRFC 10-3380] identifier 'Ni' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/define.v:219]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_tb
+WARNING: [VRFC 10-2938] 'data' is already implicitly declared on line 185 [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:202]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:94]
+WARNING: [VRFC 10-3380] identifier 'F_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:103]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:109]
+WARNING: [VRFC 10-3380] identifier 'W_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:117]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:123]
+WARNING: [VRFC 10-3380] identifier 'B_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:131]
+WARNING: [VRFC 10-3380] identifier 'conv3x3_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:140]
+WARNING: [VRFC 10-3380] identifier 'pixel_out_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:147]
+"xvhdl --incr --relax -prj conv_kern_tb_vhdl.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '9' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 3019.699 ; gain = 0.000
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_WIDTH' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:166]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_HEIGHT' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:167]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tr' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:168]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tc' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:169]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'Ti' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:170]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'To' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:171]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'Ni' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:172]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'No' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:173]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'SCALE_FACTOR' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:174]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'NEXT_LAYER_INPUT_M' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:175]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_CONV00' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:179]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_1x1' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:180]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mul_default
+Compiling module xil_defaultlib.adder_tree
+Compiling module xil_defaultlib.mac
+Compiling module xil_defaultlib.mac_array
+Compiling module xil_defaultlib.conv3x3_maxpool_module
+Compiling module xil_defaultlib.conv_kern_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot conv_kern_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 3019.699 ; gain = 0.000
+Time resolution is 1 ps
+Loading input feature maps from file: ../../inout_data_sw/log_feamap/CONV12_input_32b.hex
+relaunch_xsim_kernel: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 3019.699 ; gain = 0.000
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:29 . Memory (MB): peak = 3019.699 ; gain = 0.000
+current_wave_config {conv_kern_tb_behav.wcfg}
+C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg
+add_wave {{/conv_kern_tb/m_conv3x3_maxpool_module/data_out_2}} 
+save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj conv_kern_tb_vlog.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/adder_tree.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tree
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/conv3x3_maxpool_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv3x3_maxpool_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mac_array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_array
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mul
+WARNING: [VRFC 10-3380] identifier 'Ni' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/define.v:219]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_kern_tb
+WARNING: [VRFC 10-2938] 'data' is already implicitly declared on line 185 [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:202]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:94]
+WARNING: [VRFC 10-3380] identifier 'F_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:103]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:109]
+WARNING: [VRFC 10-3380] identifier 'W_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:117]
+WARNING: [VRFC 10-3380] identifier 'tick' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:123]
+WARNING: [VRFC 10-3380] identifier 'B_writedone' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:131]
+WARNING: [VRFC 10-3380] identifier 'conv3x3_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:140]
+WARNING: [VRFC 10-3380] identifier 'pixel_out_done' is used before its declaration [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:147]
+"xvhdl --incr --relax -prj conv_kern_tb_vhdl.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '9' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 3019.699 ; gain = 0.000
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'conv_kern_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_5 -L xbip_utils_v3_0_11 -L xbip_pipe_v3_0_7 -L dsp_macro_v1_0_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot conv_kern_tb_behav xil_defaultlib.conv_kern_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_WIDTH' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:166]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'IFM_HEIGHT' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:167]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tr' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:168]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'Tc' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:169]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'Ti' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:170]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'To' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:171]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'Ni' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:172]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'No' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:173]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'SCALE_FACTOR' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:174]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'NEXT_LAYER_INPUT_M' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:175]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_CONV00' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:179]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'is_1x1' [C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v:180]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mul_default
+Compiling module xil_defaultlib.adder_tree
+Compiling module xil_defaultlib.mac
+Compiling module xil_defaultlib.mac_array
+Compiling module xil_defaultlib.conv3x3_maxpool_module
+Compiling module xil_defaultlib.conv_kern_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot conv_kern_tb_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 3019.699 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 3019.699 ; gain = 0.000
+Time resolution is 1 ps
+Loading input feature maps from file: ../../inout_data_sw/log_feamap/CONV12_input_32b.hex
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:27 . Memory (MB): peak = 3019.699 ; gain = 0.000
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sources_1\imports\src\conv3x3_maxpool_module.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sim_1\imports\sim\conv_kern_tb.v:]
+run all
+ERROR: [Common 17-180] Spawn failed: No error
+Loading weights from file: ../../inout_data_sw/log_param/CONV12_param_weight_32b.hex
+Loading biases from file: ../../inout_data_sw/log_param/CONV12_param_biases_32b.hex
+Preload data done.
+
+Conv module starts to read feature
+Conv module finishes reading feature
+
+Conv module starts to read weight
+Conv module finishes reading weight
+
+Conv module starts to read bias
+Conv module finishes reading bias
+
+Conv module starts to compute
+run: Time (s): cpu = 00:02:05 ; elapsed = 00:02:20 . Memory (MB): peak = 3019.699 ; gain = 0.000
+ERROR: [Common 17-39] 'run' failed due to earlier errors.
+save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sources_1\imports\src\conv3x3_maxpool_module.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sim_1\imports\sim\conv_kern_tb.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+save_wave_config {C:/Users/hdm09/Desktop/AIX2024_DM_local/build/conv3x3_maxpool_tb/conv_kern_tb_behav.wcfg}
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sources_1\imports\src\conv3x3_maxpool_module.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hdm09\Desktop\AIX2024_DM_local\build\conv3x3_maxpool_tb\conv3x3_maxpool_tb.srcs\sim_1\imports\sim\conv_kern_tb.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+close_sim
+INFO: xsimkernel Simulation Memory Usage: 24164 KB (Peak: 24164 KB), Simulation CPU Usage: 49171 ms
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 3019.699 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 25 13:26:51 2024...

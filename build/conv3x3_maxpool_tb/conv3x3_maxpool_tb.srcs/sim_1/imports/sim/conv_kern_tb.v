@@ -178,6 +178,7 @@ conv3x3_maxpool_module m_conv3x3_maxpool_module (
 	.rstn				(rstn),
 	.is_CONV00			(is_CONV00),
 	.is_1x1				(is_1x1),
+	.is_relu			(is_relu),
 	.COMMAND			(COMMAND),
 	.RECEIVE_SIZE		(RECEIVE_SIZE),
 	.conv_start			(conv3x3_start),
