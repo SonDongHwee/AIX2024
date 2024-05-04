@@ -1,0 +1,199 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Apr 28 16:04:29 2024
+# Process ID: 27676
+# Current directory: C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21268 C:\Users\leewo\Documents\GitHub\AIX2024\build\hw_test\hw_test.xpr
+# Log file: C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/vivado.log
+# Journal file: C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test\vivado.jou
+# Running On: DESKTOP-5IEP7NP, OS: Windows, CPU Frequency: 1800 MHz, CPU Physical cores: 4, Host memory: 8373 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/ip/yolo_design_1_mig_7series_0_0/board.prj] -no_script -reset -force -quiet
+remove_files  C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/ip/yolo_design_1_mig_7series_0_0/board.prj
+export_ip_user_files -of_objects  [get_files C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd] -no_script -reset -force -quiet
+remove_files  C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd
+create_bd_design "yolo_design_1"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:yolo_engine_ip:1.0 yolo_engine_ip_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:11.0 microblaze_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:mig_7series:4.2 mig_7series_0
+apply_board_connection -board_interface "ddr2_sdram" -ip_intf "mig_7series_0/mig_ddr_interface" -diagram "yolo_design_1" 
+endgroup
+delete_bd_objs [get_bd_nets clk_ref_i_1]
+delete_bd_objs [get_bd_nets sys_clk_i_1]
+delete_bd_objs [get_bd_ports sys_clk_i]
+delete_bd_objs [get_bd_ports clk_ref_i]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0
+apply_board_connection -board_interface "usb_uart" -ip_intf "axi_uartlite_0/UART" -diagram "yolo_design_1" 
+endgroup
+startgroup
+set_property CONFIG.C_BAUDRATE {230400} [get_bd_cells axi_uartlite_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0
+apply_board_connection -board_interface "sys_clock" -ip_intf "clk_wiz_0/clock_CLK_IN1" -diagram "yolo_design_1" 
+endgroup
+startgroup
+set_property -dict [list \
+  CONFIG.CLKOUT2_JITTER {114.829} \
+  CONFIG.CLKOUT2_PHASE_ERROR {98.575} \
+  CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {200.000} \
+  CONFIG.CLKOUT2_USED {true} \
+  CONFIG.MMCM_CLKOUT1_DIVIDE {5} \
+  CONFIG.NUM_OUT_CLKS {2} \
+  CONFIG.RESET_PORT {resetn} \
+  CONFIG.RESET_TYPE {ACTIVE_LOW} \
+] [get_bd_cells clk_wiz_0]
+endgroup
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins mig_7series_0/sys_clk_i]
+apply_bd_automation -rule xilinx.com:bd_rule:microblaze -config { axi_intc {0} axi_periph {Enabled} cache {32KB} clk {/clk_wiz_0/clk_out1 (100 MHz)} cores {1} debug_module {Debug Only} ecc {None} local_mem {32KB} preset {None}}  [get_bd_cells microblaze_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/axi_uartlite_0/S_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_uartlite_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {New External Port (ACTIVE_LOW)}}  [get_bd_pins clk_wiz_0/resetn]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins mig_7series_0/clk_ref_i]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (100 MHz)} Clk_slave {/mig_7series_0/ui_clk (81 MHz)} Clk_xbar {Auto} Master {/microblaze_0 (Cached)} Slave {/mig_7series_0/S_AXI} ddr_seg {Auto} intc_ip {New AXI SmartConnect} master_apm {0}}  [get_bd_intf_pins mig_7series_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {Auto}}  [get_bd_pins mig_7series_0/sys_rst]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {Auto}}  [get_bd_pins rst_clk_wiz_0_100M/ext_reset_in]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/yolo_engine_ip_0/s00_axi} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins yolo_engine_ip_0/s00_axi]
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/mig_7series_0/ui_clk (81 MHz)} Clk_xbar {/clk_wiz_0/clk_out1 (100 MHz)} Master {/yolo_engine_ip_0/M} Slave {/mig_7series_0/S_AXI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins yolo_engine_ip_0/M]
+validate_bd_design
+make_wrapper -files [get_files C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd] -top
+add_files -norecurse c:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.gen/sources_1/bd/yolo_design_1/hdl/yolo_design_1_wrapper.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top yolo_design_1_wrapper [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+exec subst V: c:/Users/leewo/Documents/GitHub/AIX2024/build
+create_project yolo_ip V:/yolo_ip -part xc7a100tcsg324-1
+set_property board_part digilentinc.com:nexys-a7-100t:part0:1.3 [current_project]
+add_files -fileset constrs_1 -norecurse C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/fpga/NEXYS_A7_100T.xdc
+import_files -fileset constrs_1 C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/fpga/NEXYS_A7_100T.xdc
+import_files -norecurse {C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/axi_dma_wr.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/yolo_engine_ip.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/spram_wrapper.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/cnn_ctrl.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/mac.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/adder_tree.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/mul.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/dpram_wrapper.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/define.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/axi_dma_ctrl.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/axi_dma_rd.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/yolo_engine.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/yolo_engine_axi.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 {C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim/conv_kern_tb.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim/mac_tb.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim/cnn_ctrl_tb.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim_dram_model/axi_sram_if.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim_dram_model/axi_slave_if_sync.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim_dram_model/sram.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim_dram_model/sram_ctrl.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim_dram_model/sync_reg_fifo.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim/bmp_image_writer.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim/yolo_engine_tb.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim/cnn_ctrl_multi_layer_tb.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim/conv_layer_tb.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim/mul_tb.v}
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top yolo_engine_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top yolo_engine_ip [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+source yolo_engine_tb.tcl
+run 4 ms
+ipx::package_project -root_dir C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/fpga/ip_repo -vendor xilinx.com -library user -taxonomy /UserIP -import_files -set_current false -force
+ipx::unload_core c:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/fpga/ip_repo/component.xml
+ipx::edit_ip_in_project -upgrade true -name tmp_edit_project -directory C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/fpga/ip_repo c:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/fpga/ip_repo/component.xml
+update_compile_order -fileset sources_1
+current_project yolo_ip
+current_project hw_test
+close_project
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+set_property  ip_repo_paths  c:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/fpga/ip_repo [current_project]
+update_ip_catalog
+create_bd_design "yolo_design_1"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:yolo_engine_ip:1.0 yolo_engine_ip_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:11.0 microblaze_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:mig_7series:4.2 mig_7series_0
+apply_board_connection -board_interface "ddr2_sdram" -ip_intf "mig_7series_0/mig_ddr_interface" -diagram "yolo_design_1" 
+endgroup
+delete_bd_objs [get_bd_nets clk_ref_i_1]
+delete_bd_objs [get_bd_nets sys_clk_i_1]
+delete_bd_objs [get_bd_ports sys_clk_i]
+delete_bd_objs [get_bd_ports clk_ref_i]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0
+apply_board_connection -board_interface "usb_uart" -ip_intf "axi_uartlite_0/UART" -diagram "yolo_design_1" 
+endgroup
+startgroup
+set_property CONFIG.C_BAUDRATE {230400} [get_bd_cells axi_uartlite_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0
+apply_board_connection -board_interface "sys_clock" -ip_intf "clk_wiz_0/clock_CLK_IN1" -diagram "yolo_design_1" 
+endgroup
+startgroup
+set_property -dict [list \
+  CONFIG.CLKOUT2_JITTER {114.829} \
+  CONFIG.CLKOUT2_PHASE_ERROR {98.575} \
+  CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {200.000} \
+  CONFIG.CLKOUT2_USED {true} \
+  CONFIG.MMCM_CLKOUT1_DIVIDE {5} \
+  CONFIG.NUM_OUT_CLKS {2} \
+  CONFIG.RESET_PORT {resetn} \
+  CONFIG.RESET_TYPE {ACTIVE_LOW} \
+] [get_bd_cells clk_wiz_0]
+endgroup
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins mig_7series_0/sys_clk_i]
+apply_bd_automation -rule xilinx.com:bd_rule:microblaze -config { axi_intc {0} axi_periph {Enabled} cache {32KB} clk {/clk_wiz_0/clk_out1 (100 MHz)} cores {1} debug_module {Debug Only} ecc {None} local_mem {32KB} preset {None}}  [get_bd_cells microblaze_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/axi_uartlite_0/S_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_uartlite_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {New External Port (ACTIVE_LOW)}}  [get_bd_pins clk_wiz_0/resetn]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins mig_7series_0/clk_ref_i]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (100 MHz)} Clk_slave {/mig_7series_0/ui_clk (81 MHz)} Clk_xbar {Auto} Master {/microblaze_0 (Cached)} Slave {/mig_7series_0/S_AXI} ddr_seg {Auto} intc_ip {New AXI SmartConnect} master_apm {0}}  [get_bd_intf_pins mig_7series_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {Auto}}  [get_bd_pins mig_7series_0/sys_rst]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {Auto}}  [get_bd_pins rst_clk_wiz_0_100M/ext_reset_in]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/yolo_engine_ip_0/s00_axi} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins yolo_engine_ip_0/s00_axi]
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/mig_7series_0/ui_clk (81 MHz)} Clk_xbar {/clk_wiz_0/clk_out1 (100 MHz)} Master {/yolo_engine_ip_0/M} Slave {/mig_7series_0/S_AXI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins yolo_engine_ip_0/M]
+validate_bd_design
+make_wrapper -files [get_files V:/yolo_ip/yolo_ip.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd] -top
+add_files -norecurse v:/yolo_ip/yolo_ip.gen/sources_1/bd/yolo_design_1/hdl/yolo_design_1_wrapper.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top yolo_design_1_wrapper [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 8
+reset_run synth_1
+reset_run yolo_design_1_axi_smc_0_synth_1
+reset_run yolo_design_1_clk_wiz_0_0_synth_1
+reset_run yolo_design_1_mig_7series_0_0_synth_1
+reset_run yolo_design_1_microblaze_0_0_synth_1
+reset_run yolo_design_1_axi_uartlite_0_0_synth_1
+reset_run yolo_design_1_ilmb_bram_if_cntlr_0_synth_1
+reset_run yolo_design_1_lmb_bram_0_synth_1
+close_sim

@@ -1,0 +1,26 @@
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot yolo_engine_tb_behav xil_defaultlib.yolo_engine_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.sync_reg_fifo(N_SLOT=16,W_SLOT=4...
+Compiling module xil_defaultlib.sync_reg_fifo(N_SLOT=256,W_SLOT=...
+Compiling module xil_defaultlib.sync_reg_fifo(N_SLOT=256,W_SLOT=...
+Compiling module xil_defaultlib.axi_slave_if_sync(L=8,D=32,M=4)
+Compiling module xil_defaultlib.sram_ctrl(L=8,D=32,M=4,W_MEM=16)
+Compiling module xil_defaultlib.axi_sram_if(D=32,M=4,MEM_DW=16)
+Compiling module xil_defaultlib.sram(FILE_NAME="../../inout_data...
+Compiling module xil_defaultlib.axi_dma_ctrl(BIT_TRANS=8)
+Compiling module xil_defaultlib.axi_dma_rd(BITS_TRANS=8,OUT_BITS...
+Compiling module xil_defaultlib.dpram_wrapper(DW=32)
+Compiling module xil_defaultlib.axi_dma_wr(BITS_TRANS=8,OUT_BITS...
+Compiling module xil_defaultlib.yolo_engine(AXI_WIDTH_DS=4,MEM_B...
+Compiling module xil_defaultlib.yolo_engine_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot yolo_engine_tb_behav

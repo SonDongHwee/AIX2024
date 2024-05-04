@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="233,343.333 ns"></ZoomStartTime>
-      <ZoomEndTime time="233,555.334 ns"></ZoomEndTime>
-      <Cursor1Time time="233,460.000 ns"></Cursor1Time>
+      <ZoomStartTime time="536.462689 us"></ZoomStartTime>
+      <ZoomEndTime time="642.874349 us"></ZoomEndTime>
+      <Cursor1Time time="876.980000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="177"></NameColumnWidth>
-      <ValueColumnWidth column_width="299"></ValueColumnWidth>
+      <NameColumnWidth column_width="281"></NameColumnWidth>
+      <ValueColumnWidth column_width="422"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="60" />
+   <WVObjectSize size="78" />
    <wvobject fp_name="/conv_kern_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -36,17 +36,9 @@
       <obj_property name="ElementShortName">preload</obj_property>
       <obj_property name="ObjectShortName">preload</obj_property>
    </wvobject>
-   <wvobject fp_name="/conv_kern_tb/win" type="array">
-      <obj_property name="ElementShortName">win[0:3][127:0]</obj_property>
-      <obj_property name="ObjectShortName">win[0:3][127:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/conv_kern_tb/din" type="array">
-      <obj_property name="ElementShortName">din[0:3][127:0]</obj_property>
-      <obj_property name="ObjectShortName">din[0:3][127:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/conv_kern_tb/bias" type="array">
-      <obj_property name="ElementShortName">bias[0:63][31:0]</obj_property>
-      <obj_property name="ObjectShortName">bias[0:63][31:0]</obj_property>
+      <obj_property name="ElementShortName">bias[0:194][31:0]</obj_property>
+      <obj_property name="ObjectShortName">bias[0:194][31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/conv_kern_tb/COMMAND" type="array">
       <obj_property name="ElementShortName">COMMAND[3:0]</obj_property>
@@ -97,8 +89,8 @@
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/conv_kern_tb/pixel_out" type="array">
-      <obj_property name="ElementShortName">pixel_out[0:63][7:0]</obj_property>
-      <obj_property name="ObjectShortName">pixel_out[0:63][7:0]</obj_property>
+      <obj_property name="ElementShortName">pixel_out[0:194][7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_out[0:194][7:0]</obj_property>
       <obj_property name="CustomSignalColor">#A0A0A4</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
@@ -106,18 +98,6 @@
       <obj_property name="ElementShortName">pixel_out_done</obj_property>
       <obj_property name="ObjectShortName">pixel_out_done</obj_property>
       <obj_property name="CustomSignalColor">#A0A0A4</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/valid_o" type="logic">
-      <obj_property name="ElementShortName">valid_o</obj_property>
-      <obj_property name="ObjectShortName">valid_o</obj_property>
-      <obj_property name="CustomSignalColor">#FFD700</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/data_out" type="array">
-      <obj_property name="ElementShortName">data_out[127:0]</obj_property>
-      <obj_property name="ObjectShortName">data_out[127:0]</obj_property>
-      <obj_property name="CustomSignalColor">#FFD700</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/state" type="array">
@@ -203,6 +183,46 @@
       <obj_property name="CustomSignalColor">#008080</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/row_array_0" type="array">
+      <obj_property name="ElementShortName">row_array_0[15:0]</obj_property>
+      <obj_property name="ObjectShortName">row_array_0[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/row_array_1" type="array">
+      <obj_property name="ElementShortName">row_array_1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">row_array_1[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/row_array_2" type="array">
+      <obj_property name="ElementShortName">row_array_2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">row_array_2[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/row_array_3" type="array">
+      <obj_property name="ElementShortName">row_array_3[15:0]</obj_property>
+      <obj_property name="ObjectShortName">row_array_3[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/col_array_0" type="array">
+      <obj_property name="ElementShortName">col_array_0[15:0]</obj_property>
+      <obj_property name="ObjectShortName">col_array_0[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/col_array_1" type="array">
+      <obj_property name="ElementShortName">col_array_1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">col_array_1[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/col_array_2" type="array">
+      <obj_property name="ElementShortName">col_array_2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">col_array_2[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/col_array_3" type="array">
+      <obj_property name="ElementShortName">col_array_3[15:0]</obj_property>
+      <obj_property name="ObjectShortName">col_array_3[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
    <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/mac_vld_i" type="logic">
       <obj_property name="ElementShortName">mac_vld_i</obj_property>
       <obj_property name="ObjectShortName">mac_vld_i</obj_property>
@@ -238,43 +258,94 @@
       <obj_property name="ObjectShortName">din_mac_array_3[0:8][127:0]</obj_property>
       <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/mac_out" type="array">
+      <obj_property name="ElementShortName">mac_out[0:3][0:7][28:0]</obj_property>
+      <obj_property name="ObjectShortName">mac_out[0:3][0:7][28:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/partial_sum" type="array">
-      <obj_property name="ElementShortName">partial_sum[0:3][28:0]</obj_property>
-      <obj_property name="ObjectShortName">partial_sum[0:3][28:0]</obj_property>
+      <obj_property name="ElementShortName">partial_sum[0:3][0:7][28:0]</obj_property>
+      <obj_property name="ObjectShortName">partial_sum[0:3][0:7][28:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/partial_sum[0]" type="array">
-         <obj_property name="ElementShortName">[0][28:0]</obj_property>
-         <obj_property name="ObjectShortName">[0][28:0]</obj_property>
-         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/partial_sum[1]" type="array">
-         <obj_property name="ElementShortName">[1][28:0]</obj_property>
-         <obj_property name="ObjectShortName">[1][28:0]</obj_property>
-         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/partial_sum[2]" type="array">
-         <obj_property name="ElementShortName">[2][28:0]</obj_property>
-         <obj_property name="ObjectShortName">[2][28:0]</obj_property>
-         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/partial_sum[3]" type="array">
-         <obj_property name="ElementShortName">[3][28:0]</obj_property>
-         <obj_property name="ObjectShortName">[3][28:0]</obj_property>
-         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/final_sum" type="array">
+      <obj_property name="ElementShortName">final_sum[0:3][0:7][28:0]</obj_property>
+      <obj_property name="ObjectShortName">final_sum[0:3][0:7][28:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/bias_1x1" type="array">
+      <obj_property name="ElementShortName">bias_1x1[0:7][15:0]</obj_property>
+      <obj_property name="ObjectShortName">bias_1x1[0:7][15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/mac_1x1_add_bias" type="array">
+      <obj_property name="ElementShortName">mac_1x1_add_bias[0:3][0:7][28:0]</obj_property>
+      <obj_property name="ObjectShortName">mac_1x1_add_bias[0:3][0:7][28:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/mac_1x1_quant" type="array">
+      <obj_property name="ElementShortName">mac_1x1_quant[0:3][0:7][7:0]</obj_property>
+      <obj_property name="ObjectShortName">mac_1x1_quant[0:3][0:7][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/result_1x1_0" type="array">
+      <obj_property name="ElementShortName">result_1x1_0[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_1x1_0[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/result_1x1_1" type="array">
+      <obj_property name="ElementShortName">result_1x1_1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_1x1_1[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/result_1x1_2" type="array">
+      <obj_property name="ElementShortName">result_1x1_2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_1x1_2[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/result_1x1_3" type="array">
+      <obj_property name="ElementShortName">result_1x1_3[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_1x1_3[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/valid_o" type="logic">
+      <obj_property name="ElementShortName">valid_o</obj_property>
+      <obj_property name="ObjectShortName">valid_o</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/data_out" type="array">
+      <obj_property name="ElementShortName">data_out[127:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[127:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Reversed">false</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/data_out_2" type="array">
+      <obj_property name="ElementShortName">data_out_2[127:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out_2[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/mac_array_0_out[0]" type="array">
       <obj_property name="DisplayName">label</obj_property>
@@ -282,7 +353,7 @@
       <obj_property name="ObjectShortName">[0][28:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       <obj_property name="label">mac_array_0_out</obj_property>
-      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/mac_array_1_out[0]" type="array">
@@ -291,7 +362,7 @@
       <obj_property name="ObjectShortName">[0][28:0]</obj_property>
       <obj_property name="label">mac_array_1_out</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/mac_array_2_out[0]" type="array">
@@ -300,7 +371,7 @@
       <obj_property name="ObjectShortName">[0][28:0]</obj_property>
       <obj_property name="label">mac_array_2_out</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/mac_array_3_out[0]" type="array">
@@ -309,7 +380,7 @@
       <obj_property name="ObjectShortName">[0][28:0]</obj_property>
       <obj_property name="label">mac_array_3_out</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/bias_to_add_0" type="array">
@@ -416,5 +487,13 @@
    <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/send_done" type="logic">
       <obj_property name="ElementShortName">send_done</obj_property>
       <obj_property name="ObjectShortName">send_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/row" type="array">
+      <obj_property name="ElementShortName">row[15:0]</obj_property>
+      <obj_property name="ObjectShortName">row[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/col" type="array">
+      <obj_property name="ElementShortName">col[15:0]</obj_property>
+      <obj_property name="ObjectShortName">col[15:0]</obj_property>
    </wvobject>
 </wave_config>

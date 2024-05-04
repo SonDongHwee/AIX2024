@@ -1,0 +1,1060 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Apr 28 16:04:29 2024
+# Process ID: 27676
+# Current directory: C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21268 C:\Users\leewo\Documents\GitHub\AIX2024\build\hw_test\hw_test.xpr
+# Log file: C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/vivado.log
+# Journal file: C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test\vivado.jou
+# Running On: DESKTOP-5IEP7NP, OS: Windows, CPU Frequency: 1800 MHz, CPU Physical cores: 4, Host memory: 8373 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24c/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24i:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24i/1.0/board.xml as part xck24-ubva530-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.2/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.3/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.4/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kd240_som/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.0/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.1/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.0/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.1/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc702:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc702/1.4/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu104/1.1/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.4/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.5/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.6/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/ip/yolo_design_1_mig_7series_0_0/board.prj'.
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-509] GeneratedRun file for 'yolo_design_1_dlmb_bram_if_cntlr_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'yolo_design_1_dlmb_v10_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'yolo_design_1_yolo_engine_ip_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'yolo_design_1_mig_7series_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'yolo_design_1_clk_wiz_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'yolo_design_1_ilmb_bram_if_cntlr_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'yolo_design_1_axi_uartlite_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'yolo_design_1_lmb_bram_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'yolo_design_1_mdm_1_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'yolo_design_1_rst_clk_wiz_0_100M_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'yolo_design_1_xbar_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'yolo_design_1_microblaze_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'yolo_design_1_ilmb_v10_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'yolo_design_1_axi_smc_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'yolo_design_1_rst_mig_7series_0_81M_0_synth_1' not found
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/fpga/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
+WARNING: [Project 1-533] File 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/ip/yolo_design_1_axi_smc_0/yolo_design_1_axi_smc_0.xci' could not be found in the subdesign 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd', but fileset 'yolo_design_1_axi_smc_0' still exists. The fileset and corresponding run(s) will be deleted the next time top-level synthesis is run.
+WARNING: [Project 1-533] File 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/ip/yolo_design_1_axi_uartlite_0_0/yolo_design_1_axi_uartlite_0_0.xci' could not be found in the subdesign 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd', but fileset 'yolo_design_1_axi_uartlite_0_0' still exists. The fileset and corresponding run(s) will be deleted the next time top-level synthesis is run.
+WARNING: [Project 1-533] File 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/ip/yolo_design_1_clk_wiz_0_0/yolo_design_1_clk_wiz_0_0.xci' could not be found in the subdesign 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd', but fileset 'yolo_design_1_clk_wiz_0_0' still exists. The fileset and corresponding run(s) will be deleted the next time top-level synthesis is run.
+WARNING: [Project 1-533] File 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/ip/yolo_design_1_dlmb_bram_if_cntlr_0/yolo_design_1_dlmb_bram_if_cntlr_0.xci' could not be found in the subdesign 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd', but fileset 'yolo_design_1_dlmb_bram_if_cntlr_0' still exists. The fileset and corresponding run(s) will be deleted the next time top-level synthesis is run.
+WARNING: [Project 1-533] File 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/ip/yolo_design_1_dlmb_v10_0/yolo_design_1_dlmb_v10_0.xci' could not be found in the subdesign 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd', but fileset 'yolo_design_1_dlmb_v10_0' still exists. The fileset and corresponding run(s) will be deleted the next time top-level synthesis is run.
+WARNING: [Project 1-533] File 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/ip/yolo_design_1_ilmb_bram_if_cntlr_0/yolo_design_1_ilmb_bram_if_cntlr_0.xci' could not be found in the subdesign 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd', but fileset 'yolo_design_1_ilmb_bram_if_cntlr_0' still exists. The fileset and corresponding run(s) will be deleted the next time top-level synthesis is run.
+WARNING: [Project 1-533] File 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/ip/yolo_design_1_ilmb_v10_0/yolo_design_1_ilmb_v10_0.xci' could not be found in the subdesign 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd', but fileset 'yolo_design_1_ilmb_v10_0' still exists. The fileset and corresponding run(s) will be deleted the next time top-level synthesis is run.
+WARNING: [Project 1-533] File 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/ip/yolo_design_1_lmb_bram_0/yolo_design_1_lmb_bram_0.xci' could not be found in the subdesign 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd', but fileset 'yolo_design_1_lmb_bram_0' still exists. The fileset and corresponding run(s) will be deleted the next time top-level synthesis is run.
+WARNING: [Project 1-533] File 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/ip/yolo_design_1_mdm_1_0/yolo_design_1_mdm_1_0.xci' could not be found in the subdesign 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd', but fileset 'yolo_design_1_mdm_1_0' still exists. The fileset and corresponding run(s) will be deleted the next time top-level synthesis is run.
+WARNING: [Project 1-533] File 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/ip/yolo_design_1_microblaze_0_0/yolo_design_1_microblaze_0_0.xci' could not be found in the subdesign 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd', but fileset 'yolo_design_1_microblaze_0_0' still exists. The fileset and corresponding run(s) will be deleted the next time top-level synthesis is run.
+WARNING: [Project 1-533] File 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/ip/yolo_design_1_mig_7series_0_0/yolo_design_1_mig_7series_0_0.xci' could not be found in the subdesign 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd', but fileset 'yolo_design_1_mig_7series_0_0' still exists. The fileset and corresponding run(s) will be deleted the next time top-level synthesis is run.
+WARNING: [Project 1-533] File 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/ip/yolo_design_1_rst_clk_wiz_0_100M_0/yolo_design_1_rst_clk_wiz_0_100M_0.xci' could not be found in the subdesign 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd', but fileset 'yolo_design_1_rst_clk_wiz_0_100M_0' still exists. The fileset and corresponding run(s) will be deleted the next time top-level synthesis is run.
+WARNING: [Project 1-533] File 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/ip/yolo_design_1_rst_mig_7series_0_81M_0/yolo_design_1_rst_mig_7series_0_81M_0.xci' could not be found in the subdesign 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd', but fileset 'yolo_design_1_rst_mig_7series_0_81M_0' still exists. The fileset and corresponding run(s) will be deleted the next time top-level synthesis is run.
+WARNING: [Project 1-533] File 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/ip/yolo_design_1_xbar_0/yolo_design_1_xbar_0.xci' could not be found in the subdesign 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd', but fileset 'yolo_design_1_xbar_0' still exists. The fileset and corresponding run(s) will be deleted the next time top-level synthesis is run.
+WARNING: [Project 1-533] File 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/ip/yolo_design_1_yolo_engine_ip_0_0/yolo_design_1_yolo_engine_ip_0_0.xci' could not be found in the subdesign 'C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd', but fileset 'yolo_design_1_yolo_engine_ip_0_0' still exists. The fileset and corresponding run(s) will be deleted the next time top-level synthesis is run.
+open_project: Time (s): cpu = 00:00:36 ; elapsed = 00:00:33 . Memory (MB): peak = 1506.594 ; gain = 327.168
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/ip/yolo_design_1_mig_7series_0_0/board.prj] -no_script -reset -force -quiet
+remove_files  C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/ip/yolo_design_1_mig_7series_0_0/board.prj
+export_ip_user_files -of_objects  [get_files C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd] -no_script -reset -force -quiet
+remove_files  C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd
+create_bd_design "yolo_design_1"
+Wrote  : <C:\Users\leewo\Documents\GitHub\AIX2024\build\hw_test\hw_test.srcs\sources_1\bd\yolo_design_1\yolo_design_1.bd> 
+create_bd_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 1599.016 ; gain = 80.137
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:yolo_engine_ip:1.0 yolo_engine_ip_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:11.0 microblaze_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:mig_7series:4.2 mig_7series_0
+apply_board_connection -board_interface "ddr2_sdram" -ip_intf "mig_7series_0/mig_ddr_interface" -diagram "yolo_design_1" 
+INFO: [BoardInterface 100-3] current_bd_design yolo_design_1
+INFO: [BoardInterface 100-119] set_property CONFIG.BOARD_MIG_PARAM ddr2_sdram [get_bd_cells -quiet /mig_7series_0]
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [BoardInterface 100-108] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:ddrx_rtl:1.0 ddr2_sdram
+INFO: [BoardInterface 100-109] connect_bd_intf_net /ddr2_sdram /mig_7series_0/DDR2
+INFO: [BoardInterface 100-121] create_bd_port -dir I clk_ref_i -type clk
+WARNING: [BD 5-670] It is required to provide a frequency value for a user created input clock port. Please use the <-freq_hz $freq_val> argument of the create_bd_port command. ie create_bd_port -dir I -type clk -freq_hz 100000000 clkin
+INFO: [BoardInterface 100-122] connect_bd_net /clk_ref_i /mig_7series_0/clk_ref_i
+INFO: [BoardInterface 100-121] create_bd_port -dir I sys_clk_i -type clk
+WARNING: [BD 5-670] It is required to provide a frequency value for a user created input clock port. Please use the <-freq_hz $freq_val> argument of the create_bd_port command. ie create_bd_port -dir I -type clk -freq_hz 100000000 clkin
+INFO: [BoardInterface 100-122] connect_bd_net /sys_clk_i /mig_7series_0/sys_clk_i
+apply_board_connection: Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 2138.668 ; gain = 464.781
+endgroup
+delete_bd_objs [get_bd_nets clk_ref_i_1]
+delete_bd_objs [get_bd_nets sys_clk_i_1]
+delete_bd_objs [get_bd_ports sys_clk_i]
+delete_bd_objs [get_bd_ports clk_ref_i]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0
+apply_board_connection -board_interface "usb_uart" -ip_intf "axi_uartlite_0/UART" -diagram "yolo_design_1" 
+INFO: [BoardInterface 100-3] current_bd_design yolo_design_1
+INFO: [BoardInterface 100-10] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells -quiet /axi_uartlite_0]
+INFO: [BoardInterface 100-12] set_property CONFIG.UARTLITE_BOARD_INTERFACE usb_uart [get_bd_cells -quiet /axi_uartlite_0]
+INFO: [BoardInterface 100-108] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:uart_rtl:1.0 usb_uart
+INFO: [BoardInterface 100-109] connect_bd_intf_net /usb_uart /axi_uartlite_0/UART
+endgroup
+startgroup
+set_property CONFIG.C_BAUDRATE {230400} [get_bd_cells axi_uartlite_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0
+apply_board_connection -board_interface "sys_clock" -ip_intf "clk_wiz_0/clock_CLK_IN1" -diagram "yolo_design_1" 
+INFO: [BoardInterface 100-3] current_bd_design yolo_design_1
+INFO: [BoardInterface 100-10] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells -quiet /clk_wiz_0]
+INFO: [BoardInterface 100-12] set_property CONFIG.CLK_IN1_BOARD_INTERFACE sys_clock [get_bd_cells -quiet /clk_wiz_0]
+WARNING: [BD 5-670] It is required to provide a frequency value for a user created input clock port. Please use the <-freq_hz $freq_val> argument of the create_bd_port command. ie create_bd_port -dir I -type clk -freq_hz 100000000 clkin
+INFO: [BoardInterface 100-110] create_bd_port -dir I sys_clock -type clk
+INFO: [BoardInterface 100-105] set_property CONFIG.FREQ_HZ 100000000 /sys_clock
+INFO: [BoardInterface 100-106] set_property CONFIG.PHASE 0.0 /sys_clock
+INFO: [BoardInterface 100-111] connect_bd_net /sys_clock /clk_wiz_0/clk_in1
+INFO: [BoardInterface 100-114] set_property CONFIG.FREQ_HZ 100000000 /sys_clock
+endgroup
+startgroup
+set_property -dict [list \
+  CONFIG.CLKOUT2_JITTER {114.829} \
+  CONFIG.CLKOUT2_PHASE_ERROR {98.575} \
+  CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {200.000} \
+  CONFIG.CLKOUT2_USED {true} \
+  CONFIG.MMCM_CLKOUT1_DIVIDE {5} \
+  CONFIG.NUM_OUT_CLKS {2} \
+  CONFIG.RESET_PORT {resetn} \
+  CONFIG.RESET_TYPE {ACTIVE_LOW} \
+] [get_bd_cells clk_wiz_0]
+endgroup
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins mig_7series_0/sys_clk_i]
+apply_bd_automation -rule xilinx.com:bd_rule:microblaze -config { axi_intc {0} axi_periph {Enabled} cache {32KB} clk {/clk_wiz_0/clk_out1 (100 MHz)} cores {1} debug_module {Debug Only} ecc {None} local_mem {32KB} preset {None}}  [get_bd_cells microblaze_0]
+WARNING: [BD 5-700] No address spaces matched 'get_bd_addr_spaces /microblaze_0'
+apply_bd_automation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2277.961 ; gain = 31.387
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+WARNING: [IP_Flow 19-240] Unknown architecture 'versal' detected.
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/axi_uartlite_0/S_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_uartlite_0/S_AXI]
+Slave segment '/axi_uartlite_0/S_AXI/Reg' is being assigned into address space '/microblaze_0/Data' at <0x4060_0000 [ 64K ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {New External Port (ACTIVE_LOW)}}  [get_bd_pins clk_wiz_0/resetn]
+INFO: [board_rule 100-100] set_property CONFIG.RESET_BOARD_INTERFACE reset [get_bd_cells /clk_wiz_0]
+INFO: [BoardRule 102-10] create_bd_port -dir I reset -type rst
+INFO: [BoardRule 102-7] set_property CONFIG.POLARITY ACTIVE_LOW /reset
+INFO: [BoardRule 102-15] connect_bd_net /reset /clk_wiz_0/resetn
+INFO: [BoardRule 102-18] set_property CONFIG.POLARITY ACTIVE_LOW /reset
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins mig_7series_0/clk_ref_i]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (100 MHz)} Clk_slave {/mig_7series_0/ui_clk (81 MHz)} Clk_xbar {Auto} Master {/microblaze_0 (Cached)} Slave {/mig_7series_0/S_AXI} ddr_seg {Auto} intc_ip {New AXI SmartConnect} master_apm {0}}  [get_bd_intf_pins mig_7series_0/S_AXI]
+Slave segment '/mig_7series_0/memmap/memaddr' is being assigned into address space '/microblaze_0/Data' at <0x8000_0000 [ 128M ]>.
+Slave segment '/mig_7series_0/memmap/memaddr' is being assigned into address space '/microblaze_0/Instruction' at <0x8000_0000 [ 128M ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {Auto}}  [get_bd_pins mig_7series_0/sys_rst]
+INFO: [board_rule 100-100] set_property CONFIG.RESET_BOARD_INTERFACE reset [get_bd_cells /mig_7series_0]
+INFO: [BoardRule 102-15] connect_bd_net /reset /mig_7series_0/sys_rst
+INFO: [BoardRule 102-18] set_property CONFIG.POLARITY ACTIVE_LOW /reset
+apply_bd_automation: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2314.270 ; gain = 36.309
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {Auto}}  [get_bd_pins rst_clk_wiz_0_100M/ext_reset_in]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /rst_clk_wiz_0_100M]
+INFO: [board_rule 100-100] set_property CONFIG.RESET_BOARD_INTERFACE reset [get_bd_cells /rst_clk_wiz_0_100M]
+INFO: [BoardRule 102-15] connect_bd_net /reset /rst_clk_wiz_0_100M/ext_reset_in
+INFO: [BoardRule 102-18] set_property CONFIG.POLARITY ACTIVE_LOW /reset
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/yolo_engine_ip_0/s00_axi} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins yolo_engine_ip_0/s00_axi]
+Slave segment '/yolo_engine_ip_0/s00_axi/reg0' is being assigned into address space '/microblaze_0/Data' at <0x0001_0000 [ 4K ]>.
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/mig_7series_0/ui_clk (81 MHz)} Clk_xbar {/clk_wiz_0/clk_out1 (100 MHz)} Master {/yolo_engine_ip_0/M} Slave {/mig_7series_0/S_AXI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins yolo_engine_ip_0/M]
+Slave segment '/mig_7series_0/memmap/memaddr' is being assigned into address space '/yolo_engine_ip_0/M' at <0x8000_0000 [ 128M ]>.
+validate_bd_design
+CRITICAL WARNING: [xilinx.com:ip:smartconnect:1.0-1] yolo_design_1_axi_smc_0: The device(s) attached to /S02_AXI do not share a common clock domain with this smartconnect instance. Modify the clock domain values of the attached device(s) or re-customize this AXI SmartConnect instance to add a new clock pin and connect it to the same clock source of the IP attached to /S02_AXI to prevent further clock DRC violations.
+INFO: [BD 5-943] Reserving offset range <0x8000_0000 [ 128M ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x8000_0000 [ 128M ]> from slave interface '/axi_smc/S01_AXI' to master interface '/axi_smc/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x8000_0000 [ 128M ]> from slave interface '/axi_smc/S02_AXI' to master interface '/axi_smc/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] yolo_design_1_axi_smc_0: SmartConnect yolo_design_1_axi_smc_0 is in High-performance Mode.
+xit::source_ipfile: Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2438.820 ; gain = 53.500
+CRITICAL WARNING: [BD 41-967] AXI interface pin /yolo_engine_ip_0/M is not associated to any clock pin. It may not work correctly.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+INFO: [xilinx.com:ip:microblaze:11.0-16] /microblaze_0: Setting D-cache cacheable area base address C_DCACHE_BASEADDR to 0x80000000 and high address C_DCACHE_HIGHADDR to 0x87FFFFFF.
+INFO: [xilinx.com:ip:microblaze:11.0-16] /microblaze_0: Setting I-cache cacheable area base address C_ICACHE_BASEADDR to 0x80000000 and high address C_ICACHE_HIGHADDR to 0x87FFFFFF.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /mig_7series_0/S_AXI(0) and /axi_smc/M00_AXI(4)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /mig_7series_0/S_AXI(0) and /axi_smc/M00_AXI(4)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /mig_7series_0/S_AXI(0) and /axi_smc/M00_AXI(1)
+validate_bd_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 2448.816 ; gain = 63.496
+make_wrapper -files [get_files C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd] -top
+INFO: [BD 41-1662] The design 'yolo_design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+Wrote  : <C:\Users\leewo\Documents\GitHub\AIX2024\build\hw_test\hw_test.srcs\sources_1\bd\yolo_design_1\yolo_design_1.bd> 
+Wrote  : <C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/bd/yolo_design_1/ui/bd_fe62e136.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S02_AXI_arlock'(1) to pin: '/yolo_engine_ip_0/M_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S02_AXI_awlock'(1) to pin: '/yolo_engine_ip_0/M_AWLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.gen/sources_1/bd/yolo_design_1/synth/yolo_design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S02_AXI_arlock'(1) to pin: '/yolo_engine_ip_0/M_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S02_AXI_awlock'(1) to pin: '/yolo_engine_ip_0/M_AWLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.gen/sources_1/bd/yolo_design_1/sim/yolo_design_1.v
+Verilog Output written to : C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.gen/sources_1/bd/yolo_design_1/hdl/yolo_design_1_wrapper.v
+make_wrapper: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2472.418 ; gain = 23.602
+add_files -norecurse c:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.gen/sources_1/bd/yolo_design_1/hdl/yolo_design_1_wrapper.v
+update_compile_order -fileset sources_1
+set_property top yolo_design_1_wrapper [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+INFO: [BD 41-1662] The design 'yolo_design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S02_AXI_arlock'(1) to pin: '/yolo_engine_ip_0/M_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S02_AXI_awlock'(1) to pin: '/yolo_engine_ip_0/M_AWLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.gen/sources_1/bd/yolo_design_1/synth/yolo_design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S02_AXI_arlock'(1) to pin: '/yolo_engine_ip_0/M_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S02_AXI_awlock'(1) to pin: '/yolo_engine_ip_0/M_AWLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.gen/sources_1/bd/yolo_design_1/sim/yolo_design_1.v
+Verilog Output written to : C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.gen/sources_1/bd/yolo_design_1/hdl/yolo_design_1_wrapper.v
+ERROR: [Common 17-680] Path length exceeds 260-Byte maximum allowed by Windows: c:\Users\leewo\Documents\GitHub\AIX2024\build\hw_test\hw_test.gen\sources_1\bd\yolo_design_1\ip\yolo_design_1_yolo_engine_ip_0_0\src\yolo_design_1_mig_7series_0_0\_tmp\/yolo_design_1_mig_7series_0_0/example_design/rtl/traffic_gen/mig_7series_v4_2_axi4_wrapper.v
+Please consider using the OS subst command to shorten the path length by mapping part of the path to a virtual drive letter. See Answer Record AR52787 for more information.
+Resolution: In Windows 7 or later, the mklink command can also be used to create a symbolic link and shorten the path.
+ERROR: [IP_Flow 19-3475] Tcl error in ::ipgui_yolo_design_1_mig_7series_0_0_1::updateAllModelParams procedure for BD Cell 'yolo_engine_ip_0/mig_7series_0'. ERROR: [Common 17-680] Path length exceeds 260-Byte maximum allowed by Windows: c:\Users\leewo\Documents\GitHub\AIX2024\build\hw_test\hw_test.gen\sources_1\bd\yolo_design_1\ip\yolo_design_1_yolo_engine_ip_0_0\src\yolo_design_1_mig_7series_0_0\_tmp\/yolo_design_1_mig_7series_0_0/example_design/rtl/traffic_gen/mig_7series_v4_2_axi4_wrapper.v
+Please consider using the OS subst command to shorten the path length by mapping part of the path to a virtual drive letter. See Answer Record AR52787 for more information.
+Resolution: In Windows 7 or later, the mklink command can also be used to create a symbolic link and shorten the path.
+
+ERROR: [Common 17-680] Path length exceeds 260-Byte maximum allowed by Windows: c:\Users\leewo\Documents\GitHub\AIX2024\build\hw_test\hw_test.gen\sources_1\bd\yolo_design_1\ip\yolo_design_1_yolo_engine_ip_0_0\src\yolo_design_1_mig_7series_0_0\_tmp\/yolo_design_1_mig_7series_0_0/example_design/rtl/traffic_gen/mig_7series_v4_2_axi4_wrapper.v
+Please consider using the OS subst command to shorten the path length by mapping part of the path to a virtual drive letter. See Answer Record AR52787 for more information.
+Resolution: In Windows 7 or later, the mklink command can also be used to create a symbolic link and shorten the path.
+ERROR: [IP_Flow 19-3475] Tcl error in ::ipgui_yolo_design_1_mig_7series_0_0_1::updateAllModelParams procedure for BD Cell 'yolo_design_1_yolo_engine_ip_0_0/yolo_design_1_mig_7series_0_0'. ERROR: [Common 17-680] Path length exceeds 260-Byte maximum allowed by Windows: c:\Users\leewo\Documents\GitHub\AIX2024\build\hw_test\hw_test.gen\sources_1\bd\yolo_design_1\ip\yolo_design_1_yolo_engine_ip_0_0\src\yolo_design_1_mig_7series_0_0\_tmp\/yolo_design_1_mig_7series_0_0/example_design/rtl/traffic_gen/mig_7series_v4_2_axi4_wrapper.v
+Please consider using the OS subst command to shorten the path length by mapping part of the path to a virtual drive letter. See Answer Record AR52787 for more information.
+Resolution: In Windows 7 or later, the mklink command can also be used to create a symbolic link and shorten the path.
+
+ERROR: [IP_Flow 19-98] Generation of the IP CORE failed.
+Failed to customize subcore IP 'yolo_design_1_mig_7series_0_0'. Failed to apply user parameter values.
+ERROR: [BD 41-1030] Generation failed for the IP Integrator block yolo_engine_ip_0 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mig_7series_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.gen/sources_1/bd/yolo_design_1/ip/yolo_design_1_axi_uartlite_0_0/yolo_design_1_axi_uartlite_0_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/xbar .
+Exporting to file c:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.gen/sources_1/bd/yolo_design_1/ip/yolo_design_1_axi_smc_0/bd_0/hw_handoff/yolo_design_1_axi_smc_0.hwh
+Generated Hardware Definition File c:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.gen/sources_1/bd/yolo_design_1/ip/yolo_design_1_axi_smc_0/bd_0/synth/yolo_design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_mig_7series_0_81M .
+Exporting to file C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.gen/sources_1/bd/yolo_design_1/hw_handoff/yolo_design_1.hwh
+Generated Hardware Definition File C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.gen/sources_1/bd/yolo_design_1/synth/yolo_design_1.hwdef
+WARNING: [BD 41-2265] Clock pin for protocol instance pin M could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /yolo_engine_ip_0
+WARNING: [Coretcl 2-1822] config_ip_cache: ignoring specified IP instance 'yolo_design_1_axi_uartlite_0_0'; does not support IP Caching: IP instance does not support OOC synthesis.
+WARNING: [Coretcl 2-1822] config_ip_cache: ignoring specified IP instance 'yolo_design_1_clk_wiz_0_0'; does not support IP Caching: IP instance does not support OOC synthesis.
+WARNING: [Coretcl 2-1822] config_ip_cache: ignoring specified IP instance 'yolo_design_1_dlmb_bram_if_cntlr_0'; does not support IP Caching: IP instance does not support OOC synthesis.
+WARNING: [Coretcl 2-1822] config_ip_cache: ignoring specified IP instance 'yolo_design_1_dlmb_v10_0'; does not support IP Caching: IP instance does not support OOC synthesis.
+WARNING: [Coretcl 2-1822] config_ip_cache: ignoring specified IP instance 'yolo_design_1_ilmb_bram_if_cntlr_0'; does not support IP Caching: IP instance does not support OOC synthesis.
+WARNING: [Coretcl 2-1822] config_ip_cache: ignoring specified IP instance 'yolo_design_1_ilmb_v10_0'; does not support IP Caching: IP instance does not support OOC synthesis.
+WARNING: [Coretcl 2-1822] config_ip_cache: ignoring specified IP instance 'yolo_design_1_lmb_bram_0'; does not support IP Caching: IP instance does not support OOC synthesis.
+WARNING: [Coretcl 2-1822] config_ip_cache: ignoring specified IP instance 'yolo_design_1_mdm_1_0'; does not support IP Caching: IP instance does not support OOC synthesis.
+WARNING: [Coretcl 2-1822] config_ip_cache: ignoring specified IP instance 'yolo_design_1_microblaze_0_0'; does not support IP Caching: IP instance does not support OOC synthesis.
+WARNING: [Coretcl 2-1822] config_ip_cache: ignoring specified IP instance 'yolo_design_1_rst_clk_wiz_0_100M_0'; does not support IP Caching: IP instance does not support OOC synthesis.
+WARNING: [Coretcl 2-1822] config_ip_cache: ignoring specified IP instance 'yolo_design_1_rst_mig_7series_0_81M_0'; does not support IP Caching: IP instance does not support OOC synthesis.
+WARNING: [Coretcl 2-1822] config_ip_cache: ignoring specified IP instance 'yolo_design_1_xbar_0'; does not support IP Caching: IP instance does not support OOC synthesis.
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_axi_smc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_axi_uartlite_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_clk_wiz_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_dlmb_v10_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_ilmb_v10_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_lmb_bram_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_mdm_1_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_microblaze_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_rst_clk_wiz_0_100M_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_rst_mig_7series_0_81M_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_xbar_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_yolo_engine_ip_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_axi_smc_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_axi_uartlite_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_clk_wiz_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_rst_clk_wiz_0_100M_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_xbar_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_rst_mig_7series_0_81M_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_yolo_engine_ip_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_dlmb_v10_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_ilmb_v10_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_lmb_bram_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_mdm_1_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_microblaze_0_0
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+exec subst V: c:/Users/leewo/Documents/GitHub/AIX2024/build
+create_project yolo_ip V:/yolo_ip -part xc7a100tcsg324-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24c/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24i:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24i/1.0/board.xml as part xck24-ubva530-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.2/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.3/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.4/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kd240_som/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.0/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.1/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.0/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.1/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc702:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc702/1.4/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu104/1.1/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.4/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.5/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.6/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 3019.836 ; gain = 13.609
+yolo_ip
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24c/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24i:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24i/1.0/board.xml as part xck24-ubva530-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.2/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.3/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.4/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kd240_som/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.0/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.1/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+INFO: [Common 17-14] Message 'Board 49-26' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+set_property board_part digilentinc.com:nexys-a7-100t:part0:1.3 [current_project]
+add_files -fileset constrs_1 -norecurse C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/fpga/NEXYS_A7_100T.xdc
+import_files -fileset constrs_1 C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/fpga/NEXYS_A7_100T.xdc
+import_files -norecurse {C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/axi_dma_wr.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/yolo_engine_ip.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/spram_wrapper.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/cnn_ctrl.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/mac.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/adder_tree.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/mul.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/dpram_wrapper.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/define.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/axi_dma_ctrl.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/axi_dma_rd.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/yolo_engine.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sources_1/imports/src/yolo_engine_axi.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 {C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim/conv_kern_tb.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim/mac_tb.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim/cnn_ctrl_tb.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim_dram_model/axi_sram_if.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim_dram_model/axi_slave_if_sync.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim_dram_model/sram.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim_dram_model/sram_ctrl.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim_dram_model/sync_reg_fifo.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim/bmp_image_writer.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim/yolo_engine_tb.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim/cnn_ctrl_multi_layer_tb.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim/conv_layer_tb.v C:/Users/leewo/Documents/GitHub/AIX2024/build/hw_test/hw_test.srcs/sim_1/imports/sim/mul_tb.v}
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+set_property top yolo_engine_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+set_property top yolo_engine_ip [current_fileset]
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'yolo_engine_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'V:/yolo_ip/yolo_ip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'yolo_engine_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'V:/yolo_ip/yolo_ip.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj yolo_engine_tb_vlog.prj"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+INFO: [VRFC 10-2263] Analyzing Verilog file "V:/yolo_ip/yolo_ip.srcs/sources_1/imports/src/axi_dma_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_dma_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "V:/yolo_ip/yolo_ip.srcs/sources_1/imports/src/axi_dma_rd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_dma_rd
+INFO: [VRFC 10-2263] Analyzing Verilog file "V:/yolo_ip/yolo_ip.srcs/sources_1/imports/src/axi_dma_wr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_dma_wr
+INFO: [VRFC 10-2263] Analyzing Verilog file "V:/yolo_ip/yolo_ip.srcs/sim_1/imports/sim/dram_model/axi_slave_if_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_slave_if_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "V:/yolo_ip/yolo_ip.srcs/sim_1/imports/sim/dram_model/axi_sram_if.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_sram_if
+INFO: [VRFC 10-2263] Analyzing Verilog file "V:/yolo_ip/yolo_ip.srcs/sources_1/imports/src/dpram_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dpram_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "V:/yolo_ip/yolo_ip.srcs/sim_1/imports/sim/dram_model/sram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "V:/yolo_ip/yolo_ip.srcs/sim_1/imports/sim/dram_model/sram_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sram_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "V:/yolo_ip/yolo_ip.srcs/sim_1/imports/sim/dram_model/sync_reg_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_reg_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "V:/yolo_ip/yolo_ip.srcs/sources_1/imports/src/yolo_engine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module yolo_engine
+INFO: [VRFC 10-2263] Analyzing Verilog file "V:/yolo_ip/yolo_ip.srcs/sim_1/imports/sim/yolo_engine_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module yolo_engine_tb
+WARNING: [VRFC 10-3380] identifier 'Ni' is used before its declaration [V:/yolo_ip/yolo_ip.srcs/sim_1/imports/sim/../../../sources_1/imports/src/define.v:38]
+INFO: [VRFC 10-2263] Analyzing Verilog file "V:/yolo_ip/yolo_ip.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 3039.367 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'V:/yolo_ip/yolo_ip.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot yolo_engine_tb_behav xil_defaultlib.yolo_engine_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO가 설정되어 있지 않습니다.
+ECHO가 설정되어 있지 않습니다.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot yolo_engine_tb_behav xil_defaultlib.yolo_engine_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.sync_reg_fifo(N_SLOT=16,W_SLOT=4...
+Compiling module xil_defaultlib.sync_reg_fifo(N_SLOT=256,W_SLOT=...
+Compiling module xil_defaultlib.sync_reg_fifo(N_SLOT=256,W_SLOT=...
+Compiling module xil_defaultlib.axi_slave_if_sync(L=8,D=32,M=4)
+Compiling module xil_defaultlib.sram_ctrl(L=8,D=32,M=4,W_MEM=16)
+Compiling module xil_defaultlib.axi_sram_if(D=32,M=4,MEM_DW=16)
+Compiling module xil_defaultlib.sram(FILE_NAME="../../inout_data...
+Compiling module xil_defaultlib.axi_dma_ctrl(BIT_TRANS=8)
+Compiling module xil_defaultlib.axi_dma_rd(BITS_TRANS=8,OUT_BITS...
+Compiling module xil_defaultlib.dpram_wrapper(DW=32)
+Compiling module xil_defaultlib.axi_dma_wr(BITS_TRANS=8,OUT_BITS...
+Compiling module xil_defaultlib.yolo_engine(AXI_WIDTH_DS=4,MEM_B...
+Compiling module xil_defaultlib.yolo_engine_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot yolo_engine_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 3039.367 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'V:/yolo_ip/yolo_ip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "yolo_engine_tb_behav -key {Behavioral:sim_1:Functional:yolo_engine_tb} -tclbatch {yolo_engine_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source yolo_engine_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Initializing memory 'SimmemSync_rp0_wp0_cp1'..
+Loading memory 'SimmemSync_rp0_wp0_cp1' from file: ../../inout_data_sw/log_feamap/CONV00_input_32b.hex
+WARNING: File ../../inout_data_sw/log_feamap/CONV00_input_32b.hex referenced on V:/yolo_ip/yolo_ip.srcs/sources_1/imports/src/axi_dma_rd.v at line 136 cannot be opened for reading. Please ensure that this file is available in the current working directory or parent directory of xsim.dir location specified via -xsimdir switch.
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 3075.371 ; gain = 21.379
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'yolo_engine_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 3075.371 ; gain = 36.004
+run 4 ms
+$stop called at time : 3238880 ns : File "V:/yolo_ip/yolo_ip.srcs/sim_1/imports/sim/yolo_engine_tb.v" Line 251
+run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 3075.371 ; gain = 0.000
+ipx::package_project -root_dir C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/fpga/ip_repo -vendor xilinx.com -library user -taxonomy /UserIP -import_files -set_current false -force
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'V:/yolo_ip/yolo_ip.srcs/sources_1/imports/src/adder_tree.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'V:/yolo_ip/yolo_ip.srcs/sources_1/imports/src/define.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'V:/yolo_ip/yolo_ip.srcs/sources_1/imports/src/mul.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'V:/yolo_ip/yolo_ip.srcs/sources_1/imports/src/mac.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'V:/yolo_ip/yolo_ip.srcs/sources_1/imports/src/cnn_ctrl.v'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'V:/yolo_ip/yolo_ip.srcs/sources_1/imports/src/spram_wrapper.v'.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 's00_axi'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+INFO: [IP_Flow 19-818] Not transferring value dependency attribute "(spirit:decode(id('MODELPARAM_VALUE.D')) / 8)" into user parameter "M".
+INFO: [IP_Flow 19-818] Not transferring value dependency attribute "spirit:decode(id('MODELPARAM_VALUE.A'))" into user parameter "AXI_WIDTH_AD".
+INFO: [IP_Flow 19-818] Not transferring value dependency attribute "spirit:decode(id('MODELPARAM_VALUE.D'))" into user parameter "AXI_WIDTH_DA".
+INFO: [IP_Flow 19-818] Not transferring value dependency attribute "spirit:decode(id('MODELPARAM_VALUE.M'))" into user parameter "AXI_WIDTH_DS".
+WARNING: [IP_Flow 19-3158] Bus Interface 'M': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-11770] Clock interface 's00_axi_aclk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+ipx::unload_core c:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/fpga/ip_repo/component.xml
+ipx::edit_ip_in_project -upgrade true -name tmp_edit_project -directory C:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/fpga/ip_repo c:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/fpga/ip_repo/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24c/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24i:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24i/1.0/board.xml as part xck24-ubva530-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.2/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.3/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.4/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kd240_som/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.0/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.1/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.0/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.1/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc702:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc702/1.4/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu104/1.1/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.4/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.5/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.6/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 3077.402 ; gain = 2.031
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3091.668 ; gain = 16.297
+update_compile_order -fileset sources_1
+current_project yolo_ip
+current_project hw_test
+close_project
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+WARNING: [IP_Flow 19-3158] Bus Interface 'M': FREQ_HZ bus parameter missing from AXI interface when interface is not associated to a clock.
+WARNING: [IP_Flow 19-11770] Clock interface 's00_axi_aclk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+set_property  ip_repo_paths  c:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/fpga/ip_repo [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/leewo/Documents/GitHub/AIX2024/skeleton/code/yolohw/fpga/ip_repo'.
+create_bd_design "yolo_design_1"
+Wrote  : <V:\yolo_ip\yolo_ip.srcs\sources_1\bd\yolo_design_1\yolo_design_1.bd> 
+create_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3196.984 ; gain = 17.949
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:yolo_engine_ip:1.0 yolo_engine_ip_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:11.0 microblaze_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:mig_7series:4.2 mig_7series_0
+apply_board_connection -board_interface "ddr2_sdram" -ip_intf "mig_7series_0/mig_ddr_interface" -diagram "yolo_design_1" 
+INFO: [BoardInterface 100-3] current_bd_design yolo_design_1
+INFO: [BoardInterface 100-119] set_property CONFIG.BOARD_MIG_PARAM ddr2_sdram [get_bd_cells -quiet /mig_7series_0]
+INFO: [BoardInterface 100-108] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:ddrx_rtl:1.0 ddr2_sdram
+INFO: [BoardInterface 100-109] connect_bd_intf_net /ddr2_sdram /mig_7series_0/DDR2
+INFO: [BoardInterface 100-121] create_bd_port -dir I clk_ref_i -type clk
+WARNING: [BD 5-670] It is required to provide a frequency value for a user created input clock port. Please use the <-freq_hz $freq_val> argument of the create_bd_port command. ie create_bd_port -dir I -type clk -freq_hz 100000000 clkin
+INFO: [BoardInterface 100-122] connect_bd_net /clk_ref_i /mig_7series_0/clk_ref_i
+INFO: [BoardInterface 100-121] create_bd_port -dir I sys_clk_i -type clk
+WARNING: [BD 5-670] It is required to provide a frequency value for a user created input clock port. Please use the <-freq_hz $freq_val> argument of the create_bd_port command. ie create_bd_port -dir I -type clk -freq_hz 100000000 clkin
+INFO: [BoardInterface 100-122] connect_bd_net /sys_clk_i /mig_7series_0/sys_clk_i
+apply_board_connection: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 3198.691 ; gain = 1.203
+endgroup
+delete_bd_objs [get_bd_nets clk_ref_i_1]
+delete_bd_objs [get_bd_nets sys_clk_i_1]
+delete_bd_objs [get_bd_ports sys_clk_i]
+delete_bd_objs [get_bd_ports clk_ref_i]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0
+apply_board_connection -board_interface "usb_uart" -ip_intf "axi_uartlite_0/UART" -diagram "yolo_design_1" 
+INFO: [BoardInterface 100-3] current_bd_design yolo_design_1
+INFO: [BoardInterface 100-10] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells -quiet /axi_uartlite_0]
+INFO: [BoardInterface 100-12] set_property CONFIG.UARTLITE_BOARD_INTERFACE usb_uart [get_bd_cells -quiet /axi_uartlite_0]
+INFO: [BoardInterface 100-108] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:uart_rtl:1.0 usb_uart
+INFO: [BoardInterface 100-109] connect_bd_intf_net /usb_uart /axi_uartlite_0/UART
+endgroup
+startgroup
+set_property CONFIG.C_BAUDRATE {230400} [get_bd_cells axi_uartlite_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0
+apply_board_connection -board_interface "sys_clock" -ip_intf "clk_wiz_0/clock_CLK_IN1" -diagram "yolo_design_1" 
+INFO: [BoardInterface 100-3] current_bd_design yolo_design_1
+INFO: [BoardInterface 100-10] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells -quiet /clk_wiz_0]
+INFO: [BoardInterface 100-12] set_property CONFIG.CLK_IN1_BOARD_INTERFACE sys_clock [get_bd_cells -quiet /clk_wiz_0]
+WARNING: [BD 5-670] It is required to provide a frequency value for a user created input clock port. Please use the <-freq_hz $freq_val> argument of the create_bd_port command. ie create_bd_port -dir I -type clk -freq_hz 100000000 clkin
+INFO: [BoardInterface 100-110] create_bd_port -dir I sys_clock -type clk
+INFO: [BoardInterface 100-105] set_property CONFIG.FREQ_HZ 100000000 /sys_clock
+INFO: [BoardInterface 100-106] set_property CONFIG.PHASE 0.0 /sys_clock
+INFO: [BoardInterface 100-111] connect_bd_net /sys_clock /clk_wiz_0/clk_in1
+INFO: [BoardInterface 100-114] set_property CONFIG.FREQ_HZ 100000000 /sys_clock
+endgroup
+startgroup
+set_property -dict [list \
+  CONFIG.CLKOUT2_JITTER {114.829} \
+  CONFIG.CLKOUT2_PHASE_ERROR {98.575} \
+  CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {200.000} \
+  CONFIG.CLKOUT2_USED {true} \
+  CONFIG.MMCM_CLKOUT1_DIVIDE {5} \
+  CONFIG.NUM_OUT_CLKS {2} \
+  CONFIG.RESET_PORT {resetn} \
+  CONFIG.RESET_TYPE {ACTIVE_LOW} \
+] [get_bd_cells clk_wiz_0]
+endgroup
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins mig_7series_0/sys_clk_i]
+apply_bd_automation -rule xilinx.com:bd_rule:microblaze -config { axi_intc {0} axi_periph {Enabled} cache {32KB} clk {/clk_wiz_0/clk_out1 (100 MHz)} cores {1} debug_module {Debug Only} ecc {None} local_mem {32KB} preset {None}}  [get_bd_cells microblaze_0]
+WARNING: [BD 5-700] No address spaces matched 'get_bd_addr_spaces /microblaze_0'
+apply_bd_automation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 3209.766 ; gain = 4.824
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/axi_uartlite_0/S_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_uartlite_0/S_AXI]
+Slave segment '/axi_uartlite_0/S_AXI/Reg' is being assigned into address space '/microblaze_0/Data' at <0x4060_0000 [ 64K ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {New External Port (ACTIVE_LOW)}}  [get_bd_pins clk_wiz_0/resetn]
+INFO: [board_rule 100-100] set_property CONFIG.RESET_BOARD_INTERFACE reset [get_bd_cells /clk_wiz_0]
+INFO: [BoardRule 102-10] create_bd_port -dir I reset -type rst
+INFO: [BoardRule 102-7] set_property CONFIG.POLARITY ACTIVE_LOW /reset
+INFO: [BoardRule 102-15] connect_bd_net /reset /clk_wiz_0/resetn
+INFO: [BoardRule 102-18] set_property CONFIG.POLARITY ACTIVE_LOW /reset
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/clk_wiz_0/clk_out1 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins mig_7series_0/clk_ref_i]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (100 MHz)} Clk_slave {/mig_7series_0/ui_clk (81 MHz)} Clk_xbar {Auto} Master {/microblaze_0 (Cached)} Slave {/mig_7series_0/S_AXI} ddr_seg {Auto} intc_ip {New AXI SmartConnect} master_apm {0}}  [get_bd_intf_pins mig_7series_0/S_AXI]
+Slave segment '/mig_7series_0/memmap/memaddr' is being assigned into address space '/microblaze_0/Data' at <0x8000_0000 [ 128M ]>.
+Slave segment '/mig_7series_0/memmap/memaddr' is being assigned into address space '/microblaze_0/Instruction' at <0x8000_0000 [ 128M ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {Auto}}  [get_bd_pins mig_7series_0/sys_rst]
+INFO: [board_rule 100-100] set_property CONFIG.RESET_BOARD_INTERFACE reset [get_bd_cells /mig_7series_0]
+INFO: [BoardRule 102-15] connect_bd_net /reset /mig_7series_0/sys_rst
+INFO: [BoardRule 102-18] set_property CONFIG.POLARITY ACTIVE_LOW /reset
+apply_bd_automation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 3209.766 ; gain = 0.000
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {Auto}}  [get_bd_pins rst_clk_wiz_0_100M/ext_reset_in]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /rst_clk_wiz_0_100M]
+INFO: [board_rule 100-100] set_property CONFIG.RESET_BOARD_INTERFACE reset [get_bd_cells /rst_clk_wiz_0_100M]
+INFO: [BoardRule 102-15] connect_bd_net /reset /rst_clk_wiz_0_100M/ext_reset_in
+INFO: [BoardRule 102-18] set_property CONFIG.POLARITY ACTIVE_LOW /reset
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/yolo_engine_ip_0/s00_axi} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins yolo_engine_ip_0/s00_axi]
+Slave segment '/yolo_engine_ip_0/s00_axi/reg0' is being assigned into address space '/microblaze_0/Data' at <0x0001_0000 [ 4K ]>.
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/mig_7series_0/ui_clk (81 MHz)} Clk_xbar {/clk_wiz_0/clk_out1 (100 MHz)} Master {/yolo_engine_ip_0/M} Slave {/mig_7series_0/S_AXI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins yolo_engine_ip_0/M]
+Slave segment '/mig_7series_0/memmap/memaddr' is being assigned into address space '/yolo_engine_ip_0/M' at <0x8000_0000 [ 128M ]>.
+validate_bd_design
+CRITICAL WARNING: [xilinx.com:ip:smartconnect:1.0-1] yolo_design_1_axi_smc_0: The device(s) attached to /S02_AXI do not share a common clock domain with this smartconnect instance. Modify the clock domain values of the attached device(s) or re-customize this AXI SmartConnect instance to add a new clock pin and connect it to the same clock source of the IP attached to /S02_AXI to prevent further clock DRC violations.
+INFO: [BD 5-943] Reserving offset range <0x8000_0000 [ 128M ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x8000_0000 [ 128M ]> from slave interface '/axi_smc/S01_AXI' to master interface '/axi_smc/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x8000_0000 [ 128M ]> from slave interface '/axi_smc/S02_AXI' to master interface '/axi_smc/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] yolo_design_1_axi_smc_0: SmartConnect yolo_design_1_axi_smc_0 is in High-performance Mode.
+create_bd_cell: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3212.469 ; gain = 1.984
+xit::source_ipfile: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 3239.699 ; gain = 29.219
+CRITICAL WARNING: [BD 41-967] AXI interface pin /yolo_engine_ip_0/M is not associated to any clock pin. It may not work correctly.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+INFO: [xilinx.com:ip:microblaze:11.0-16] /microblaze_0: Setting D-cache cacheable area base address C_DCACHE_BASEADDR to 0x80000000 and high address C_DCACHE_HIGHADDR to 0x87FFFFFF.
+INFO: [xilinx.com:ip:microblaze:11.0-16] /microblaze_0: Setting I-cache cacheable area base address C_ICACHE_BASEADDR to 0x80000000 and high address C_ICACHE_HIGHADDR to 0x87FFFFFF.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /mig_7series_0/S_AXI(0) and /axi_smc/M00_AXI(4)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /mig_7series_0/S_AXI(0) and /axi_smc/M00_AXI(4)
+WARNING: [BD 41-237] Bus Interface property BUSER_WIDTH does not match between /mig_7series_0/S_AXI(0) and /axi_smc/M00_AXI(1)
+validate_bd_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 3243.676 ; gain = 33.418
+make_wrapper -files [get_files V:/yolo_ip/yolo_ip.srcs/sources_1/bd/yolo_design_1/yolo_design_1.bd] -top
+INFO: [BD 41-1662] The design 'yolo_design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+Wrote  : <V:\yolo_ip\yolo_ip.srcs\sources_1\bd\yolo_design_1\yolo_design_1.bd> 
+Wrote  : <V:/yolo_ip/yolo_ip.srcs/sources_1/bd/yolo_design_1/ui/bd_fe62e136.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S02_AXI_arlock'(1) to pin: '/yolo_engine_ip_0/M_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S02_AXI_awlock'(1) to pin: '/yolo_engine_ip_0/M_AWLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : V:/yolo_ip/yolo_ip.gen/sources_1/bd/yolo_design_1/synth/yolo_design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S02_AXI_arlock'(1) to pin: '/yolo_engine_ip_0/M_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S02_AXI_awlock'(1) to pin: '/yolo_engine_ip_0/M_AWLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : V:/yolo_ip/yolo_ip.gen/sources_1/bd/yolo_design_1/sim/yolo_design_1.v
+Verilog Output written to : V:/yolo_ip/yolo_ip.gen/sources_1/bd/yolo_design_1/hdl/yolo_design_1_wrapper.v
+make_wrapper: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 3248.242 ; gain = 4.566
+add_files -norecurse v:/yolo_ip/yolo_ip.gen/sources_1/bd/yolo_design_1/hdl/yolo_design_1_wrapper.v
+update_compile_order -fileset sources_1
+set_property top yolo_design_1_wrapper [current_fileset]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [V:\yolo_ip\yolo_ip.srcs\sim_1\imports\sim\yolo_engine_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [v:\yolo_ip\yolo_ip.gen\sources_1\bd\yolo_design_1\hdl\yolo_design_1_wrapper.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [V:\yolo_ip\yolo_ip.srcs\sim_1\imports\sim\yolo_engine_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [v:\yolo_ip\yolo_ip.gen\sources_1\bd\yolo_design_1\hdl\yolo_design_1_wrapper.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+launch_runs synth_1 -jobs 8
+INFO: [BD 41-1662] The design 'yolo_design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+Wrote  : <V:/yolo_ip/yolo_ip.srcs/sources_1/bd/yolo_design_1/ui/bd_fe62e136.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S02_AXI_arlock'(1) to pin: '/yolo_engine_ip_0/M_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S02_AXI_awlock'(1) to pin: '/yolo_engine_ip_0/M_AWLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : V:/yolo_ip/yolo_ip.gen/sources_1/bd/yolo_design_1/synth/yolo_design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S02_AXI_arlock'(1) to pin: '/yolo_engine_ip_0/M_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc/S02_AXI_awlock'(1) to pin: '/yolo_engine_ip_0/M_AWLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : V:/yolo_ip/yolo_ip.gen/sources_1/bd/yolo_design_1/sim/yolo_design_1.v
+Verilog Output written to : V:/yolo_ip/yolo_ip.gen/sources_1/bd/yolo_design_1/hdl/yolo_design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block yolo_engine_ip_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mig_7series_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'v:/yolo_ip/yolo_ip.gen/sources_1/bd/yolo_design_1/ip/yolo_design_1_axi_uartlite_0_0/yolo_design_1_axi_uartlite_0_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/xbar .
+Exporting to file v:/yolo_ip/yolo_ip.gen/sources_1/bd/yolo_design_1/ip/yolo_design_1_axi_smc_0/bd_0/hw_handoff/yolo_design_1_axi_smc_0.hwh
+Generated Hardware Definition File v:/yolo_ip/yolo_ip.gen/sources_1/bd/yolo_design_1/ip/yolo_design_1_axi_smc_0/bd_0/synth/yolo_design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_mig_7series_0_81M .
+Exporting to file V:/yolo_ip/yolo_ip.gen/sources_1/bd/yolo_design_1/hw_handoff/yolo_design_1.hwh
+Generated Hardware Definition File V:/yolo_ip/yolo_ip.gen/sources_1/bd/yolo_design_1/synth/yolo_design_1.hwdef
+WARNING: [BD 41-2265] Clock pin for protocol instance pin M could not be determined. Make sure that ASSOCIATED_BUSIF and ASSOCIATED_RESET properties are set or propagated on clock pins of block /yolo_engine_ip_0
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_axi_smc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_axi_uartlite_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_clk_wiz_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_dlmb_v10_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_ilmb_v10_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_lmb_bram_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_mdm_1_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_microblaze_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_rst_clk_wiz_0_100M_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_rst_mig_7series_0_81M_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_xbar_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP yolo_design_1_yolo_engine_ip_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_axi_smc_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_axi_uartlite_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_clk_wiz_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_xbar_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_dlmb_v10_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_ilmb_v10_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_lmb_bram_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_mdm_1_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_microblaze_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_rst_clk_wiz_0_100M_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_rst_mig_7series_0_81M_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: yolo_design_1_yolo_engine_ip_0_0
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [V:\yolo_ip\yolo_ip.srcs\sim_1\imports\sim\yolo_engine_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [v:\yolo_ip\yolo_ip.gen\sources_1\bd\yolo_design_1\hdl\yolo_design_1_wrapper.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Sun Apr 28 16:47:33 2024] Launched yolo_design_1_axi_smc_0_synth_1, yolo_design_1_yolo_engine_ip_0_0_synth_1, yolo_design_1_mdm_1_0_synth_1, yolo_design_1_rst_clk_wiz_0_100M_0_synth_1, yolo_design_1_xbar_0_synth_1, yolo_design_1_ilmb_v10_0_synth_1, yolo_design_1_dlmb_bram_if_cntlr_0_synth_1, yolo_design_1_rst_mig_7series_0_81M_0_synth_1, yolo_design_1_clk_wiz_0_0_synth_1, yolo_design_1_dlmb_v10_0_synth_1, yolo_design_1_mig_7series_0_0_synth_1, yolo_design_1_microblaze_0_0_synth_1, yolo_design_1_axi_uartlite_0_0_synth_1, yolo_design_1_ilmb_bram_if_cntlr_0_synth_1, yolo_design_1_lmb_bram_0_synth_1...
+Run output will be captured here:
+yolo_design_1_axi_smc_0_synth_1: V:/yolo_ip/yolo_ip.runs/yolo_design_1_axi_smc_0_synth_1/runme.log
+yolo_design_1_yolo_engine_ip_0_0_synth_1: V:/yolo_ip/yolo_ip.runs/yolo_design_1_yolo_engine_ip_0_0_synth_1/runme.log
+yolo_design_1_mdm_1_0_synth_1: V:/yolo_ip/yolo_ip.runs/yolo_design_1_mdm_1_0_synth_1/runme.log
+yolo_design_1_rst_clk_wiz_0_100M_0_synth_1: V:/yolo_ip/yolo_ip.runs/yolo_design_1_rst_clk_wiz_0_100M_0_synth_1/runme.log
+yolo_design_1_xbar_0_synth_1: V:/yolo_ip/yolo_ip.runs/yolo_design_1_xbar_0_synth_1/runme.log
+yolo_design_1_ilmb_v10_0_synth_1: V:/yolo_ip/yolo_ip.runs/yolo_design_1_ilmb_v10_0_synth_1/runme.log
+yolo_design_1_dlmb_bram_if_cntlr_0_synth_1: V:/yolo_ip/yolo_ip.runs/yolo_design_1_dlmb_bram_if_cntlr_0_synth_1/runme.log
+yolo_design_1_rst_mig_7series_0_81M_0_synth_1: V:/yolo_ip/yolo_ip.runs/yolo_design_1_rst_mig_7series_0_81M_0_synth_1/runme.log
+yolo_design_1_clk_wiz_0_0_synth_1: V:/yolo_ip/yolo_ip.runs/yolo_design_1_clk_wiz_0_0_synth_1/runme.log
+yolo_design_1_dlmb_v10_0_synth_1: V:/yolo_ip/yolo_ip.runs/yolo_design_1_dlmb_v10_0_synth_1/runme.log
+yolo_design_1_mig_7series_0_0_synth_1: V:/yolo_ip/yolo_ip.runs/yolo_design_1_mig_7series_0_0_synth_1/runme.log
+yolo_design_1_microblaze_0_0_synth_1: V:/yolo_ip/yolo_ip.runs/yolo_design_1_microblaze_0_0_synth_1/runme.log
+yolo_design_1_axi_uartlite_0_0_synth_1: V:/yolo_ip/yolo_ip.runs/yolo_design_1_axi_uartlite_0_0_synth_1/runme.log
+yolo_design_1_ilmb_bram_if_cntlr_0_synth_1: V:/yolo_ip/yolo_ip.runs/yolo_design_1_ilmb_bram_if_cntlr_0_synth_1/runme.log
+yolo_design_1_lmb_bram_0_synth_1: V:/yolo_ip/yolo_ip.runs/yolo_design_1_lmb_bram_0_synth_1/runme.log
+[Sun Apr 28 16:47:35 2024] Launched synth_1...
+Run output will be captured here: V:/yolo_ip/yolo_ip.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:01:29 ; elapsed = 00:02:10 . Memory (MB): peak = 3599.359 ; gain = 351.117
+ERROR: [Common 17-39] 'launch_runs' failed due to earlier errors.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [V:\yolo_ip\yolo_ip.srcs\sim_1\imports\sim\yolo_engine_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [v:\yolo_ip\yolo_ip.gen\sources_1\bd\yolo_design_1\hdl\yolo_design_1_wrapper.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [V:\yolo_ip\yolo_ip.srcs\sim_1\imports\sim\yolo_engine_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [v:\yolo_ip\yolo_ip.gen\sources_1\bd\yolo_design_1\hdl\yolo_design_1_wrapper.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [V:\yolo_ip\yolo_ip.srcs\sim_1\imports\sim\yolo_engine_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [v:\yolo_ip\yolo_ip.gen\sources_1\bd\yolo_design_1\hdl\yolo_design_1_wrapper.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [V:\yolo_ip\yolo_ip.srcs\sim_1\imports\sim\yolo_engine_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [v:\yolo_ip\yolo_ip.gen\sources_1\bd\yolo_design_1\hdl\yolo_design_1_wrapper.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [V:\yolo_ip\yolo_ip.srcs\sim_1\imports\sim\yolo_engine_tb.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [v:\yolo_ip\yolo_ip.gen\sources_1\bd\yolo_design_1\hdl\yolo_design_1_wrapper.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+reset_run synth_1
+reset_run yolo_design_1_axi_smc_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory V:/yolo_ip/yolo_ip.runs/yolo_design_1_axi_smc_0_synth_1
+
+reset_run yolo_design_1_clk_wiz_0_0_synth_1
+reset_run yolo_design_1_mig_7series_0_0_synth_1
+reset_run yolo_design_1_microblaze_0_0_synth_1
+reset_run yolo_design_1_axi_uartlite_0_0_synth_1
+reset_run yolo_design_1_ilmb_bram_if_cntlr_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory V:/yolo_ip/yolo_ip.runs/yolo_design_1_ilmb_bram_if_cntlr_0_synth_1
+
+reset_run yolo_design_1_lmb_bram_0_synth_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 28 16:58:36 2024...
