@@ -289,9 +289,14 @@ wire [63:0] result_1x1_2; // these are results in output channel dim.
 wire [63:0] result_1x1_3; // these are results in output channel dim.
 
 genvar b;
+// Changwoo: added bias_mask for 1x1 conv
+wire [31:0] bias_mask_1x1;
+assign bias_mask_1x1 = (No >> 3) - 1;
 generate
   for(b = 0; b < 8; b = b + 1) begin : gen_bias_1x1 // To is 8 in 1x1
-    assign bias_1x1[b] = bias[((bias_counter[4:0] << 3) + b) >> 1][get_BIAS_offset((bias_counter[4:0] << 3) + b) +:16];
+    // assign bias_1x1[b] = bias[((bias_counter[4:0] << 3) + b) >> 1][get_BIAS_offset((bias_counter[4:0] << 3) + b) +:16]; 
+    // Changwoo: bias_counter should iterate from 0 to (No >> 3)-1
+    assign bias_1x1[b] = bias[(((bias_counter & bias_mask_1x1) << 3) + b) >> 1][get_BIAS_offset(((bias_counter & bias_mask_1x1) << 3) + b) +:16];
   end
 endgenerate
 
