@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="conv_kern_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="conv_kern_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1,321,630.200 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,321,870.001 ns"></ZoomEndTime>
+      <Cursor1Time time="1,321,830.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="177"></NameColumnWidth>
+      <ValueColumnWidth column_width="295"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="46" />
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/rstn" type="logic">
+      <obj_property name="ElementShortName">rstn</obj_property>
+      <obj_property name="ObjectShortName">rstn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/valid_i" type="logic">
+      <obj_property name="ElementShortName">valid_i</obj_property>
+      <obj_property name="ObjectShortName">valid_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/data_in" type="array">
+      <obj_property name="ElementShortName">data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/F_writedone" type="logic">
+      <obj_property name="ElementShortName">F_writedone</obj_property>
+      <obj_property name="ObjectShortName">F_writedone</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/W_writedone" type="logic">
+      <obj_property name="ElementShortName">W_writedone</obj_property>
+      <obj_property name="ObjectShortName">W_writedone</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/B_writedone" type="logic">
+      <obj_property name="ElementShortName">B_writedone</obj_property>
+      <obj_property name="ObjectShortName">B_writedone</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/ready_o" type="logic">
+      <obj_property name="ElementShortName">ready_o</obj_property>
+      <obj_property name="ObjectShortName">ready_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/valid_o" type="logic">
+      <obj_property name="ElementShortName">valid_o</obj_property>
+      <obj_property name="ObjectShortName">valid_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/data_out" type="array">
+      <obj_property name="ElementShortName">data_out[127:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/data_out_2" type="array">
+      <obj_property name="ElementShortName">data_out_2[127:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out_2[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/conv_done" type="logic">
+      <obj_property name="ElementShortName">conv_done</obj_property>
+      <obj_property name="ObjectShortName">conv_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/counter" type="array">
+      <obj_property name="ElementShortName">counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/mac_counter" type="array">
+      <obj_property name="ElementShortName">mac_counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mac_counter[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/bias_counter" type="array">
+      <obj_property name="ElementShortName">bias_counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bias_counter[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/pool_counter" type="array">
+      <obj_property name="ElementShortName">pool_counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pool_counter[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/send_counter" type="array">
+      <obj_property name="ElementShortName">send_counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">send_counter[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/filter_set" type="array">
+      <obj_property name="ElementShortName">filter_set[15:0]</obj_property>
+      <obj_property name="ObjectShortName">filter_set[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/chan_set" type="array">
+      <obj_property name="ElementShortName">chan_set[15:0]</obj_property>
+      <obj_property name="ObjectShortName">chan_set[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/delay" type="array">
+      <obj_property name="ElementShortName">delay[31:0]</obj_property>
+      <obj_property name="ObjectShortName">delay[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/pool_delay" type="array">
+      <obj_property name="ElementShortName">pool_delay[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pool_delay[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/row" type="array">
+      <obj_property name="ElementShortName">row[15:0]</obj_property>
+      <obj_property name="ObjectShortName">row[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/col" type="array">
+      <obj_property name="ElementShortName">col[15:0]</obj_property>
+      <obj_property name="ObjectShortName">col[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/mac_vld_i" type="logic">
+      <obj_property name="ElementShortName">mac_vld_i</obj_property>
+      <obj_property name="ObjectShortName">mac_vld_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/din_mac_array_0" type="array">
+      <obj_property name="ElementShortName">din_mac_array_0[0:8][127:0]</obj_property>
+      <obj_property name="ObjectShortName">din_mac_array_0[0:8][127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/din_mac_array_1" type="array">
+      <obj_property name="ElementShortName">din_mac_array_1[0:8][127:0]</obj_property>
+      <obj_property name="ObjectShortName">din_mac_array_1[0:8][127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/din_mac_array_2" type="array">
+      <obj_property name="ElementShortName">din_mac_array_2[0:8][127:0]</obj_property>
+      <obj_property name="ObjectShortName">din_mac_array_2[0:8][127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/din_mac_array_3" type="array">
+      <obj_property name="ElementShortName">din_mac_array_3[0:8][127:0]</obj_property>
+      <obj_property name="ObjectShortName">din_mac_array_3[0:8][127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/win" type="array">
+      <obj_property name="ElementShortName">win[0:8][127:0]</obj_property>
+      <obj_property name="ObjectShortName">win[0:8][127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/partial_sum" type="array">
+      <obj_property name="ElementShortName">partial_sum[0:3][0:7][28:0]</obj_property>
+      <obj_property name="ObjectShortName">partial_sum[0:3][0:7][28:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/mac_out" type="array">
+      <obj_property name="ElementShortName">mac_out[0:3][0:7][28:0]</obj_property>
+      <obj_property name="ObjectShortName">mac_out[0:3][0:7][28:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/m_mac_vld_o" type="array">
+      <obj_property name="ElementShortName">m_mac_vld_o[0:3]</obj_property>
+      <obj_property name="ObjectShortName">m_mac_vld_o[0:3]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/valid_mac" type="logic">
+      <obj_property name="ElementShortName">valid_mac</obj_property>
+      <obj_property name="ObjectShortName">valid_mac</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/valid_pool" type="logic">
+      <obj_property name="ElementShortName">valid_pool</obj_property>
+      <obj_property name="ObjectShortName">valid_pool</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/mac_done" type="logic">
+      <obj_property name="ElementShortName">mac_done</obj_property>
+      <obj_property name="ObjectShortName">mac_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/pool_done" type="logic">
+      <obj_property name="ElementShortName">pool_done</obj_property>
+      <obj_property name="ObjectShortName">pool_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/send_done" type="logic">
+      <obj_property name="ElementShortName">send_done</obj_property>
+      <obj_property name="ObjectShortName">send_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/mac_array_0_out" type="array">
+      <obj_property name="ElementShortName">mac_array_0_out[0:3][28:0]</obj_property>
+      <obj_property name="ObjectShortName">mac_array_0_out[0:3][28:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/mac_array_1_out" type="array">
+      <obj_property name="ElementShortName">mac_array_1_out[0:3][28:0]</obj_property>
+      <obj_property name="ObjectShortName">mac_array_1_out[0:3][28:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/mac_array_2_out" type="array">
+      <obj_property name="ElementShortName">mac_array_2_out[0:3][28:0]</obj_property>
+      <obj_property name="ObjectShortName">mac_array_2_out[0:3][28:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/mac_array_3_out" type="array">
+      <obj_property name="ElementShortName">mac_array_3_out[0:3][28:0]</obj_property>
+      <obj_property name="ObjectShortName">mac_array_3_out[0:3][28:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/result_buffer" type="array">
+      <obj_property name="ElementShortName">result_buffer[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result_buffer[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/result_1x1_0" type="array">
+      <obj_property name="ElementShortName">result_1x1_0[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_1x1_0[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/result_1x1_1" type="array">
+      <obj_property name="ElementShortName">result_1x1_1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_1x1_1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/result_1x1_2" type="array">
+      <obj_property name="ElementShortName">result_1x1_2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_1x1_2[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/conv_kern_tb/m_conv3x3_maxpool_module/result_1x1_3" type="array">
+      <obj_property name="ElementShortName">result_1x1_3[63:0]</obj_property>
+      <obj_property name="ObjectShortName">result_1x1_3[63:0]</obj_property>
+   </wvobject>
+</wave_config>
