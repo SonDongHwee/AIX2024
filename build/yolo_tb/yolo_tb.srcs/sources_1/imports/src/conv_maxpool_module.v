@@ -21,12 +21,10 @@ module conv_maxpool_module(
   // basic signals
   input              clk,
   input              rstn,
-  input       [ 3:0] COMMAND,
-  input       [31:0] RECEIVE_SIZE,
   input              conv_start,
 
-  // weight & bias related signals
-  input              valid_wb,
+  // weight-related signals
+  input              valid_w,
   input      [127:0] data_in_w0,
   input      [127:0] data_in_w1,
   input      [127:0] data_in_w2,
@@ -36,26 +34,29 @@ module conv_maxpool_module(
   input      [127:0] data_in_w6,
   input      [127:0] data_in_w7,
   input      [127:0] data_in_w8,
-  input      [ 15:0] data_in_b,
 
-  // ifm related signals
+  // bias-related signals
+  input              valid_b,
+  input      [ 31:0] data_in_b,
+
+  // ifm-related signals
   input              valid_f,
   input     [1023:0] data_in_f,
   
   /* Output ports */
   // done signals
-  output reg         F_writedone,
-  output reg         W_writedone,
-  output reg         B_writedone,
   output reg         conv_done,
 
   // ready signals
-  output reg         ready_wb,
+  output reg         ready_w,
+  output reg         ready_b,
   output reg         ready_f,
 
   // ofm related signals
   output reg         is_first_row,
   output reg         is_first_col,
+  output reg         is_last_row,
+  output reg         is_last_col,
   output reg         valid_o0,
   output reg         valid_o1,
   output reg [255:0] data_out0,
@@ -65,34 +66,84 @@ module conv_maxpool_module(
 // --------------------------------------------
 // FSM states
 // --------------------------------------------
-localparam     COMMAND_IDLE = 4'b0000;
-localparam    COMMAND_GET_F = 4'b0001;
-localparam    COMMAND_GET_W = 4'b0010;
-localparam    COMMAND_GET_B = 4'b0100;
-localparam  COMMAND_COMPUTE = 4'b1000;
 reg [3:0] state;
-localparam    STATE_IDLE = 4'b0000;
-localparam     STATE_RUN = 4'b0001;
-localparam    STATE_DONE = 4'b0010;
+localparam STATE_IDLE     = 4'b0000;
+localparam STATE_GET_B    = 4'b0001;
+localparam STATE_GET_F    = 4'b0010;
+localparam STATE_COMPUTE  = 4'b0011;
+localparam STATE_SEND     = 4'b0100;
+localparam STATE_DONE     = 4'b0101;
 
 // --------------------------------------------
 // Registers or BRAMs
 // --------------------------------------------
-reg [31:0] in_img [0:2047]; // 4x4xNi(maximum value of 512) 8-bit = 32-bit x 2048
+reg [31:0] in_img [0:2047]; // 4x4xNi (maximum value of 512) 8-bit = 32-bit x 2048
 reg [31:0] weight [0:36];   // 3x3x16 8-bit = 32-bit x 36
-reg [15:0]   bias;          // get one by one
+reg [31:0]   bias [0:255];  // No (maximum value of 512) 16-bit = 32-bit x 256
+
+// ifm tiling related variables
+localparam tile_a = 2'b00;
+localparam tile_b = 2'b01;
+localparam tile_c = 2'b10;
+localparam tile_d = 2'b11;
+reg [ 1:0] tile;
+reg [31:0] feamap_offset;
+
+wire [31:0] tile_separator;
+assign tile_separator = Ni >> 5;
+
+integer ff, ww;
+always @ (*) begin
+  if (ena_b) begin
+    bias[addr_b] = din_b;
+  end
+
+  if (ena_f) begin
+    if      (addr_f <     tile_separator) tile = tile_a;
+    else if (addr_f < 2 * tile_separator) tile = tile_b;
+    else if (addr_f < 3 * tile_separator) tile = tile_c;
+    else                                  tile = tile_d;
+    case (tile)
+      tile_a : feamap_offset = 1'b0;
+      tile_b : feamap_offset =  8 << Ni_BITSHIFT;
+      tile_c : feamap_offset =  2 << Ni_BITSHIFT;
+      tile_d : feamap_offset = 10 << Ni_BITSHIFT;
+    endcase
+    for(ff = 0; ff < 1024; ff = ff + 32) begin
+      in_img[getAddr(ff)] = din_f[ff+:32];
+    end
+  end
+
+  if (ready_w && valid_w) begin
+    for (ww = 0; ww < 4; ww = ww + 1) begin
+      weight[ww     ] = data_in_w0[32*ww+:32];
+      weight[ww +  4] = data_in_w1[32*ww+:32];
+      weight[ww +  8] = data_in_w2[32*ww+:32];
+      weight[ww + 12] = data_in_w3[32*ww+:32];
+      weight[ww + 16] = data_in_w4[32*ww+:32];
+      weight[ww + 20] = data_in_w5[32*ww+:32];
+      weight[ww + 24] = data_in_w6[32*ww+:32];
+      weight[ww + 28] = data_in_w7[32*ww+:32];
+      weight[ww + 32] = data_in_w8[32*ww+:32];
+    end
+  end
+end
 
 // --------------------------------------------
 // Local variables
 // --------------------------------------------
 // fixed values for each layer
-reg  [31:0] IFM_DATA_SIZE;
-reg  [31:0] WGT_DATA_SIZE;
-reg  [31:0] BIAS_DATA_SIZE;
-reg  [31:0] OUTPUT_SIZE;
+wire [31:0] IFM_DATA_SIZE;
+wire [31:0] WGT_DATA_SIZE;
+wire [31:0] BIAS_DATA_SIZE;
+wire [31:0] OUTPUT_SIZE;
 wire [ 3:0] IFM_BITSHIFT;
 wire [ 3:0] Ni_BITSHIFT;
 wire [31:0] FRAME_DELAY;
+assign IFM_DATA_SIZE = IFM_WIDTH * IFM_HEIGHT * Ni;
+assign WGT_DATA_SIZE = is_1x1 ? (Ni * No) : (9 * Ni * No);
+assign BIAS_DATA_SIZE = No;
+assign OUTPUT_SIZE = is_1x1 ? (IFM_HEIGHT * IFM_WIDTH) : (IFM_HEIGHT * IFM_WIDTH) >> 2; // max-pooling reduces the size by 1/4
 assign IFM_BITSHIFT = IFM_WIDTH[8] ? 4'd8 : ( // when IFM_WIDTH == 256
                       IFM_WIDTH[7] ? 4'd7 : ( // when IFM_WIDTH == 128
                       IFM_WIDTH[6] ? 4'd6 : ( // when IFM_WIDTH == 64
@@ -109,6 +160,17 @@ assign  Ni_BITSHIFT = Ni[9] ? 4'd9 : ( // when Ni == 512
                       Ni[2] ? 4'd2 : ( // when Ni == 4
                       4'd0)))))));
 assign FRAME_DELAY = is_1x1 ? (Ni * No) >> 7 : (Ni * No) >> 4; // equals to Ni * No / (Ti * To); we fix (Ti * To) as 128 or 16.
+
+// buffer indices
+reg     [31:0] b_counter;
+reg            ena_b;
+reg     [31:0] addr_b;
+reg     [31:0] din_b;
+reg            initial_get_f;
+reg     [31:0] f_counter;
+reg            ena_f;
+reg     [31:0] addr_f;
+reg   [1023:0] din_f;
 
 // counters for indexing
 reg     [31:0] counter;
@@ -134,22 +196,6 @@ assign col_array_1 = col + 1;
 assign col_array_2 = col;
 assign col_array_3 = col + 1;
 
-// ifm tiling related variables
-localparam tile_a = 2'b00;
-localparam tile_b = 2'b01;
-localparam tile_c = 2'b10;
-localparam tile_d = 2'b11;
-reg [ 1:0] tile;
-reg [31:0] feamap_offset;
-always @ (*) begin
-  case (tile)
-    tile_a : feamap_offset = 1'b0;
-    tile_b : feamap_offset =  8 << Ni_BITSHIFT;
-    tile_c : feamap_offset =  2 << Ni_BITSHIFT;
-    tile_d : feamap_offset = 10 << Ni_BITSHIFT;
-  endcase
-end
-
 // MAC array-related variables
 // inputs for MAC array; [0:8] for 9 MAC16 modules per each array
 reg         mac_vld_i;
@@ -169,6 +215,8 @@ assign valid_mac = m_mac_vld_o[0] && m_mac_vld_o[1] && m_mac_vld_o[2] && m_mac_v
 reg         valid_pool;
 
 // variables notifying whether each unit is done
+reg         get_bias_done;
+reg         get_feature_done;
 reg         mac_done;
 reg         pool_done;
 reg         send_done;
@@ -176,61 +224,6 @@ reg         send_done;
 // --------------------------------------------
 // Functions
 // --------------------------------------------
-/*
-function automatic is_first_row(
-  input [15:0] _row
-); 
-	is_first_row = (_row == 0) ? 1'b1 : 1'b0;
-endfunction
-function automatic is_last_row(
-  input [15:0] _row
-); 
-	is_last_row = (_row == IFM_HEIGHT-1) ? 1'b1 : 1'b0;
-endfunction
-function automatic is_first_col(
-  input [15:0] _col
-); 
-	is_first_col = (_col == 0) ? 1'b1 : 1'b0;
-endfunction
-function automatic is_last_col(
-  input [15:0] _col
-); 
-	is_last_col = (_col == IFM_WIDTH-1) ? 1'b1 : 1'b0;
-endfunction
-function automatic [31:0] get_IFM_index(
-  input [15:0] _row,
-  input [15:0] _col,
-  input [15:0] _channel
-); 
-	get_IFM_index = ((((_row << IFM_BITSHIFT) + _col) << Ni_BITSHIFT) + _channel) >> 2;
-endfunction
-function automatic [ 4:0] get_IFM_offset(
-  input [15:0] _channel
-); 
-	get_IFM_offset = _channel[1:0] << 3;
-endfunction
-function automatic [31:0] get_WGT_index(
-  input [15:0] _fil_num,
-  input [15:0] _element
-);
-  get_WGT_index = ((9 << Ni_BITSHIFT) * _fil_num + _element) >> 2;
-endfunction
-function automatic [ 4:0] get_WGT_offset(
-  input [15:0] _element
-); 
-	get_WGT_offset = _element[1:0] << 3;
-endfunction
-function automatic [31:0] get_BIAS_index(
-  input [31:0] _bias_counter
-);
-  get_BIAS_index= _bias_counter >> 1;
-endfunction
-function automatic [ 4:0] get_BIAS_offset(
-  input [31:0] _bias_counter
-); 
-  get_BIAS_offset = _bias_counter[0] << 4;
-endfunction
-*/
 function automatic [31:0] getAddr(
   input [31:0] _bitPosition
 );
@@ -244,27 +237,47 @@ begin : getaddr
 end  
 endfunction
 function automatic [31:0] get_IFM_index(
-  // input [15:0] _row,
-  // input [15:0] _col,
-  // input [15:0] _channel
+  input [ 1:0] _wbuf_row,
+  input [ 1:0] _wbuf_col,
+  input [15:0] _channel
 ); 
-	// get_IFM_index = ((((_row << IFM_BITSHIFT) + _col) << Ni_BITSHIFT) + _channel) >> 2;
+begin : getIFMIndex
+  reg [15:0] row_offset;
+  reg [15:0] col_offset;
+  reg [ 3:0] multiplicand;
+  row_offset = {4'd3, 4'd2, 4'd1, 4'd0};
+  col_offset = {4'd12, 4'd8, 4'd4, 4'd0};
+  multiplicand = row_offset[(4*_wbuf_row)+:4] + col_offset[(4*_wbuf_col)+:4];
+  get_IFM_index = ((multiplicand << Ni_BITSHIFT) + _channel) >> 2;
+end
 endfunction
 function automatic [ 4:0] get_IFM_offset(
-  // input [15:0] _channel
+  input [15:0] _channel
 ); 
-	// get_IFM_offset = _channel[1:0] << 3;
+	get_IFM_offset = _channel[1:0] << 3; // '<< 3', since each datum is 8-bit
 endfunction
 function automatic [31:0] get_WGT_index(
   // input [15:0] _fil_num,
-  // input [15:0] _element
+  input [15:0] _element
 );
-  // get_WGT_index = ((9 << Ni_BITSHIFT) * _fil_num + _element) >> 2;
+begin : getWGTIndex
+  get_WGT_index = (_element - 144 * (_element / 144)) >> 2;
+end
 endfunction
 function automatic [ 4:0] get_WGT_offset(
-  // input [15:0] _element
+  input [15:0] _element
 ); 
-	// get_WGT_offset = _element[1:0] << 3;
+	get_WGT_offset = _element[1:0] << 3; // '<< 3', since each datum is 8-bit
+endfunction
+function automatic [31:0] get_BIAS_index(
+  input [31:0] _bias_counter
+);
+  get_BIAS_index= _bias_counter >> 1;
+endfunction
+function automatic [ 4:0] get_BIAS_offset(
+  input [31:0] _bias_counter
+); 
+  get_BIAS_offset = _bias_counter[0] << 4;
 endfunction
 function automatic [ 7:0] find_max(
   input [ 7:0] ina,
@@ -371,13 +384,10 @@ wire [63:0] result_1x1_2; // these are results in output channel dim.
 wire [63:0] result_1x1_3; // these are results in output channel dim.
 
 genvar b;
-// Changwoo: added bias_mask for 1x1 conv
 wire [31:0] bias_mask_1x1;
 assign bias_mask_1x1 = (No >> 3) - 1;
 generate
   for(b = 0; b < 8; b = b + 1) begin : gen_bias_1x1 // To is 8 in 1x1
-    // assign bias_1x1[b] = bias[((bias_counter[4:0] << 3) + b) >> 1][get_BIAS_offset((bias_counter[4:0] << 3) + b) +:16]; 
-    // Changwoo: bias_counter should iterate from 0 to (No >> 3)-1
     assign bias_1x1[b] = bias[(((bias_counter & bias_mask_1x1) << 3) + b) >> 1][get_BIAS_offset(((bias_counter & bias_mask_1x1) << 3) + b) +:16];
   end
 endgenerate
@@ -929,7 +939,7 @@ always @ (*) begin // assign din and win for 4 MAC arrays
     // --------------------------------------------
     for (fil_i = 0; fil_i < 9; fil_i = fil_i + 1) begin     // iterates 9 MAC16 modules
       for (fil_j = 0; fil_j < 16; fil_j = fil_j + 1) begin  // iterates the ports in each MAC module
-        win[fil_i][(fil_j << 3)+:8] = weight[get_WGT_index(filter_set, 9*(chan_set + fil_j) + fil_i)][get_WGT_offset(9*(chan_set + fil_j) + fil_i)+:8];
+        win[fil_i][(fil_j << 3)+:8] = weight[get_WGT_index(9*(chan_set + fil_j) + fil_i)][get_WGT_offset(9*(chan_set + fil_j) + fil_i)+:8];
       end
     end
 
@@ -938,24 +948,15 @@ always @ (*) begin // assign din and win for 4 MAC arrays
     // MAC array 0 : IFM
     // --------------------------------------------
     for (mac_iter = 0; mac_iter < 16; mac_iter = mac_iter + 1) begin
-      din_mac_array_0[0][(mac_iter<<3)+:8] = ( is_first_row(row_array_0) || is_first_col(col_array_0) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_0-1, col_array_0-1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_0[1][(mac_iter<<3)+:8] = ( is_first_row(row_array_0)                              ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_0-1, col_array_0  , chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_0[2][(mac_iter<<3)+:8] = ( is_first_row(row_array_0) ||  is_last_col(col_array_0) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_0-1, col_array_0+1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_0[3][(mac_iter<<3)+:8] = (                              is_first_col(col_array_0) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_0  , col_array_0-1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_0[4][(mac_iter<<3)+:8] = 
-                                             in_img[get_IFM_index(row_array_0  , col_array_0  , chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_0[5][(mac_iter<<3)+:8] = (                               is_last_col(col_array_0) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_0  , col_array_0+1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_0[6][(mac_iter<<3)+:8] = (  is_last_row(row_array_0) || is_first_col(col_array_0) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_0+1, col_array_0-1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_0[7][(mac_iter<<3)+:8] = (  is_last_row(row_array_0)                              ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_0+1, col_array_0  , chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_0[8][(mac_iter<<3)+:8] = (  is_last_row(row_array_0) ||  is_last_col(col_array_0) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_0+1, col_array_0+1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];   
+      din_mac_array_0[0][(mac_iter<<3)+:8] = in_img[get_IFM_index(0, 0, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_0[1][(mac_iter<<3)+:8] = in_img[get_IFM_index(0, 1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_0[2][(mac_iter<<3)+:8] = in_img[get_IFM_index(0, 2, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_0[3][(mac_iter<<3)+:8] = in_img[get_IFM_index(1, 0, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_0[4][(mac_iter<<3)+:8] = in_img[get_IFM_index(1, 1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_0[5][(mac_iter<<3)+:8] = in_img[get_IFM_index(1, 2, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_0[6][(mac_iter<<3)+:8] = in_img[get_IFM_index(2, 0, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_0[7][(mac_iter<<3)+:8] = in_img[get_IFM_index(2, 1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_0[8][(mac_iter<<3)+:8] = in_img[get_IFM_index(2, 2, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
     end
 
 
@@ -963,24 +964,15 @@ always @ (*) begin // assign din and win for 4 MAC arrays
     // MAC array 1 : IFM
     // --------------------------------------------
     for (mac_iter = 0; mac_iter < 16; mac_iter = mac_iter + 1) begin
-      din_mac_array_1[0][(mac_iter<<3)+:8] = ( is_first_row(row_array_1) || is_first_col(col_array_1) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_1-1, col_array_1-1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_1[1][(mac_iter<<3)+:8] = ( is_first_row(row_array_1)                              ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_1-1, col_array_1  , chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_1[2][(mac_iter<<3)+:8] = ( is_first_row(row_array_1) ||  is_last_col(col_array_1) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_1-1, col_array_1+1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_1[3][(mac_iter<<3)+:8] = (                              is_first_col(col_array_1) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_1  , col_array_1-1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_1[4][(mac_iter<<3)+:8] = 
-                                             in_img[get_IFM_index(row_array_1  , col_array_1  , chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_1[5][(mac_iter<<3)+:8] = (                               is_last_col(col_array_1) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_1  , col_array_1+1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_1[6][(mac_iter<<3)+:8] = (  is_last_row(row_array_1) || is_first_col(col_array_1) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_1+1, col_array_1-1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_1[7][(mac_iter<<3)+:8] = (  is_last_row(row_array_1)                              ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_1+1, col_array_1  , chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_1[8][(mac_iter<<3)+:8] = (  is_last_row(row_array_1) ||  is_last_col(col_array_1) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_1+1, col_array_1+1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];   
+      din_mac_array_1[0][(mac_iter<<3)+:8] = in_img[get_IFM_index(0, 1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_1[1][(mac_iter<<3)+:8] = in_img[get_IFM_index(0, 2, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_1[2][(mac_iter<<3)+:8] = in_img[get_IFM_index(0, 3, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_1[3][(mac_iter<<3)+:8] = in_img[get_IFM_index(1, 1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_1[4][(mac_iter<<3)+:8] = in_img[get_IFM_index(1, 2, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_1[5][(mac_iter<<3)+:8] = in_img[get_IFM_index(1, 3, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_1[6][(mac_iter<<3)+:8] = in_img[get_IFM_index(2, 1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_1[7][(mac_iter<<3)+:8] = in_img[get_IFM_index(2, 2, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_1[8][(mac_iter<<3)+:8] = in_img[get_IFM_index(2, 3, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
     end
 
 
@@ -988,24 +980,15 @@ always @ (*) begin // assign din and win for 4 MAC arrays
     // MAC array 2 : IFM
     // --------------------------------------------
     for (mac_iter = 0; mac_iter < 16; mac_iter = mac_iter + 1) begin
-      din_mac_array_2[0][(mac_iter<<3)+:8] = ( is_first_row(row_array_2) || is_first_col(col_array_2) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_2-1, col_array_2-1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_2[1][(mac_iter<<3)+:8] = ( is_first_row(row_array_2)                              ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_2-1, col_array_2  , chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_2[2][(mac_iter<<3)+:8] = ( is_first_row(row_array_2) ||  is_last_col(col_array_2) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_2-1, col_array_2+1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_2[3][(mac_iter<<3)+:8] = (                              is_first_col(col_array_2) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_2  , col_array_2-1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_2[4][(mac_iter<<3)+:8] = 
-                                             in_img[get_IFM_index(row_array_2  , col_array_2  , chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_2[5][(mac_iter<<3)+:8] = (                               is_last_col(col_array_2) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_2  , col_array_2+1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_2[6][(mac_iter<<3)+:8] = (  is_last_row(row_array_2) || is_first_col(col_array_2) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_2+1, col_array_2-1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_2[7][(mac_iter<<3)+:8] = (  is_last_row(row_array_2)                              ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_2+1, col_array_2  , chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_2[8][(mac_iter<<3)+:8] = (  is_last_row(row_array_2) ||  is_last_col(col_array_2) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_2+1, col_array_2+1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];   
+      din_mac_array_2[0][(mac_iter<<3)+:8] = in_img[get_IFM_index(1, 0, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_2[1][(mac_iter<<3)+:8] = in_img[get_IFM_index(1, 1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_2[2][(mac_iter<<3)+:8] = in_img[get_IFM_index(1, 2, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_2[3][(mac_iter<<3)+:8] = in_img[get_IFM_index(2, 0, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_2[4][(mac_iter<<3)+:8] = in_img[get_IFM_index(2, 1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_2[5][(mac_iter<<3)+:8] = in_img[get_IFM_index(2, 2, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_2[6][(mac_iter<<3)+:8] = in_img[get_IFM_index(3, 0, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_2[7][(mac_iter<<3)+:8] = in_img[get_IFM_index(3, 1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_2[8][(mac_iter<<3)+:8] = in_img[get_IFM_index(3, 2, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];   
     end
 
 
@@ -1013,24 +996,15 @@ always @ (*) begin // assign din and win for 4 MAC arrays
     // MAC array 3 : IFM
     // --------------------------------------------
     for (mac_iter = 0; mac_iter < 16; mac_iter = mac_iter + 1) begin
-      din_mac_array_3[0][(mac_iter<<3)+:8] = ( is_first_row(row_array_3) || is_first_col(col_array_3) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_3-1, col_array_3-1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_3[1][(mac_iter<<3)+:8] = ( is_first_row(row_array_3)                              ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_3-1, col_array_3  , chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_3[2][(mac_iter<<3)+:8] = ( is_first_row(row_array_3) ||  is_last_col(col_array_3) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_3-1, col_array_3+1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_3[3][(mac_iter<<3)+:8] = (                              is_first_col(col_array_3) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_3  , col_array_3-1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_3[4][(mac_iter<<3)+:8] = 
-                                             in_img[get_IFM_index(row_array_3  , col_array_3  , chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_3[5][(mac_iter<<3)+:8] = (                               is_last_col(col_array_3) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_3  , col_array_3+1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_3[6][(mac_iter<<3)+:8] = (  is_last_row(row_array_3) || is_first_col(col_array_3) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_3+1, col_array_3-1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_3[7][(mac_iter<<3)+:8] = (  is_last_row(row_array_3)                              ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_3+1, col_array_3  , chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
-      din_mac_array_3[8][(mac_iter<<3)+:8] = (  is_last_row(row_array_3) ||  is_last_col(col_array_3) ) ? 8'd0 
-                                           : in_img[get_IFM_index(row_array_3+1, col_array_3+1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];   
+      din_mac_array_3[0][(mac_iter<<3)+:8] = in_img[get_IFM_index(1, 1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_3[1][(mac_iter<<3)+:8] = in_img[get_IFM_index(1, 2, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_3[2][(mac_iter<<3)+:8] = in_img[get_IFM_index(1, 3, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_3[3][(mac_iter<<3)+:8] = in_img[get_IFM_index(2, 1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_3[4][(mac_iter<<3)+:8] = in_img[get_IFM_index(2, 2, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_3[5][(mac_iter<<3)+:8] = in_img[get_IFM_index(2, 3, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_3[6][(mac_iter<<3)+:8] = in_img[get_IFM_index(3, 1, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_3[7][(mac_iter<<3)+:8] = in_img[get_IFM_index(3, 2, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
+      din_mac_array_3[8][(mac_iter<<3)+:8] = in_img[get_IFM_index(3, 3, chan_set + mac_iter)][get_IFM_offset(chan_set + mac_iter)+:8];
     end
   end
 end
@@ -1041,22 +1015,34 @@ end
 integer i;
 always @ (posedge clk) begin
 	if (!rstn || conv_done) begin // initialize registers
-    F_writedone <= 1'b0;
-    W_writedone <= 1'b0;
-    B_writedone <= 1'b0;
-    ready_o <= 1'b0;
+    if (conv_done) conv_done <= 1'b1;
+    else           conv_done <= 1'b0;
+    ready_b <= 1'b0;
+    ready_f <= 1'b0;
+    ready_w <= 1'b0;
+    is_first_row <= 1'b0;
+    is_first_col <= 1'b0;
+    is_last_row <= 1'b0;
+    is_last_col <= 1'b0;
     valid_o0 <= 1'b0;
     valid_o1 <= 1'b0;
     data_out0 <= 1'b0;
     data_out1 <= 1'b0;
-    if (conv_done) conv_done <= 1'b1;
-    else           conv_done <= 1'b0;
     state <= 1'b0;
     for (i=0; i<2048; i=i+1)
       in_img[i] = 1'b0;
     for (i=0; i<36; i=i+1)
       weight[i] = 1'b0;
     bias <= 1'b0;
+    b_counter <= 1'b0;
+    ena_b <= 1'b0;
+    addr_b <= 1'b0;
+    din_b <= 1'b0;
+    initial_get_f <= 1'b1; // initialized as 1
+    f_counter <= 1'b0;
+    ena_f <= 1'b0;
+    addr_f <= 1'b0;
+    din_f <= 1'b0;
     counter <= 1'b0;
     mac_counter <= 1'b0;
     pool_counter <= 1'b0;
@@ -1064,10 +1050,6 @@ always @ (posedge clk) begin
     bias_counter <= 1'b0;
     filter_set <= 1'b0;
     chan_set <= 1'b0;
-    IFM_DATA_SIZE <= 1'b0;
-    WGT_DATA_SIZE <= 1'b0;
-    BIAS_DATA_SIZE <= 1'b0;
-    OUTPUT_SIZE <= 1'b0;
     delay <= 1'b0;
     pool_delay <= 1'b0;
     row <= 1'b0;
@@ -1105,436 +1087,486 @@ always @ (posedge clk) begin
       final_sum[i][6] <= 1'b0;
       final_sum[i][7] <= 1'b0;
     end
+    get_bias_done <= 1'b0;
+    get_feature_done <= 1'b0;
     mac_done <= 1'b0;
     pool_done <= 1'b0;
     send_done <= 1'b0;
 	end else begin
-		case (COMMAND) // tb sends the IFM, weights, and biases with corresponding COMMANDs
-      COMMAND_IDLE: begin
-        counter <= 1'b0;
-        ready_o <= 1'b0;
-      end
-      COMMAND_GET_F: begin // get IFM
-        if (F_writedone) begin
-          counter <= 1'b0;
-          ready_o <= 1'b0;
-        end else if (!ready_o) begin
-          IFM_DATA_SIZE <= RECEIVE_SIZE;
-          counter <= 1'b0;
-          ready_o <= 1'b1;
-        end else if (counter == IFM_DATA_SIZE >> 2 - 1) begin // last data
-          in_img[counter] <= data_in;
-          F_writedone <= 1'b1;
-          counter <= 1'b0;
-          ready_o <= 1'b0;
+    // state transition
+    case (state)
+      STATE_IDLE: begin
+        if (!conv_done) begin
+          state <= STATE_GET_B;
         end else begin
-          in_img[counter] <= data_in;
-          F_writedone <= 1'b0;
-          counter <= counter + 1;
-          ready_o <= 1'b1;
+          state <= state;
         end
       end
-      COMMAND_GET_W: begin // get weights
-        if (W_writedone) begin
-          counter <= 1'b0;
-          ready_o <= 1'b0;
-        end else if (!ready_o) begin
-          WGT_DATA_SIZE <= RECEIVE_SIZE;
-          counter <= 1'b0;
-          ready_o <= 1'b1;
-        end else if (counter == WGT_DATA_SIZE >> 2 - 1) begin // last data
-          weight[counter] <= data_in;
-          W_writedone <= 1'b1;
-          counter <= 1'b0;
-          ready_o <= 1'b0;
+      STATE_GET_B: begin
+        if (get_bias_done) begin
+          state <= STATE_GET_F;
         end else begin
-          weight[counter] <= data_in;
-          W_writedone <= 1'b0;
-          counter <= counter + 1;
-          ready_o <= 1'b1;
+          state <= state;
         end
       end
-      COMMAND_GET_B: begin // get biases
-        if (B_writedone) begin
-          counter <= 1'b0;
-          ready_o <= 1'b0;
-        end else if (!ready_o) begin
-          BIAS_DATA_SIZE <= RECEIVE_SIZE;
-          counter <= 1'b0;
-          ready_o <= 1'b1;
-        end else if (counter == BIAS_DATA_SIZE >> 2 - 1) begin // last data
-          bias[counter] <= data_in;
-          B_writedone <= 1'b1;
-          counter <= 1'b0;
-          ready_o <= 1'b0;
+      STATE_GET_F: begin
+        if (get_feature_done) begin
+          state <= STATE_COMPUTE;
         end else begin
-          bias[counter] <= data_in;
-          B_writedone <= 1'b0;
-          counter <= counter + 1;
-          ready_o <= 1'b1;
+          state <= state;
         end
       end
-      COMMAND_COMPUTE: begin
-        // state transition
-        case (state)
-          STATE_IDLE: begin
-            if (!conv_done) begin
-              state <= STATE_RUN;
-            end else begin
-              state <= STATE_IDLE;
-            end
-          end
-          STATE_RUN: begin
-            if (mac_done && pool_done && send_done) begin
-              state <= STATE_DONE;
-            end else begin
-              state <= STATE_RUN;
-            end
-          end 
-          STATE_DONE: begin
-            state <= STATE_DONE;
-          end
-          default: ;
-        endcase
+      STATE_COMPUTE: begin
+        if (bias_counter[4:0] == 31) begin // since the send granularity is 32 x 8-bit
+          state <= STATE_SEND;
+        end else begin
+          state <= state;
+        end
+      end
+      STATE_SEND: begin
+        if (send_counter == (OUTPUT_SIZE * No) >> 5) begin // specific for common 3x3 conv case
+          state <= STATE_DONE;
+        end else if (send_counter == (Ni * No / Ti) >> 5) begin // specific for common 3x3 conv case
+          state <= STATE_GET_F;
+        end else begin
+          state <= STATE_COMPUTE;
+        end
+      end
+      STATE_DONE: begin
+        state <= STATE_DONE;
+      end
+      default: ;
+    endcase
 
-        // control
-        case (state)
-          STATE_IDLE: begin
-            if (!conv_done) begin
-              //OUTPUT_SIZE <= IFM_DATA_SIZE >> 2; // max-pooling reduces the size by 1/4
-              OUTPUT_SIZE <= is_1x1 ? (IFM_HEIGHT * IFM_WIDTH) : (IFM_HEIGHT * IFM_WIDTH) >> 2; // max-pooling reduces the size by 1/4
-              counter <= 1'b0;
-              valid_o0 <= 1'b0;
-              valid_o1 <= 1'b0;
-              row <= 1'b0;
+    // control
+    case (state)
+      STATE_IDLE: begin
+        if (!conv_done) begin
+          get_bias_done <= 1'b0;
+          get_feature_done <= 1'b0;
+          counter <= 1'b0;
+          valid_o0 <= 1'b0;
+          valid_o1 <= 1'b0;
+          row <= 1'b0;
+          col <= 1'b0;
+          delay <= 1'b0;
+          pool_delay <= 1'b0;
+          mac_vld_i <= 1'b1;
+        end
+      end
+      STATE_GET_B: begin
+        if (get_bias_done) begin
+          get_bias_done <= 1'b0;
+          ready_b <= 1'b0;
+          b_counter <= 1'b0;
+          ena_b <= 1'b0;
+          addr_b <= 1'b0;
+          din_b <= 1'b0;
+        end else if (!ready_b) begin
+          ready_b <= 1'b1;
+          b_counter <= 1'b0;
+          ena_b <= 1'b0;
+          addr_b <= 1'b0;
+          din_b <= 1'b0;
+        end else if (valid_b) begin
+          b_counter <= b_counter + 1;
+          ena_b <= 1'b1;
+          addr_b <= b_counter;
+          din_b <= data_in_b;
+          if (b_counter == (BIAS_DATA_SIZE >> 1) - 1) begin // 2 biases per address
+            get_bias_done <= 1'b1;
+            ready_b <= 1'b0;
+          end else begin
+            get_bias_done <= 1'b0;
+            ready_b <= 1'b1;
+          end
+        end else begin
+          ready_b <= 1'b1;
+          ena_b <= 1'b0;
+          addr_b <= 1'b0;
+          din_b <= 1'b0;
+        end
+      end
+      STATE_GET_F: begin
+        if (get_feature_done) begin
+          get_feature_done <= 1'b0;
+          ready_f <= 1'b0;
+          f_counter <= 1'b0;
+          ena_f <= 1'b0;
+          addr_f <= 1'b0;
+          din_f <= 1'b0;
+        end else if (!ready_f) begin
+          ready_f <= 1'b1;
+          ena_f <= 1'b0;
+          addr_f <= 1'b0;
+          din_f <= 1'b0;
+          // --------------------------------------------
+          // Row, Col and tile indexing
+          // --------------------------------------------
+          if (initial_get_f) begin
+            f_counter <= 1'b0; // starts from tile_a
+            row <= 1'b0;
+            col <= 1'b0;
+            initial_get_f <= 1'b0;
+          end else begin
+            if (col == IFM_WIDTH - Tc) begin
+              f_counter <= 1'b0; // starts from tile_a
               col <= 1'b0;
-              delay <= 1'b0;
-              pool_delay <= 1'b0;
-              mac_vld_i <= 1'b1;
+              row <= row + Tr;
+            end else begin
+              // copy tile_c and tile_d to tile_a and tile_b, respectively
+              // just copy the data in address A to address (A-Ni/2) for all A >= Ni/2
+              for(ff = (Ni >> 1); ff < 2048; ff = ff + 1) begin
+                in_img[ff - (Ni >> 1)] = in_img[ff];
+              end
+              f_counter <= 2 * tile_separator; // starts from tile_c
+              col <= col + Tc;
             end
           end
-          STATE_RUN: begin // Do MAC, max-pool, and data send in parallel
-            // --------------------------------------------
-            // Convolution via MAC
-            // --------------------------------------------
-            if (!mac_done) begin
-              if ((filter_set == No - To) && (chan_set == Ni - Ti)) begin
-                mac_counter <= mac_counter + 1;
-                filter_set <= 1'b0;
-                chan_set <= 1'b0;
-              end else begin
-                if (chan_set == Ni - Ti) begin
-                  mac_counter <= mac_counter + 1;
-                  chan_set <= 1'b0;
-                  filter_set <= filter_set + To;
-                end else begin
-                  mac_counter <= mac_counter + 1;
-                  chan_set <= chan_set + Ti;
-                end
-              end
-
-              if (is_CONV00) begin
-                if (mac_counter == IFM_DATA_SIZE - 1) begin // processing the last data
-                  mac_done <= 1'b1;
-                  mac_vld_i <= 1'b0;
-                end
-              end else if (is_1x1) begin
-                if (mac_counter == (Ni >> 4) * (OUTPUT_SIZE >> 2) * (No >> 3) - 1) begin // needs verification. 4 is Ti = 16, 2 is 2x2 ofmap, 3 is To = 8
-                  mac_done <= 1'b1;
-                  mac_vld_i <= 1'b0;
-                end
-              end else begin
-                if (mac_counter == (Ni >> 4) * OUTPUT_SIZE * No - 1) begin // processing the last data
-                  mac_done <= 1'b1;
-                  mac_vld_i <= 1'b0;
-                end
-              end
-              
+        end else if (valid_f) begin
+          f_counter <= f_counter + 1;
+          ena_f <= 1'b1;
+          addr_f <= f_counter;
+          din_f <= data_in_f;
+          if (f_counter == (Ni >> 3) - 1) begin // 2x2x32=128 data per cycle, total 4x4xNi data
+            get_feature_done <= 1'b1;
+            ready_f <= 1'b0;
+          end else begin
+            get_feature_done <= 1'b0;
+            ready_f <= 1'b1;
+          end
+        end else begin
+          ready_f <= 1'b1;
+          ena_f <= 1'b0;
+          addr_f <= 1'b0;
+          din_f <= 1'b0;
+        end
+      end
+      STATE_COMPUTE: begin // need to be fixed
+        // --------------------------------------------
+        // Convolution via MAC
+        // --------------------------------------------
+        if (!mac_done) begin
+          if ((filter_set == No - To) && (chan_set == Ni - Ti)) begin
+            mac_counter <= mac_counter + 1;
+            filter_set <= 1'b0;
+            chan_set <= 1'b0;
+          end else begin
+            if (chan_set == Ni - Ti) begin
+              mac_counter <= mac_counter + 1;
+              chan_set <= 1'b0;
+              filter_set <= filter_set + To;
+            end else begin
+              mac_counter <= mac_counter + 1;
+              chan_set <= chan_set + Ti;
             end
+          end
 
-            // --------------------------------------------
-            // Accumulation and Max-pooling
-            // --------------------------------------------
-            if (!pool_done) begin
-              if (valid_mac || (pool_delay > 0)) begin // either when the MAC result is valid or pooling is continuing
-                if (is_CONV00) begin
-                  valid_pool <= 1'b1;
-                  for (i = 0; i < 4; i = i + 1) begin
-                    mac_array_0_out[i] = mac_out[0][i];
-                    mac_array_1_out[i] = mac_out[1][i];
-                    mac_array_2_out[i] = mac_out[2][i];
-                    mac_array_3_out[i] = mac_out[3][i];
-                  end
-                  bias_counter <= pool_counter;
-                  pool_counter <= pool_counter + 1;
+          if (is_CONV00) begin
+            if (mac_counter == IFM_DATA_SIZE - 1) begin // processing the last data
+              mac_done <= 1'b1;
+              mac_vld_i <= 1'b0;
+            end
+          end else if (is_1x1) begin
+            if (mac_counter == (Ni >> 4) * (OUTPUT_SIZE >> 2) * (No >> 3) - 1) begin // needs verification. 4 is Ti = 16, 2 is 2x2 ofmap, 3 is To = 8
+              mac_done <= 1'b1;
+              mac_vld_i <= 1'b0;
+            end
+          end else begin
+            if (mac_counter == (Ni >> 4) * OUTPUT_SIZE * No - 1) begin // processing the last data
+              mac_done <= 1'b1;
+              mac_vld_i <= 1'b0;
+            end
+          end
+          
+        end
 
-                  if (pool_counter == ((OUTPUT_SIZE * No) >> 2) - 1) begin // processing the last data; '>> 2' means dividing by To
-                    pool_done <= 1'b1;
-                  end
+        // --------------------------------------------
+        // Accumulation and Max-pooling
+        // --------------------------------------------
+        if (!pool_done) begin
+          if (valid_mac || (pool_delay > 0)) begin // either when the MAC result is valid or pooling is continuing
+            if (is_CONV00) begin
+              valid_pool <= 1'b1;
+              for (i = 0; i < 4; i = i + 1) begin
+                mac_array_0_out[i] = mac_out[0][i];
+                mac_array_1_out[i] = mac_out[1][i];
+                mac_array_2_out[i] = mac_out[2][i];
+                mac_array_3_out[i] = mac_out[3][i];
+              end
+              bias_counter <= pool_counter;
+              pool_counter <= pool_counter + 1;
 
-                end else if (is_1x1) begin
-                  if (pool_delay == (Ni >> 4) - 1) begin
-                    valid_pool <= 1'b1;
-                    pool_delay <= 1'b0;
+              if (pool_counter == ((OUTPUT_SIZE * No) >> 2) - 1) begin // processing the last data; '>> 2' means dividing by To
+                pool_done <= 1'b1;
+              end
 
-                    bias_counter <= pool_counter;
-                    pool_counter <= pool_counter + 1;
+            end else if (is_1x1) begin
+              if (pool_delay == (Ni >> 4) - 1) begin
+                valid_pool <= 1'b1;
+                pool_delay <= 1'b0;
 
-                    final_sum[0][0] <= partial_sum[0][0] + mac_out[0][0];
-                    final_sum[0][1] <= partial_sum[0][1] + mac_out[0][1];
-                    final_sum[0][2] <= partial_sum[0][2] + mac_out[0][2];
-                    final_sum[0][3] <= partial_sum[0][3] + mac_out[0][3];
-                    final_sum[0][4] <= partial_sum[0][4] + mac_out[0][4];
-                    final_sum[0][5] <= partial_sum[0][5] + mac_out[0][5];
-                    final_sum[0][6] <= partial_sum[0][6] + mac_out[0][6];
-                    final_sum[0][7] <= partial_sum[0][7] + mac_out[0][7];
+                bias_counter <= pool_counter;
+                pool_counter <= pool_counter + 1;
 
-                    final_sum[1][0] <= partial_sum[1][0] + mac_out[1][0];
-                    final_sum[1][1] <= partial_sum[1][1] + mac_out[1][1];
-                    final_sum[1][2] <= partial_sum[1][2] + mac_out[1][2];
-                    final_sum[1][3] <= partial_sum[1][3] + mac_out[1][3];
-                    final_sum[1][4] <= partial_sum[1][4] + mac_out[1][4];
-                    final_sum[1][5] <= partial_sum[1][5] + mac_out[1][5];
-                    final_sum[1][6] <= partial_sum[1][6] + mac_out[1][6];
-                    final_sum[1][7] <= partial_sum[1][7] + mac_out[1][7];
+                final_sum[0][0] <= partial_sum[0][0] + mac_out[0][0];
+                final_sum[0][1] <= partial_sum[0][1] + mac_out[0][1];
+                final_sum[0][2] <= partial_sum[0][2] + mac_out[0][2];
+                final_sum[0][3] <= partial_sum[0][3] + mac_out[0][3];
+                final_sum[0][4] <= partial_sum[0][4] + mac_out[0][4];
+                final_sum[0][5] <= partial_sum[0][5] + mac_out[0][5];
+                final_sum[0][6] <= partial_sum[0][6] + mac_out[0][6];
+                final_sum[0][7] <= partial_sum[0][7] + mac_out[0][7];
 
-                    final_sum[2][0] <= partial_sum[2][0] + mac_out[2][0];
-                    final_sum[2][1] <= partial_sum[2][1] + mac_out[2][1];
-                    final_sum[2][2] <= partial_sum[2][2] + mac_out[2][2];
-                    final_sum[2][3] <= partial_sum[2][3] + mac_out[2][3];
-                    final_sum[2][4] <= partial_sum[2][4] + mac_out[2][4];
-                    final_sum[2][5] <= partial_sum[2][5] + mac_out[2][5];
-                    final_sum[2][6] <= partial_sum[2][6] + mac_out[2][6];
-                    final_sum[2][7] <= partial_sum[2][7] + mac_out[2][7];
+                final_sum[1][0] <= partial_sum[1][0] + mac_out[1][0];
+                final_sum[1][1] <= partial_sum[1][1] + mac_out[1][1];
+                final_sum[1][2] <= partial_sum[1][2] + mac_out[1][2];
+                final_sum[1][3] <= partial_sum[1][3] + mac_out[1][3];
+                final_sum[1][4] <= partial_sum[1][4] + mac_out[1][4];
+                final_sum[1][5] <= partial_sum[1][5] + mac_out[1][5];
+                final_sum[1][6] <= partial_sum[1][6] + mac_out[1][6];
+                final_sum[1][7] <= partial_sum[1][7] + mac_out[1][7];
 
-                    final_sum[3][0] <= partial_sum[3][0] + mac_out[3][0];
-                    final_sum[3][1] <= partial_sum[3][1] + mac_out[3][1];
-                    final_sum[3][2] <= partial_sum[3][2] + mac_out[3][2];
-                    final_sum[3][3] <= partial_sum[3][3] + mac_out[3][3];
-                    final_sum[3][4] <= partial_sum[3][4] + mac_out[3][4];
-                    final_sum[3][5] <= partial_sum[3][5] + mac_out[3][5];
-                    final_sum[3][6] <= partial_sum[3][6] + mac_out[3][6];
-                    final_sum[3][7] <= partial_sum[3][7] + mac_out[3][7];
+                final_sum[2][0] <= partial_sum[2][0] + mac_out[2][0];
+                final_sum[2][1] <= partial_sum[2][1] + mac_out[2][1];
+                final_sum[2][2] <= partial_sum[2][2] + mac_out[2][2];
+                final_sum[2][3] <= partial_sum[2][3] + mac_out[2][3];
+                final_sum[2][4] <= partial_sum[2][4] + mac_out[2][4];
+                final_sum[2][5] <= partial_sum[2][5] + mac_out[2][5];
+                final_sum[2][6] <= partial_sum[2][6] + mac_out[2][6];
+                final_sum[2][7] <= partial_sum[2][7] + mac_out[2][7];
 
-                    partial_sum[0][0] <= 1'b0;
-                    partial_sum[0][1] <= 1'b0;
-                    partial_sum[0][2] <= 1'b0;
-                    partial_sum[0][3] <= 1'b0;
-                    partial_sum[0][4] <= 1'b0;
-                    partial_sum[0][5] <= 1'b0;
-                    partial_sum[0][6] <= 1'b0;
-                    partial_sum[0][7] <= 1'b0;
+                final_sum[3][0] <= partial_sum[3][0] + mac_out[3][0];
+                final_sum[3][1] <= partial_sum[3][1] + mac_out[3][1];
+                final_sum[3][2] <= partial_sum[3][2] + mac_out[3][2];
+                final_sum[3][3] <= partial_sum[3][3] + mac_out[3][3];
+                final_sum[3][4] <= partial_sum[3][4] + mac_out[3][4];
+                final_sum[3][5] <= partial_sum[3][5] + mac_out[3][5];
+                final_sum[3][6] <= partial_sum[3][6] + mac_out[3][6];
+                final_sum[3][7] <= partial_sum[3][7] + mac_out[3][7];
 
-                    partial_sum[1][0] <= 1'b0;
-                    partial_sum[1][1] <= 1'b0;
-                    partial_sum[1][2] <= 1'b0;
-                    partial_sum[1][3] <= 1'b0;
-                    partial_sum[1][4] <= 1'b0;
-                    partial_sum[1][5] <= 1'b0;
-                    partial_sum[1][6] <= 1'b0;
-                    partial_sum[1][7] <= 1'b0;
+                partial_sum[0][0] <= 1'b0;
+                partial_sum[0][1] <= 1'b0;
+                partial_sum[0][2] <= 1'b0;
+                partial_sum[0][3] <= 1'b0;
+                partial_sum[0][4] <= 1'b0;
+                partial_sum[0][5] <= 1'b0;
+                partial_sum[0][6] <= 1'b0;
+                partial_sum[0][7] <= 1'b0;
 
-                    partial_sum[2][0] <= 1'b0;
-                    partial_sum[2][1] <= 1'b0;
-                    partial_sum[2][2] <= 1'b0;
-                    partial_sum[2][3] <= 1'b0;
-                    partial_sum[2][4] <= 1'b0;
-                    partial_sum[2][5] <= 1'b0;
-                    partial_sum[2][6] <= 1'b0;
-                    partial_sum[2][7] <= 1'b0;
+                partial_sum[1][0] <= 1'b0;
+                partial_sum[1][1] <= 1'b0;
+                partial_sum[1][2] <= 1'b0;
+                partial_sum[1][3] <= 1'b0;
+                partial_sum[1][4] <= 1'b0;
+                partial_sum[1][5] <= 1'b0;
+                partial_sum[1][6] <= 1'b0;
+                partial_sum[1][7] <= 1'b0;
 
-                    partial_sum[3][0] <= 1'b0;
-                    partial_sum[3][1] <= 1'b0;
-                    partial_sum[3][2] <= 1'b0;
-                    partial_sum[3][3] <= 1'b0;
-                    partial_sum[3][4] <= 1'b0;
-                    partial_sum[3][5] <= 1'b0;
-                    partial_sum[3][6] <= 1'b0;
-                    partial_sum[3][7] <= 1'b0;
+                partial_sum[2][0] <= 1'b0;
+                partial_sum[2][1] <= 1'b0;
+                partial_sum[2][2] <= 1'b0;
+                partial_sum[2][3] <= 1'b0;
+                partial_sum[2][4] <= 1'b0;
+                partial_sum[2][5] <= 1'b0;
+                partial_sum[2][6] <= 1'b0;
+                partial_sum[2][7] <= 1'b0;
 
-                  end
-                  else begin
-                    valid_pool <= 1'b0;
-                    pool_delay <= pool_delay + 1;
+                partial_sum[3][0] <= 1'b0;
+                partial_sum[3][1] <= 1'b0;
+                partial_sum[3][2] <= 1'b0;
+                partial_sum[3][3] <= 1'b0;
+                partial_sum[3][4] <= 1'b0;
+                partial_sum[3][5] <= 1'b0;
+                partial_sum[3][6] <= 1'b0;
+                partial_sum[3][7] <= 1'b0;
 
-                    partial_sum[0][0] <= partial_sum[0][0] + mac_out[0][0];
-                    partial_sum[0][1] <= partial_sum[0][1] + mac_out[0][1];
-                    partial_sum[0][2] <= partial_sum[0][2] + mac_out[0][2];
-                    partial_sum[0][3] <= partial_sum[0][3] + mac_out[0][3];
-                    partial_sum[0][4] <= partial_sum[0][4] + mac_out[0][4];
-                    partial_sum[0][5] <= partial_sum[0][5] + mac_out[0][5];
-                    partial_sum[0][6] <= partial_sum[0][6] + mac_out[0][6];
-                    partial_sum[0][7] <= partial_sum[0][7] + mac_out[0][7];
+              end
+              else begin
+                valid_pool <= 1'b0;
+                pool_delay <= pool_delay + 1;
 
-                    partial_sum[1][0] <= partial_sum[1][0] + mac_out[1][0];
-                    partial_sum[1][1] <= partial_sum[1][1] + mac_out[1][1];
-                    partial_sum[1][2] <= partial_sum[1][2] + mac_out[1][2];
-                    partial_sum[1][3] <= partial_sum[1][3] + mac_out[1][3];
-                    partial_sum[1][4] <= partial_sum[1][4] + mac_out[1][4];
-                    partial_sum[1][5] <= partial_sum[1][5] + mac_out[1][5];
-                    partial_sum[1][6] <= partial_sum[1][6] + mac_out[1][6];
-                    partial_sum[1][7] <= partial_sum[1][7] + mac_out[1][7];
+                partial_sum[0][0] <= partial_sum[0][0] + mac_out[0][0];
+                partial_sum[0][1] <= partial_sum[0][1] + mac_out[0][1];
+                partial_sum[0][2] <= partial_sum[0][2] + mac_out[0][2];
+                partial_sum[0][3] <= partial_sum[0][3] + mac_out[0][3];
+                partial_sum[0][4] <= partial_sum[0][4] + mac_out[0][4];
+                partial_sum[0][5] <= partial_sum[0][5] + mac_out[0][5];
+                partial_sum[0][6] <= partial_sum[0][6] + mac_out[0][6];
+                partial_sum[0][7] <= partial_sum[0][7] + mac_out[0][7];
 
-                    partial_sum[2][0] <= partial_sum[2][0] + mac_out[2][0];
-                    partial_sum[2][1] <= partial_sum[2][1] + mac_out[2][1];
-                    partial_sum[2][2] <= partial_sum[2][2] + mac_out[2][2];
-                    partial_sum[2][3] <= partial_sum[2][3] + mac_out[2][3];
-                    partial_sum[2][4] <= partial_sum[2][4] + mac_out[2][4];
-                    partial_sum[2][5] <= partial_sum[2][5] + mac_out[2][5];
-                    partial_sum[2][6] <= partial_sum[2][6] + mac_out[2][6];
-                    partial_sum[2][7] <= partial_sum[2][7] + mac_out[2][7];
+                partial_sum[1][0] <= partial_sum[1][0] + mac_out[1][0];
+                partial_sum[1][1] <= partial_sum[1][1] + mac_out[1][1];
+                partial_sum[1][2] <= partial_sum[1][2] + mac_out[1][2];
+                partial_sum[1][3] <= partial_sum[1][3] + mac_out[1][3];
+                partial_sum[1][4] <= partial_sum[1][4] + mac_out[1][4];
+                partial_sum[1][5] <= partial_sum[1][5] + mac_out[1][5];
+                partial_sum[1][6] <= partial_sum[1][6] + mac_out[1][6];
+                partial_sum[1][7] <= partial_sum[1][7] + mac_out[1][7];
 
-                    partial_sum[3][0] <= partial_sum[3][0] + mac_out[3][0];
-                    partial_sum[3][1] <= partial_sum[3][1] + mac_out[3][1];
-                    partial_sum[3][2] <= partial_sum[3][2] + mac_out[3][2];
-                    partial_sum[3][3] <= partial_sum[3][3] + mac_out[3][3];
-                    partial_sum[3][4] <= partial_sum[3][4] + mac_out[3][4];
-                    partial_sum[3][5] <= partial_sum[3][5] + mac_out[3][5];
-                    partial_sum[3][6] <= partial_sum[3][6] + mac_out[3][6];
-                    partial_sum[3][7] <= partial_sum[3][7] + mac_out[3][7];
+                partial_sum[2][0] <= partial_sum[2][0] + mac_out[2][0];
+                partial_sum[2][1] <= partial_sum[2][1] + mac_out[2][1];
+                partial_sum[2][2] <= partial_sum[2][2] + mac_out[2][2];
+                partial_sum[2][3] <= partial_sum[2][3] + mac_out[2][3];
+                partial_sum[2][4] <= partial_sum[2][4] + mac_out[2][4];
+                partial_sum[2][5] <= partial_sum[2][5] + mac_out[2][5];
+                partial_sum[2][6] <= partial_sum[2][6] + mac_out[2][6];
+                partial_sum[2][7] <= partial_sum[2][7] + mac_out[2][7];
 
-                    bias_counter <= pool_counter;
-                    pool_counter <= pool_counter;
-                  end
+                partial_sum[3][0] <= partial_sum[3][0] + mac_out[3][0];
+                partial_sum[3][1] <= partial_sum[3][1] + mac_out[3][1];
+                partial_sum[3][2] <= partial_sum[3][2] + mac_out[3][2];
+                partial_sum[3][3] <= partial_sum[3][3] + mac_out[3][3];
+                partial_sum[3][4] <= partial_sum[3][4] + mac_out[3][4];
+                partial_sum[3][5] <= partial_sum[3][5] + mac_out[3][5];
+                partial_sum[3][6] <= partial_sum[3][6] + mac_out[3][6];
+                partial_sum[3][7] <= partial_sum[3][7] + mac_out[3][7];
 
-                  if (pool_counter == (OUTPUT_SIZE * No) >> 5 - 1) begin // processing the last data, needs verification, 5 is 2x2x8 ofmap (32)
-                    pool_done <= 1'b1;
-                  end
+                bias_counter <= pool_counter;
+                pool_counter <= pool_counter;
+              end
 
-                end else begin
-                  // only [0] port is used for each MAC array
-                  if (pool_delay == (Ni >> 4) - 1) begin // '>> 4' means dividing by Ti, need generalization!
-                    valid_pool <= 1'b1;
-                    pool_delay <= 1'b0;
+              if (pool_counter == (OUTPUT_SIZE * No) >> 5 - 1) begin // processing the last data, needs verification, 5 is 2x2x8 ofmap (32)
+                pool_done <= 1'b1;
+              end
 
-                    mac_array_0_out[0] <= partial_sum[0][0] + mac_out[0][0];
-                    mac_array_1_out[0] <= partial_sum[1][0] + mac_out[1][0];
-                    mac_array_2_out[0] <= partial_sum[2][0] + mac_out[2][0];
-                    mac_array_3_out[0] <= partial_sum[3][0] + mac_out[3][0];
+            end else begin
+              // only [0] port is used for each MAC array
+              if (pool_delay == (Ni >> 4) - 1) begin // '>> 4' means dividing by Ti, need generalization!
+                valid_pool <= 1'b1;
+                pool_delay <= 1'b0;
 
-                    partial_sum[0][0] <= 1'b0;
-                    partial_sum[1][0] <= 1'b0;
-                    partial_sum[2][0] <= 1'b0;
-                    partial_sum[3][0] <= 1'b0;
+                mac_array_0_out[0] <= partial_sum[0][0] + mac_out[0][0];
+                mac_array_1_out[0] <= partial_sum[1][0] + mac_out[1][0];
+                mac_array_2_out[0] <= partial_sum[2][0] + mac_out[2][0];
+                mac_array_3_out[0] <= partial_sum[3][0] + mac_out[3][0];
 
-                    bias_counter <= pool_counter;
-                    pool_counter <= pool_counter + 1;
-                  end else begin
-                    valid_pool <= 1'b0;
-                    pool_delay <= pool_delay + 1;
+                partial_sum[0][0] <= 1'b0;
+                partial_sum[1][0] <= 1'b0;
+                partial_sum[2][0] <= 1'b0;
+                partial_sum[3][0] <= 1'b0;
 
-                    mac_array_0_out[0] <= 1'b0;
-                    mac_array_1_out[0] <= 1'b0;
-                    mac_array_2_out[0] <= 1'b0;
-                    mac_array_3_out[0] <= 1'b0;
-
-                    partial_sum[0][0] <= partial_sum[0][0] + mac_out[0][0];
-                    partial_sum[1][0] <= partial_sum[1][0] + mac_out[1][0];
-                    partial_sum[2][0] <= partial_sum[2][0] + mac_out[2][0];
-                    partial_sum[3][0] <= partial_sum[3][0] + mac_out[3][0];
-
-                    bias_counter <= pool_counter;
-                    pool_counter <= pool_counter;
-                  end
-
-                  if (pool_counter == (OUTPUT_SIZE * No) - 1) begin // processing the last data
-                    pool_done <= 1'b1;
-                  end
-                end
+                bias_counter <= pool_counter;
+                pool_counter <= pool_counter + 1;
               end else begin
                 valid_pool <= 1'b0;
+                pool_delay <= pool_delay + 1;
+
+                mac_array_0_out[0] <= 1'b0;
+                mac_array_1_out[0] <= 1'b0;
+                mac_array_2_out[0] <= 1'b0;
+                mac_array_3_out[0] <= 1'b0;
+
+                partial_sum[0][0] <= partial_sum[0][0] + mac_out[0][0];
+                partial_sum[1][0] <= partial_sum[1][0] + mac_out[1][0];
+                partial_sum[2][0] <= partial_sum[2][0] + mac_out[2][0];
+                partial_sum[3][0] <= partial_sum[3][0] + mac_out[3][0];
+
+                bias_counter <= pool_counter;
+                pool_counter <= pool_counter;
+              end
+
+              if (pool_counter == (OUTPUT_SIZE * No) - 1) begin // processing the last data
+                pool_done <= 1'b1;
               end
             end
+          end else begin
+            valid_pool <= 1'b0;
+          end
+        end
+      end
+      STATE_SEND: begin
+        
+      end
+      STATE_RUN: begin // Do MAC, max-pool, and data send in parallel
+        
 
-            // --------------------------------------------
-            // Data send
-            // --------------------------------------------
-            if (!send_done) begin
-              if (valid_pool) begin // start data sending only when the max-pool result is valid
-                if (is_CONV00) begin
-                  if (send_counter == OUTPUT_SIZE) begin
-                    send_done <= 1'b1;
-                    valid_o0 <= 1'b0;
-                    valid_o1 <= 1'b0;
-                    data_out0 <= 1'b0;
-                  end else if (bias_counter[1:0] == 2'b11) begin
-                    send_done <= 1'b0;
-                    valid_o0 <= 1'b1;
-                    valid_o1 <= 1'b0;
-                    data_out0[{bias_counter[1:0], {5{1'b0}}}+:32] <= result_buffer;
-                    send_counter <= send_counter + 1;
-                  end else begin
-                    send_done <= 1'b0;
-                    valid_o0 <= 1'b0;
-                    valid_o1 <= 1'b0;
-                    data_out0[{bias_counter[1:0], {5{1'b0}}}+:32] <= result_buffer;
-                    send_counter <= send_counter;
-                  end
-                end else if (is_1x1) begin
-                  if (send_counter == (OUTPUT_SIZE * No) >> 5) begin // each output is 2x2x8, thus 32.
-                    send_done <= 1'b1;
-                    valid_o0 <= 1'b0;
-                    valid_o1 <= 1'b0;
-                    data_out0 <= 1'b0;
-                    data_out1 <= 1'b0;
-                  end else begin // this is already valid_pool == 1
-                    send_done <= 1'b0;
-                    valid_o0 <= 1'b1;
-                    valid_o1 <= 1'b1;
-                    send_counter <= send_counter + 1;
-                    data_out0 <= {result_1x1_1, result_1x1_0};
-                    data_out1 <= {result_1x1_3, result_1x1_2};
-                  end
-                end else begin
-                  if (send_counter == OUTPUT_SIZE * (No >> 4)) begin // since the output bandwidth is 16*8-bit
-                    send_done <= 1'b1;
-                    valid_o0 <= 1'b0;
-                    valid_o1 <= 1'b0;
-                    data_out0 <= 1'b0;
-                  end else if (bias_counter[3:0] == 15) begin        // since the output bandwidth is 16*8-bit
-                    send_done <= 1'b0;
-                    valid_o0 <= 1'b1;
-                    valid_o1 <= 1'b0;
-                    data_out0[{bias_counter[3:0], {3{1'b0}}}+:8] <= result_buffer[7:0];
-                    send_counter <= send_counter + 1;
-                  end else begin
-                    send_done <= 1'b0;
-                    valid_o0 <= 1'b0;
-                    valid_o1 <= 1'b0;
-                    data_out0[{bias_counter[3:0], {3{1'b0}}}+:8] <= result_buffer[7:0];
-                    send_counter <= send_counter;
-                  end
-                end
-              end else begin
+        // --------------------------------------------
+        // Data send
+        // --------------------------------------------
+        if (!send_done) begin
+          if (valid_pool) begin // start data sending only when the max-pool result is valid
+            if (is_CONV00) begin
+              if (send_counter == OUTPUT_SIZE) begin
+                send_done <= 1'b1;
                 valid_o0 <= 1'b0;
                 valid_o1 <= 1'b0;
-                // send_done <= 1'b0; // needs check!
-              end
-            end
-
-            // --------------------------------------------
-            // Row and Col indexing
-            // --------------------------------------------
-            if (delay == FRAME_DELAY - 1) begin
-              if (col == IFM_WIDTH - Tc) begin
-                col <= 1'b0;
-                row <= row + Tr;
-                delay <= 1'b0;
+                data_out0 <= 1'b0;
+              end else if (bias_counter[1:0] == 2'b11) begin
+                send_done <= 1'b0;
+                valid_o0 <= 1'b1;
+                valid_o1 <= 1'b0;
+                data_out0[{bias_counter[1:0], {5{1'b0}}}+:32] <= result_buffer;
+                send_counter <= send_counter + 1;
               end else begin
-                col <= col + Tc;
-                delay <= 1'b0;
+                send_done <= 1'b0;
+                valid_o0 <= 1'b0;
+                valid_o1 <= 1'b0;
+                data_out0[{bias_counter[1:0], {5{1'b0}}}+:32] <= result_buffer;
+                send_counter <= send_counter;
+              end
+            end else if (is_1x1) begin
+              if (send_counter == (OUTPUT_SIZE * No) >> 5) begin // each output is 2x2x8, thus 32.
+                send_done <= 1'b1;
+                valid_o0 <= 1'b0;
+                valid_o1 <= 1'b0;
+                data_out0 <= 1'b0;
+                data_out1 <= 1'b0;
+              end else begin // this is already valid_pool == 1
+                send_done <= 1'b0;
+                valid_o0 <= 1'b1;
+                valid_o1 <= 1'b1;
+                send_counter <= send_counter + 1;
+                data_out0 <= {result_1x1_1, result_1x1_0};
+                data_out1 <= {result_1x1_3, result_1x1_2};
               end
             end else begin
-              col <= col;
-              row <= row;
-              delay <= delay + 1;
+              if (send_counter == OUTPUT_SIZE * (No >> 4)) begin // since the output bandwidth is 16*8-bit
+                send_done <= 1'b1;
+                valid_o0 <= 1'b0;
+                valid_o1 <= 1'b0;
+                data_out0 <= 1'b0;
+              end else if (bias_counter[3:0] == 15) begin        // since the output bandwidth is 16*8-bit
+                send_done <= 1'b0;
+                valid_o0 <= 1'b1;
+                valid_o1 <= 1'b0;
+                data_out0[{bias_counter[3:0], {3{1'b0}}}+:8] <= result_buffer[7:0];
+                send_counter <= send_counter + 1;
+              end else begin
+                send_done <= 1'b0;
+                valid_o0 <= 1'b0;
+                valid_o1 <= 1'b0;
+                data_out0[{bias_counter[3:0], {3{1'b0}}}+:8] <= result_buffer[7:0];
+                send_counter <= send_counter;
+              end
             end
+          end else begin
+            valid_o0 <= 1'b0;
+            valid_o1 <= 1'b0;
+            // send_done <= 1'b0; // needs check!
           end
-          STATE_DONE: begin
-            conv_done <= 1'b1;
+        end
+
+        // --------------------------------------------
+        // Row and Col indexing
+        // --------------------------------------------
+        if (delay == FRAME_DELAY - 1) begin
+          if (col == IFM_WIDTH - Tc) begin
+            col <= 1'b0;
+            row <= row + Tr;
+            delay <= 1'b0;
+          end else begin
+            col <= col + Tc;
+            delay <= 1'b0;
           end
-          default: ;
-        endcase
+        end else begin
+          col <= col;
+          row <= row;
+          delay <= delay + 1;
+        end
+      end
+      STATE_DONE: begin
+        conv_done <= 1'b1;
       end
       default: ;
     endcase
