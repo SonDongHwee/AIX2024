@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="65" Path="C:/Users/ece/Desktop/AIX2024/build/yolo_tb/yolo_tb.xpr">
+<Project Product="Vivado" Version="7" Minor="65" Path="C:/Users/leewo/Documents/GitHub/AIX2024/build/yolo_tb/yolo_tb.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="aa644267c5fd499ba15506db5afe2dec"/>
@@ -60,7 +60,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="nexys-a7-100t"/>
     <Option Name="FeatureSet" Val="FeatureSet_Classic"/>
-    <Option Name="WTXSimLaunchSim" Val="9"/>
+    <Option Name="WTXSimLaunchSim" Val="57"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -143,16 +143,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/src/conv3x3_maxpool_module.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Desktop/AIX2024-DM_main/AIX2024-DM_main/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/conv3x3_maxpool_module.v"/>
-          <Attr Name="ImportTime" Val="1714536344"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/src/axi_dma_ctrl.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -183,10 +173,30 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/src/conv3x3_maxpool_module.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Desktop/AIX2024-DM_main/AIX2024-DM_main/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/conv3x3_maxpool_module.v"/>
+          <Attr Name="ImportTime" Val="1714536344"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/src/dpram_wrapper.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Desktop/AIX2024-DM_main/AIX2024-DM_main/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/dpram_wrapper.v"/>
+          <Attr Name="ImportTime" Val="1714536345"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/src/spram_wrapper.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Desktop/AIX2024-DM_main/AIX2024-DM_main/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/spram_wrapper.v"/>
           <Attr Name="ImportTime" Val="1714536345"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -198,16 +208,6 @@
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../hw_test/hw_test.srcs/sources_1/imports/src/yolo_engine.v"/>
           <Attr Name="ImportTime" Val="1714286631"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/src/spram_wrapper.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Desktop/AIX2024-DM_main/AIX2024-DM_main/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sources_1/imports/src/spram_wrapper.v"/>
-          <Attr Name="ImportTime" Val="1714536345"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -234,10 +234,10 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sim_1/imports/sim/conv_kern_tb.v">
+      <File Path="$PSRCDIR/sim_1/imports/sim/conv_maxpool_module_tb.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Desktop/AIX2024-DM_main/AIX2024-DM_main/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v"/>
-          <Attr Name="ImportTime" Val="1714536344"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Desktop/sim/conv_maxpool_module_tb.v"/>
+          <Attr Name="ImportTime" Val="1716217990"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -258,6 +258,26 @@
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../hw_test/hw_test.srcs/sim_1/imports/sim_dram_model/axi_sram_if.v"/>
           <Attr Name="ImportTime" Val="1713976900"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/sim/bmp_image_writer.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Desktop/AIX2024-DM_main/AIX2024-DM_main/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/bmp_image_writer.v"/>
+          <Attr Name="ImportTime" Val="1714536344"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/sim/conv_kern_tb.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Desktop/AIX2024-DM_main/AIX2024-DM_main/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/conv_kern_tb.v"/>
+          <Attr Name="ImportTime" Val="1714536344"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -303,16 +323,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/imports/sim/bmp_image_writer.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Desktop/AIX2024-DM_main/AIX2024-DM_main/build/conv3x3_maxpool_tb/conv3x3_maxpool_tb.srcs/sim_1/imports/sim/bmp_image_writer.v"/>
-          <Attr Name="ImportTime" Val="1714536344"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/conv_kern_tb_behav1.wcfg">
         <FileInfo>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -320,7 +330,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="conv_kern_tb"/>
+        <Option Name="TopModule" Val="conv_maxpool_module_tb"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
