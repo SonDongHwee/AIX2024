@@ -86,7 +86,7 @@ assign conv_start = 1;
 //LOCALPARAMETER
 //==========================================
 integer HALF_CLK_PERIOD = 5;
-integer NB_TB_KILLED = 100000;
+integer NB_TB_KILLED = 200000;
 localparam channel_num_per_ifm = 32;
 localparam col_num_per_ifm = 2;
 localparam row_num_per_ifm = 2;

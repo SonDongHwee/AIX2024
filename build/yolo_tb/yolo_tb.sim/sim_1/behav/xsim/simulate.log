@@ -1,3 +1,7 @@
 Time resolution is 1 ps
 =============================
 [Info] Test Start!
+[Info] time-out
+============================
+$finish called at time : 2 ms : File "C:/Users/leewo/Documents/GitHub/AIX2024/build/yolo_tb/yolo_tb.srcs/sim_1/imports/sim/conv_maxpool_module_tb.v" Line 106
+INFO: xsimkernel Simulation Memory Usage: 20660 KB (Peak: 20660 KB), Simulation CPU Usage: 268421 ms
